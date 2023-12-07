@@ -1,0 +1,15 @@
+.navbar-nav .nav-link {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    margin-bottom: -2px;
+  }
+
+.navbar-nav .nav-link:hover {
+    color: #293895 !important;
+    border-bottom-color: #EB1C24;
+}
+
+.navbar-brand img {
+    margin-left: 20px; 
+}
