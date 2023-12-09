@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
-        <title>GPA</title>
+        <title>Student Account</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="footer.css">
         <!-- JQuery -->
@@ -73,34 +74,45 @@
           </nav>
         </header>
 
-        <h1>GPA</h1>
-        <div class="container">
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <th>Subject ID</th>
-                        <th>Subject Name</th>
-                        <th>Credits</th>
-                        <th>Attendence</th>
-                        <th>Midterm</th>
-                        <th>Final</th>
-                        <th>Total</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </thread>
-            </table>
-        </div>
-
-         <!-- Footer -->
-          <div class="container-fluid">
+        <!-- Main content -->
+        <section>
+            <div class="container-fluid">
+              <div class="name-box">
+                <div class="container">
+                  <div class="image">
+                    <img src="https://i.pinimg.com/originals/c1/cf/b2/c1cfb2ffa4158580693dbd2a5fef20d9.jpg"  id="profilePhoto" alt="profile photo">
+                  </div>
+                  <span>Student's Name</span>
+                </div>
+              </div>
+              <div class="detail-box"> 
+                <div class="container">
+                  <p><b>DOB:</b></p>
+                  <span>01/01/2001</span>
+                </div>
+                <div class="container">
+                  <p><b>Email:</b></p>
+                  <span>abc@gmail.com</span>
+                </div>
+                <div class="container">
+                  <p><b>Intake:</b></p>
+                  <span>2021-2024</span>
+                </div>
+                <div class="container">
+                  <p><b>Username:</b></p>
+                  <span>abcde12345</span>
+                </div>
+                <div class="container">
+                  <p><b>Password:</b></p>
+                  <span>********</span> <!-- Hide the password-->
+                </div>
+                <button onclick="changePassword()">Change</button>
+              </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <div class="container-fluid">
             <footer>
                 <div class="row">
                     <div class="col-md-4 infor">
@@ -111,7 +123,7 @@
                         </p>
                         <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
                         <hr class="divider">
-
+  
                         <!--Phone-->
                         <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
                         Phone</p>
@@ -134,6 +146,7 @@
                     </div>
                 </div>
             </footer>
-          </div>
+        </div>
+
     </body>
 </html>

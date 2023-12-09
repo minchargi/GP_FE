@@ -13,3 +13,7 @@
 .navbar-brand img {
     margin-left: 20px; 
 }
+
+.dropdown-toggle::after {
+    display: none; 
+}
