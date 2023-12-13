@@ -14,6 +14,12 @@
     margin-left: 20px; 
 }
 
+.dropdown-menu {
+    max-width: 500px; 
+    left: auto; 
+    right: 0; 
+}
+
 .dropdown-toggle::after {
     display: none; 
 }
