@@ -27,7 +27,7 @@ h1 {
     font-weight: 700; 
     font-family: 'Roboto Slab', serif; 
     margin: 15px 15px 30px 100px; 
-    background: url('/images/titlel.svg') no-repeat bottom left;
+    background: url('../images/titlel.svg') no-repeat bottom left;
     text-align: left; 
     padding-bottom: 20px; 
 }
