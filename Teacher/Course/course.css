@@ -61,28 +61,25 @@
     background:#EB1C24;
     color:#FFF;
 }
-
+.courseDetail{
+    background-color:#fbfbfb;
+    border-radius: 5px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border: #000;
+    margin-bottom: 10px;
+}
 .link_course{
     text-decoration: none;
-}
-.card-custom {
-    border-radius: 10px;
-    border: 1px solid #E8E8E8;
-    background: var(--Color, #FFF);
-    border: 2px solid #E7E7E7;
-    background: #FFF;
-    height: 100%;
-}
-.card-footer{
-    color: #000;
     font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    border-bottom: unset;
-    align-items: center;
-    background-color: #FFF;
+    color:#293895;
+    margin-left:30px;
 }
+.link_course:hover{
+    color:#EB1C24;
+}
+
 .list{
     font-size: 18px;
     color:#293895;
@@ -92,4 +89,25 @@
 }
 ul{
     list-style-type: none;
+}
+ul.horizontal-list{
+    list-style: none;
+    background-color:#293895;
+    display:flex;
+    justify-content: center;
+    height: 54px;
+    align-items: center;
+}
+.link{
+    text-decoration: none;
+    font-size: 18px;
+    color:#293895;
+    margin-left:30px;
+}
+.link:hover{
+    color:#EB1C24;
+}
+ul.horizontal-list li {
+    display: inline-block;
+    color:#FFF;
 }
