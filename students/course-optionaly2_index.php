@@ -8,14 +8,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
         <link rel="stylesheet" href="footer.css">
         <!-- JQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- Owl Carousel-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body> 
@@ -23,7 +19,7 @@
         <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
-              <img src="/images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
+              <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
             </a>
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,15 +28,15 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+                    <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
                       <i class="fas fa-book"></i> Course
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="student_course-overview_index.html">Overview</a></li>
-                      <li><a class="dropdown-item" href="student_course-grades-gpa_index.html">GPA</a></li>
+                      <li><a class="dropdown-item" href="course-overview_index.php">Overview</a></li>
+                      <li><a class="dropdown-item" href="course-grades-gpa_index.php">Grades</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -52,25 +48,13 @@
                       <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-bell"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Announce1</a></li>
-                      <li><a class="dropdown-item" href="#">Announce2</a></li>
-                    </ul>
-                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
                       <i class="fas fa-user-circle"></i> 
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="signin.html">Signin</a></li>
-                    </ul>
                   </li>
                 </ul>
               </div>
@@ -148,7 +132,7 @@
         <footer>
             <div class="row">
                 <div class="col-md-4 infor">
-                    <img class="white-logo" src="/images/white_logo.png">
+                    <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->
                     <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
                         Address
