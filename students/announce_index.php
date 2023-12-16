@@ -53,7 +53,7 @@
                     <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="account_index.php">
                       <i class="fas fa-user-circle"></i> 
                     </a>
                   </li>

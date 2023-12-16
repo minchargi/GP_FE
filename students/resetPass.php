@@ -16,7 +16,14 @@
     
           <form id="passwordResetForm" class="bg-white p-4 shadow rounded">
     
-            <h2 class="text-center mb-4 header_text">Reset Password</h2>
+            <h2 class="text-center mb-4 header_text">Change Password</h2>
+
+            <!-- Old Password Input-->
+            <div class="form-group">
+              <label for="oldPassword" class="tittle_text">Your Old Password</label>
+              <input type="password" class="form-control" id="oldPassword" name="oldPassword" placeholder="Enter your old password">
+              <small class="error-message" id="oldPasswordError"></small>
+            </div>
     
             <!-- Password Input -->
             <div class="form-group">
