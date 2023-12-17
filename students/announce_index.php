@@ -31,14 +31,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="course-overview_index.php"> 
                       <i class="fas fa-book"></i> Course
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="course-overview_index.php">Overview</a></li>
-                      <li><a class="dropdown-item" href="course-grades-gpa_index.php">Grades</a></li>
-                    </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,6 +61,55 @@
 
         <!-- Main content -->
         <h1>Announcements</h1>
+
+        <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <div class="accordion-content">
+              <p>Announcement content here !</p>
+            </div>
+          </div>
+         </div>
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <div class="accordion-content">
+              <p>Announcement content here !</p>
+            </div>
+          </div>
+         </div>
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <div class="accordion-content">
+              <p>Announcement content here !</p>
+            </div>
+          </div>
+         </div>
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <div class="accordion-content">
+              <p>Announcement content here !</p>
+            </div>
+          </div>
+         </div>
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <div class="accordion-content">
+              <p>Announcement content here !</p>
+            </div>
+          </div>
+         </div>
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <div class="accordion-content">
+              <p>Announcement content here !</p>
+            </div>
+          </div>
+         </div>
 
         <a href="">
           <div class="card mb-3" style="max-width: 700px;">

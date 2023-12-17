@@ -30,14 +30,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="course-overview_index.php"> 
                       <i class="fas fa-book"></i> Course
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="course-overview_index.php">Overview</a></li>
-                      <li><a class="dropdown-item" href="course-grades-gpa_index.php">Grades</a></li>
-                    </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,6 +58,12 @@
           </nav>
         </header>
 
+        <ul class="nav">
+          <li><a href="course-grades_index.php">Grades</a></li>
+          <li><a href="attendance_index.php">Attendance</a></li>
+          <li class="active"><a href="course-grades-gpa_index.php">GPA</a></li>
+        </ul>
+
         <h1>GPA</h1>
         <div class="container">
             <table class="table table-bordered">
@@ -84,10 +86,37 @@
                         <td></td>
                         <td></td>
                     </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                  </tr>
                 </thread>
             </table>
         </div>
-
+        
          <!-- Footer -->
          <div class="container-fluid mt-2">
             <footer>

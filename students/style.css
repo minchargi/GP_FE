@@ -170,8 +170,10 @@ td {
 }
 
 .accordion {
-    width: 100%; 
-    padding: 20px; 
+    width: 80%; 
+    padding-left: 20px; 
+    padding-bottom: 20px; 
+    margin-left: 80px; 
 }
 
 .accordion-item {
@@ -214,6 +216,39 @@ td {
 .accordion-content li a:hover {
     background-color: #f0f0f0; 
     color: #EB1C24;
+}
+
+.announce-accordion {
+    width: 80%;
+    padding-bottom: 20px; 
+    margin-left: 80px; 
+}
+
+.announce-accordion .accordion-item {
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+}
+
+.announce-accordion .accordion-header {
+    font-family: 'Roboto', sans-serif;
+    color: #000000; 
+    padding: 10px; 
+    cursor: pointer; 
+    text-align: left; 
+    border: none; 
+    outline: none; 
+    font-size: 16px; 
+}
+
+.announce-accordion .accordion-content {
+    font-family: 'Roboto', sans-serif; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease-out; 
+}
+
+.announce-accordion p {
+    padding: 10px; 
 }
 
 .card {

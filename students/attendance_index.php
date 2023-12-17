@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
-        <title>Grades</title>
+        <title>Attendance</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -17,69 +17,67 @@
     <body> 
         <!-- Navbar-->
         <header>
-          <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-              <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
-            </a>
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="course-overview_index.php"> 
-                      <i class="fas fa-book"></i> Course
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-calendar"></i> Timetable
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
-                      <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="account_index.php">
-                      <i class="fas fa-user-circle"></i> 
-                    </a>
-                  </li>
-                </ul>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+              <a class="navbar-brand" href="#">
+                <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
+              </a>
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="announce_index.html"><i class="fas fa-home"></i> Announcement</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="course-overview_index.html"> 
+                        <i class="fas fa-book"></i> Course
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-calendar"></i> Timetable
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
+                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="account_index.html">
+                        <i class="fas fa-user-circle"></i> 
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </nav>
-        </header>
+            </nav>
+          </header>
 
         <ul class="nav">
-          <li class="active"><a href="course-grades_index.php">Grades</a></li>
-          <li><a href="attendance_index.php">Attendance</a></li>
+          <li><a href="course-grades_index.php">Grades</a></li>
+          <li class="active"><a href="attendance_index.php">Attendance</a></li>
           <li><a href="course-grades-gpa_index.php">GPA</a></li>
         </ul>
 
-        <h1>Course Name</h1>
+        <h1>Attendance</h1>
         <div class="container">
             <table class="table table-bordered">
                 <thread>
                     <tr>
                         <th>Student ID</th>
                         <th>Name</th>
-                        <th>Date of birth</th>
-                        <th>Attendence</th>
-                        <th>Midterm</th>
-                        <th>Final</th>
-                        <th>Total</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

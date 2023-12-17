@@ -31,14 +31,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="course-overview_index.php"> 
                       <i class="fas fa-book"></i> Course
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="course-overview_index.php">Overview</a></li>
-                      <li><a class="dropdown-item" href="course-grades-gpa_index.php">Grades</a></li>
-                    </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,23 +60,21 @@
         </header>
 
          <!-- Main Content -->
-         <div class="container-fluid">
-            <img src="../images/2.png" alt="bachelor image" class="responsive-image">
-         </div>
+         <h1>Courses<h1>
 
          <div class="accordion">
           <div class="accordion-item">
             <button class="accordion-header" onclick="toggleAccordion(this)"><b>Second Year</b></button>
             <div class="accordion-content">
               <ul>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
               </ul>
             </div>
           </div>
@@ -91,30 +85,16 @@
             <button class="accordion-header" onclick="toggleAccordion(this)"><b>Third Year</b></button>
             <div class="accordion-content">
               <ul>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
-                <li><a href="#" class="course-link" data-bs-toggle="modal" data-bs-target="#courseModal">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">Course Name</a></li>
               </ul>
             </div>
-          </div>
-         </div>
-
-         <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered  ">
-             <div class="modal-content">
-               <div class="modal-header">
-                 <h5 class="modal-title" id="courseModalLabel">Course Information</h5>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="modal-body">
-                 Course Details
-               </div>
-             </div>
           </div>
          </div>
 

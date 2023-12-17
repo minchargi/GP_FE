@@ -43,3 +43,33 @@
     background-color: #EB1C24;
     color: white; 
 }
+
+ul.nav {
+    padding: 0px;
+    background-color: #293895;
+    text-align: center;
+    justify-content: center;
+}
+
+ul.nav > li {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 5px;
+}
+
+ul.nav > li:hover {
+    background-color: #EB1C24;
+}
+
+ul.nav > li.active {
+    background-color: #EB1C24 ;
+}
+
+ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

@@ -1,0 +1,20 @@
+.header-text{
+    color: #293895;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.form-label{
+    color: #000;
+    font-size: 18px;
+}
+.btn-custom{
+    background-color:#293895;
+    color:#FFF;
+
+}
+.btn-custom:hover{
+    background-color: #EB1C24;
+    color: #FFF;
+}
