@@ -97,38 +97,21 @@ td {
     font-weight: bold; 
 }
 
-.name-box .image {
-    height: 120px; 
-    width: 120px;
-    border-radius: 50%;  
-    margin-top: 15px; 
-    margin-left: 80px; 
-}
-
-.name-box .image img {
-    height: 100%; 
-    width: 100%; 
-    object-fit: cover; 
-    border-radius: 50%; 
-}
-
 .name-box .container {
     display: flex; 
     align-items: center; 
-    margin-left: 20px; 
-    margin-bottom: 5px; 
+    padding: 20px; 
+    margin-left: 80px; 
 }
 
 .name-box .container span {
     font-family: 'Roboto Slab', sans-serif;
-    margin-left: 30px; 
-    font-size: 35px; 
+    font-size: 30px; 
     font-weight: 500px; 
 }
 
 .detail-box {
     display: block; 
-    border: 1px solid #000; 
     border-radius: 5px; 
     width: 40%; 
     margin-left: 260px; 
@@ -182,7 +165,7 @@ td {
 }
 
 .accordion-header {
-    font-family: 'Roboto Slab', sans-serif; 
+    font-weight: 600px;
     border-radius: 5px; 
     color: #2A3C95;
     padding: 10px;
@@ -230,7 +213,8 @@ td {
 }
 
 .announce-accordion .accordion-header {
-    font-family: 'Roboto', sans-serif;
+    font-weight: 600px;
+    background-color: white;
     color: #000000; 
     padding: 10px; 
     cursor: pointer; 

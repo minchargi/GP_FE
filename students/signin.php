@@ -18,11 +18,11 @@
     
             <h2 class="text-center header_text">Sign In</h2>
     
-            <!-- Username Input -->
+            <!-- Email Input -->
             <div class="form-group">
-              <label for="username" class="tittle_text">Username:</label>
-              <input type="email" class="form-control" id="username" name="username" placeholder="Enter your email">
-              <small class="error-message" id="usernameError"></small>
+              <label for="email" class="tittle_text">Email:</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+              <small class="error-message" id="emailError"></small>
             </div>
     
             <!-- Password Input -->
