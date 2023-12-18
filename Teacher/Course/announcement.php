@@ -27,15 +27,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="announcement.html"><i class="fas fa-home"></i> Announcement</a>
+                      <a class="nav-link" href="announcement.php"><i class="fas fa-home"></i> Announcement</a>
                     </li>
                     <li class="nav-item ">
-                      <a class="nav-link" href="course.html"> 
+                      <a class="nav-link" href="course.php"> 
                         <i class="fas fa-book"></i> Course
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+                        <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
                       </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -70,7 +70,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox1">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(1)"></i>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox2">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(2)"></i>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox3">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="deleteAnnouncement(3)"></i>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox4">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(4)"></i>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox1">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(1)"></i>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox5">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(5)"></i>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox6">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(6)"></i>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox7">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="deleteAnnouncement(7)"></i>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox8">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(8)"></i>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox9">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(9)"></i>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox10">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(10)"></i>
                         </div>
                     </div>
@@ -213,7 +213,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox11">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(11)"></i>
                         </div>
                     </div>
@@ -226,7 +226,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox12">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(1)"></i>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox13">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(12)"></i>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox14">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(13)"></i>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox15">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(14)"></i>
                         </div>
                     </div>
@@ -278,7 +278,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox16">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(15)"></i>
                         </div>
                     </div>
@@ -291,7 +291,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox17">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(16)"></i>
                         </div>
                     </div>
@@ -304,7 +304,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox18">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(17)"></i>
                         </div>
                     </div>
@@ -317,7 +317,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox1">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(18)"></i>
                         </div>
                     </div>
@@ -330,7 +330,7 @@
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox19">
-                            <a class="link" href="link_announcement.html">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
+                            <a class="link" href="link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
                             <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(19)"></i>
                         </div>
                     </div>

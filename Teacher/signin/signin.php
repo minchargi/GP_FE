@@ -38,7 +38,7 @@
                 <input type="checkbox" class="form-check-input" id="remember" name="remember">
                 <label class="form-check-label" for="remember">Remember me</label>
               </div>
-              <a class="link" href="forgot_pw.html">Forgot password?</a>
+              <a class="link" href="forgot_pw.php">Forgot password?</a>
             </div>
     
             <!-- Sign In Button -->

@@ -27,15 +27,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="announcement.html"><i class="fas fa-home"></i> Announcement</a>
+                      <a class="nav-link" href="announcement.php"><i class="fas fa-home"></i> Announcement</a>
                     </li>
                     <li class="nav-item ">
-                      <a class="nav-link" href="course.html"> 
+                      <a class="nav-link" href="course.php"> 
                         <i class="fas fa-book"></i> Course
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+                        <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
                       </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -106,46 +106,46 @@
     
    <div class="container mt-4">
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.html">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
         </div>
    </div>
    <div class="container-fluid mt-4">
