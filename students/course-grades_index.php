@@ -35,6 +35,9 @@
                       <i class="fas fa-book"></i> Course
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-calendar"></i> Timetable
@@ -65,30 +68,39 @@
         </ul>
 
         <h1>Course Name</h1>
-        <div class="container">
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>Date of birth</th>
-                        <th>Attendence</th>
-                        <th>Midterm</th>
-                        <th>Final</th>
-                        <th>Total</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </thread>
+        <div class="container mt-2">
+          <table class="table table-bordered">
+              <thead>
+                <tr class="tb-row">
+                  <th class="td-head" scope="col">Student ID</th>
+                  <th class="td-head" scope="col">Name</th>
+                  <th class="td-head" scope="col">Attendance</th>
+                  <th class="td-head" scope="col">Midterm </th>
+                  <th class="td-head" scope="col">Final </th>
+                  <th class="td-head" scope="col">Total </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row"> </th>
+                  <td class="td-custom"> </td>
+                  <td class="td-custom">10%</td>
+                  <td class="td-custom">40%</td>
+                  <td class="td-custom">50%</td>
+                  <td class="td-custom">100%</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">BI12-001 </th>
+                  <td class="td-custom">Nguyễn Văn A</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                
+              </tbody>
             </table>
-        </div>
+      </div>
 
          <!-- Footer -->
          <div class="container-fluid mt-2">

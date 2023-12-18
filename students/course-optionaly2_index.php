@@ -35,6 +35,9 @@
                       <i class="fas fa-book"></i> Course
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-calendar"></i> Timetable
@@ -57,71 +60,127 @@
             </div>
           </nav>
         </header>
-
+        
         <h1>Optional Subjects</h1>
-        <div class="container">
-          <div class="text">Semeter 1</div>
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <th></th>
-                        <th>Subject ID</th>
-                        <th>Subject Name</th>
-                        <th>Credits</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </thread>
-            </table>
-        </div>
 
-        <div class="container">
-          <div class="text">Semeter 2</div>
-          <table class="table table-bordered">
-              <thread>
-                  <tr>
-                      <th></th>
-                      <th>Subject ID</th>
-                      <th>Subject Name</th>
-                      <th>Credits</th>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-              </thread>
-          </table>
+        <div class="container mt-2">
+          <div class="text">Semester 1</div>
+          <table class="table table-bordered table-hover">
+              <thead>
+                <tr class="tb-row">
+                  <th class="td-head" scope="col"> </th>
+                  <th class="td-head" scope="col">Course ID</th>
+                  <th class="td-head" scope="col">Course Name</th>
+                  <th class="td-head" scope="col">Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox1">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox2">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox3">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox4">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox5">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                
+              </tbody>
+            </table>
       </div>
+
+      <div class="container mt-2">
+        <div class="text">Semester 2</div>
+        <table class="table table-bordered table-hover">
+            <thead>
+              <tr class="tb-row">
+                <th class="td-head" scope="col"> </th>
+                <th class="td-head" scope="col">Course ID</th>
+                <th class="td-head" scope="col">Course Name</th>
+                <th class="td-head" scope="col">Credits</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox1">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox2">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox3">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox4">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox5">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+
+        <!-- Submit Button -->
+        <div class="container mt-4 text-end">
+          <button type="submit" class="btn submit-btn btn-primary btn-lg">Submit</button>
+        </div>
 
        <!-- Footer -->
        <div class="container-fluid mt-2">

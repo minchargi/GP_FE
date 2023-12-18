@@ -36,6 +36,9 @@
                       <i class="fas fa-book"></i> Course
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-calendar"></i> Timetable
@@ -60,21 +63,22 @@
         </header>
 
          <!-- Main Content -->
-         <h1>Courses<h1>
+        <h1>Courses</h1>
 
          <div class="accordion">
           <div class="accordion-item">
             <button class="accordion-header" onclick="toggleAccordion(this)"><b>Second Year</b></button>
             <div class="accordion-content">
               <ul>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+
               </ul>
             </div>
           </div>
@@ -85,14 +89,14 @@
             <button class="accordion-header" onclick="toggleAccordion(this)"><b>Third Year</b></button>
             <div class="accordion-content">
               <ul>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
-                <li><a href="course-grades_index.php">Course Name</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
+                <li><a href="course-grades_index.php">ICT3.001 Introduction to Cryptography</a></li>
               </ul>
             </div>
           </div>

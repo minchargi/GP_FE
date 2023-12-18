@@ -35,6 +35,9 @@
                       <i class="fas fa-book"></i> Course
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-calendar"></i> Timetable
@@ -65,58 +68,133 @@
         </ul>
 
         <h1>GPA</h1>
-        <div class="container">
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <th>Subject ID</th>
-                        <th>Subject Name</th>
-                        <th>Credits</th>
-                        <th>Attendence</th>
-                        <th>Midterm</th>
-                        <th>Final</th>
-                        <th>Total</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                  </tr>
-                </thread>
+        <div class="container mt-2">
+          <table class="table table-bordered table-hover">
+              <thead>
+                <tr class="tb-row">
+                  <th class="td-head" scope="col">Course ID</th>
+                  <th class="td-head" scope="col">Course Name</th>
+                  <th class="td-head" scope="col">Credits</th>
+                  <th class="td-head" scope="col">Attendance</th>
+                  <th class="td-head" scope="col">Midterm </th>
+                  <th class="td-head" scope="col">Final </th>
+                  <th class="td-head" scope="col">Total </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">ICT3.001 </th>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                  <td class="td-custom">20.0</td>
+                  <td class="td-custom">15.0</td>
+                  <td class="td-custom">16.0</td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row"> </th>
+                  <td class="td-custom"></td>
+                  <td class="td-custom"></td>
+                  <td class="td-custom"></td>
+                  <td class="td-custom"></td>
+                  <td class="td-custom"></td>
+                  <td class="td-custom">16.0</td>
+                </tr>
+                
+              </tbody>
             </table>
-        </div>
-        
+      </div>
+
          <!-- Footer -->
          <div class="container-fluid mt-2">
             <footer>

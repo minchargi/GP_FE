@@ -20,13 +20,43 @@ body {
     }
 }
 
+ul.nav {
+    padding: 0px;
+    background-color: #293895;
+    text-align: center;
+    justify-content: center;
+}
+
+ul.nav > li {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 5px;
+}
+
+ul.nav > li:hover {
+    background-color: #EB1C24;
+}
+
+ul.nav > li.active {
+    background-color: #EB1C24 ;
+}
+
+ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 h1 {
     font-size: 37px;
     line-height: 1.3; 
     color: #2A3C95;
     font-weight: 700; 
     font-family: 'Roboto Slab', serif; 
-    margin: 15px 15px 30px 100px; 
+    margin: 15px 15px 30px 80px; 
     background: url('../images/titlel.svg') no-repeat bottom left;
     text-align: left; 
     padding-bottom: 20px; 
@@ -60,20 +90,31 @@ a:hover {
     color: #EB1C24; 
 }
 
-table, th, tr, td{
-    text-align: center; 
+.td-head{
     color: #000;
-    font-family: 'Roboto';
     font-size: 16px;
-    border: 1px solid #000000; 
-    max-width: 100%; 
-    margin-left: 30px; 
-    white-space: nowrap; 
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.th-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.td-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
 }
 
 .container .text {
-    margin-left: 30px; 
-    margin-top: 20px; 
+    margin-left: 10px; 
     font-size: 20px; 
     text-align: left; 
     
@@ -88,33 +129,29 @@ td {
 }
 
 .text {
-    font-family: 'Roboto', sans-serif;
     font-size: 15px; 
     text-align: center;
     color: #000; 
-    margin-top: 10px; 
     padding-bottom: 20px;  
     font-weight: bold; 
 }
 
-.name-box .container {
+.name-box .container { 
     display: flex; 
-    align-items: center; 
-    padding: 20px; 
-    margin-left: 80px; 
+    align-items: center;  
 }
 
 .name-box .container span {
-    font-family: 'Roboto Slab', sans-serif;
+    margin: 15px 15px 10px 20px;
     font-size: 30px; 
-    font-weight: 500px; 
+    font-weight: 700px; 
 }
 
 .detail-box {
     display: block; 
     border-radius: 5px; 
     width: 40%; 
-    margin-left: 260px; 
+    margin-left: 100px; 
 }
 
 .detail-box .container {
@@ -134,7 +171,6 @@ td {
     font-size: 16px; 
     margin-left: 8px; 
     margin-top: 10px; 
-    margin-bottom: 5px; 
 }
 
 .detail-box button {
@@ -144,7 +180,7 @@ td {
     border: none;
     border-radius: 4px;
     cursor: pointer; 
-    margin-left: 400px; 
+    margin-left: 300px; 
     margin-bottom: 5px;  
 }
 
@@ -153,7 +189,7 @@ td {
 }
 
 .accordion {
-    width: 80%; 
+    width: 700px; 
     padding-left: 20px; 
     padding-bottom: 20px; 
     margin-left: 80px; 
@@ -202,7 +238,7 @@ td {
 }
 
 .announce-accordion {
-    width: 80%;
+    width: 700px;
     padding-bottom: 20px; 
     margin-left: 80px; 
 }
@@ -213,8 +249,8 @@ td {
 }
 
 .announce-accordion .accordion-header {
-    font-weight: 600px;
-    background-color: white;
+    font-weight: 600;
+    background-color: white; 
     color: #000000; 
     padding: 10px; 
     cursor: pointer; 
@@ -238,4 +274,14 @@ td {
 .card {
     margin-left: 80px; 
     margin-top: 20px; 
+}
+
+.tb-check-input {
+    align-items: center;
+}
+
+.submit-btn {
+    background-color: #293895;
+    border: none; 
+    margin-bottom: 10px; 
 }

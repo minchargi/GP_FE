@@ -28,12 +28,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="announce_index.html"><i class="fas fa-home"></i> Announcement</a>
+                      <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="course-overview_index.html"> 
+                      <a class="nav-link" href="course-overview_index.php"> 
                         <i class="fas fa-book"></i> Course
                       </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +51,7 @@
                       <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="account_index.html">
+                      <a class="nav-link" href="account_index.php">
                         <i class="fas fa-user-circle"></i> 
                       </a>
                     </li>
@@ -65,28 +68,49 @@
         </ul>
 
         <h1>Attendance</h1>
-        <div class="container">
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </thread>
+        <div class="container mt-2">
+          <table class="table table-bordered">
+              <thead>
+                <tr class="tb-row">
+                  <th class="td-head" scope="col">Student ID</th>
+                  <th class="td-head" scope="col">Name</th>
+                  <th class="td-head" scope="col">1</th>
+                  <th class="td-head" scope="col">2 </th>
+                  <th class="td-head" scope="col">3 </th>
+                  <th class="td-head" scope="col">4 </th>
+                  <th class="td-head" scope="col">5 </th>
+                  <th class="td-head" scope="col">6 </th>
+                  <th class="td-head" scope="col">7 </th>
+                  <th class="td-head" scope="col">8 </th>
+                  <th class="td-head" scope="col">9 </th>
+                  <th class="td-head" scope="col">10 </th>
+                  <th class="td-head" scope="col"> 11 </th>
+                  <th class="td-head" scope="col">12 </th>
+                  <th class="td-head" scope="col">13</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tb-row">
+                  <td class="td-custom">BI12-001 </td>
+                  <td class="td-custom">Nguyễn Văn A </td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">0</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">0</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">0</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">1</td>
+                  <td class="td-custom">0</td>
+                </tr>
+
+              </tbody>
             </table>
-        </div>
+      </div>
 
          <!-- Footer -->
          <div class="container-fluid mt-2">

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coursedetail</title>
+    <title>Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="courseDetail.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,15 +26,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="announcement.html"><i class="fas fa-home"></i> Announcement</a>
+                      <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
                     </li>
                     <li class="nav-item ">
-                      <a class="nav-link" href="course.html"> 
+                      <a class="nav-link" href="course-overview_index.php"> 
                         <i class="fas fa-book"></i> Course
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+                        <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
                       </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,7 +49,7 @@
                       <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link" href="account_index.php">
                         <i class="fas fa-user-circle"></i> 
                       </a>
                     </li>
@@ -59,15 +59,37 @@
             </nav>
         </header>
     </div>
-    <ul class="nav">
-        <li class="active"><a href="coursedetail.html">Overview</a></li>
-        <li><a href="studentList.html">Student List</a></li>
-        <li><a href="attendance.html">Attendance</a></li>
-    </ul>
-    
+
     <div class="container mt-4">
-        <p class="header_text">Course Name</p>
+        <p class="header-text">Contact Teacher</p>
+        <form id="messageForm">
+            <div class="mb-3">
+                <label for="teacherEmail" class="form-label">Teacher Email</label>
+                <input type="email" class="form-control" id="teacherEmail" placeholder="Enter teacher's email" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactMethod" class="form-label">Contact Method</label>
+                <select class="form-select" id="contactMethod" required>
+                    <option value="" disabled selected>Select contact method</option>
+                    <option value="email">Email</option>
+                    <option value="message">Message</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom">Send Message</button>
+        </form>
+    
+        <hr>
+    
+        <h2>Received Messages</h2>
+        <ul id="receivedMessages" class="list-group">
+            
+        </ul>
     </div>
+    
 
     <div class="container-fluid mt-4">
         <footer>
@@ -107,5 +129,9 @@
         </footer>
     </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script src="contact.js"></script>
 </body>
 </html>

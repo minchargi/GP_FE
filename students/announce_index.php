@@ -36,6 +36,9 @@
                       <i class="fas fa-book"></i> Course
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-calendar"></i> Timetable
@@ -62,9 +65,9 @@
         <!-- Main content -->
         <h1>Announcements</h1>
 
-        <div class="announce-accordion">
+         <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
             <div class="accordion-content">
               <p>Announcement content here !</p>
             </div>
@@ -72,7 +75,7 @@
          </div>
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
             <div class="accordion-content">
               <p>Announcement content here !</p>
             </div>
@@ -80,7 +83,7 @@
          </div>
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
             <div class="accordion-content">
               <p>Announcement content here !</p>
             </div>
@@ -88,7 +91,7 @@
          </div>
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
             <div class="accordion-content">
               <p>Announcement content here !</p>
             </div>
@@ -96,7 +99,7 @@
          </div>
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
             <div class="accordion-content">
               <p>Announcement content here !</p>
             </div>
@@ -104,7 +107,7 @@
          </div>
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>Announcement Title</b></button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
             <div class="accordion-content">
               <p>Announcement content here !</p>
             </div>
@@ -175,7 +178,7 @@
             </div>
           </div>
         </a>
-        <a href="student_course-optionaly2_index.php">
+        <a href="course-optionaly2_index.php">
           <div class="card mb-3" style="max-width: 700px;">
             <div class="row g-0">
               <div class="col-md-4">

@@ -8,6 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
         <link rel="stylesheet" href="footer.css">
         <!-- JQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -34,6 +35,9 @@
                       <i class="fas fa-book"></i> Course
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-calendar"></i> Timetable
@@ -56,109 +60,165 @@
             </div>
           </nav>
         </header>
-
+        
         <h1>Optional Subjects</h1>
-        <div class="container">
-          <div class="text">Semeter 1</div>
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <th></th>
-                        <th>Subject ID</th>
-                        <th>Subject Name</th>
-                        <th>Credits</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </thread>
+
+        <div class="container mt-2">
+          <div class="text">Semester 1</div>
+          <table class="table table-bordered table-hover">
+              <thead>
+                <tr class="tb-row">
+                  <th class="td-head" scope="col"> </th>
+                  <th class="td-head" scope="col">Course ID</th>
+                  <th class="td-head" scope="col">Course Name</th>
+                  <th class="td-head" scope="col">Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox1">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox2">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox3">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox4">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox5">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                
+              </tbody>
             </table>
-        </div>
+      </div>
 
-        <div class="container">
-          <div class="text">Semeter 2</div>
-          <table class="table table-bordered">
-              <thread>
-                  <tr>
-                      <th></th>
-                      <th>Subject ID</th>
-                      <th>Subject Name</th>
-                      <th>Credits</th>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-              </thread>
+      <div class="container mt-2">
+        <div class="text">Semester 2</div>
+        <table class="table table-bordered table-hover">
+            <thead>
+              <tr class="tb-row">
+                <th class="td-head" scope="col"> </th>
+                <th class="td-head" scope="col">Course ID</th>
+                <th class="td-head" scope="col">Course Name</th>
+                <th class="td-head" scope="col">Credits</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox1">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox2">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox3">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox4">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">
+                  <input class="tb-check-input" type="checkbox" id="checkbox5">
+                </th>
+                <td class="td-custom">ICT3.001</td>
+                <td class="td-custom">Introduction to Cryptography</td>
+                <td class="td-custom">4</td>
+              </tr>
+              
+            </tbody>
           </table>
+    </div>
+
+        <!-- Submit Button -->
+        <div class="container mt-4 text-end">
+          <button type="submit" class="btn submit-btn btn-primary btn-lg">Submit</button>
         </div>
 
-        <!-- Footer -->
-        <div class="container-fluid mt-2">
-          <footer>
-              <div class="row">
-                  <div class="col-md-4 infor">
-                      <img class="white-logo" src="../images/white_logo.png">
-                      <!--Address-->
-                      <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
-                          Address
-                      </p>
-                      <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
-                      <hr class="divider">
-  
-                      <!--Phone-->
-                      <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
-                      Phone</p>
-                      <p class="text-detail"> +84-24 37 91 69 60</p>
-                      <hr class="divider">
-                      
-                      <!--Email-->
-                      <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                          Email
-                      </p>
-                      <p class="text-detail">officeusth@usth.edu.vn</p>
-                      <hr class="divider">
-                      
-                      <!--Contact-->
-                      <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                          Contact
-                      <p class="text-detail">webmaster@usth.edu.vn</p>
-                      <hr class="divider">
-                      
-                  </div>
-  
-                  
+       <!-- Footer -->
+       <div class="container-fluid mt-2">
+        <footer>
+            <div class="row">
+                <div class="col-md-4 infor">
+                    <img class="white-logo" src="../images/white_logo.png">
+                    <!--Address-->
+                    <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
+                        Address
+                    </p>
+                    <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
+                    <hr class="divider">
+
+                    <!--Phone-->
+                    <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
+                    Phone</p>
+                    <p class="text-detail"> +84-24 37 91 69 60</p>
+                    <hr class="divider">
+                    
+                    <!--Email-->
+                    <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                        Email
+                    </p>
+                    <p class="text-detail">officeusth@usth.edu.vn</p>
+                    <hr class="divider">
+                    
+                    <!--Contact-->
+                    <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                        Contact
+                    <p class="text-detail">webmaster@usth.edu.vn</p>
+                    <hr class="divider">
+                    
+                </div>
+
+                
               </div>
           </footer>
-      </div>
+        </div>
     </body>
 </html>

@@ -32,7 +32,11 @@ ul.nav {
   
 
 .header_text{
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    font-family: 'Roboto Slab', serif; 
     color: #293895;
+    margin: 15px 15px 30px 10px;
+    padding-bottom: 20px;
     font-size: 37px;
     font-style: normal;
     font-weight: 700;
