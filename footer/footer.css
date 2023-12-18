@@ -1,32 +1,29 @@
 footer {
-    background-image: url(/images/background_img.png);
+    background-image: url("../images/background_img.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width:100% auto;
-    height: 100% auto; 
-    margin-top: 20px; 
-    padding: 0px; 
+    width:100%;
 }
 .white-logo{
-    margin-top:10px;
-    margin-bottom: 20px;
+    margin-top:55px;
+    margin-bottom: 22px;
 }
 
 .infor{
-    margin-left: 100px;
-    margin-bottom: 5px;
+    margin-left:180px;
+    margin-bottom: 100px;
 }
 .detail{
     color: #DBE0FC;
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 .text-detail{
     color: #FFF;
-    font-size: 12px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -34,9 +31,9 @@ footer {
 .divider{
     color:#FFF;
     height:1px;
-    margin-bottom: 5px; 
 }
 .icon-footer{
     color:#9DA9EC;
     margin-right: 9px;
 }
+
