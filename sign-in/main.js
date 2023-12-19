@@ -4,7 +4,7 @@ function validateForm() {
     document.getElementById("passwordError").innerText = "";
 
     // Get values from the form
-    var account = document.getElementById("account").value;
+    var account = document.getElementById("user_id").value;
     var password = document.getElementById("password").value;
 
     // Email validation

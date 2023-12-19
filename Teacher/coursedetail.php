@@ -1,3 +1,28 @@
+<?php 
+
+  include '../db_conn.php';
+  if (isset($_GET['id'])) {
+
+    $course_id = $_GET['id']; 
+
+    $sql = "SELECT * FROM `course` WHERE `Course_ID`='$course_id'";
+
+    $result = $conn->query($sql); 
+
+    if ($result->num_rows > 0) {        
+
+        while ($row = $result->fetch_assoc()) {
+            $name = $row['Course_Name'];
+            $year = $row['Year'];
+            $lastname = $row['LastName'];
+            $email = $row['Email'];
+            $phone = $row['Phone'];
+            $tprogram_id = $row['TProgram_ID'];
+        } 
+      }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

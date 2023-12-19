@@ -20,8 +20,8 @@
     
             <!-- Username Input -->
             <div class="form-group">
-              <label for="account" class="tittle_text">Account:</label>
-              <input type="email" class="form-control" id="account" name="account" placeholder="Enter your account">
+              <label for="user_id" class="tittle_text">User ID:</label>
+              <input type="email" class="form-control" id="user_id" name="user_id" placeholder="Enter your account">
               <small class="error-message" id="usernameError"></small>
             </div>
     

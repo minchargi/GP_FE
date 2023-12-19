@@ -1,3 +1,11 @@
+<?php 
+    include '../db_conn.php';
+    session_start();
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT * FROM course WHERE Teacher_ID = '$user_id'";
+    $result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,20 +92,26 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for creating a class -->
-                    <form id="createClassForm">
-                        <div class="form-group">
-                            <label for="className">Class Name:</label>
-                            <input type="text" class="form-control" id="className" required>
-                        </div>
+                    <form id="createClassForm" action="create_class.php" method=post>
                         <div class="form-group">
                             <label for="classCode">Class Code:</label>
-                            <input type="text" class="form-control" id="classCode" required>
+                            <input type="text" class="form-control" id="classCode" name="classCode" required>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="className">Class Name:</label>
+                            <input type="text" class="form-control" id="className" name="className" required>
                         </div>
                         <div class="form-group">
-                            <label for="classCode">Class Information:</label>
-                            <input type="text" class="form-control" id="classInfor" required>
+                            <label for="tprogram">Training program:</label>
+                            <input type="text" class="form-control" id="tprogram" name="tprogram" required>
                         </div>
-                        <button type="button" class="btn btn-custom" onclick="createClass()">Create Class</button>
+                        <div class="form-group">
+                            <label for="optional">Optional:</label>
+                            <input type="hidden" name="optional" value="0">
+                            <input type="checkbox" name="optional" value="1">
+                        </div>
+
+                        <button type="submit" class="btn btn-custom" name="submit">Create Class</button>
                     </form>
                 </div>
             </div>
@@ -105,48 +119,17 @@
     </div>
     
    <div class="container mt-4">
+        <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+        ?>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
+            <a class="link_course" href="coursedetail.php?id=<?php echo $row['Course_ID']; ?>"><?php echo $row['Course_Name']; ?></a>
         </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
+        <?php       
+                }
+            }
+        ?>   
    </div>
    <div class="container-fluid mt-4">
     <footer>

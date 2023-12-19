@@ -2,11 +2,11 @@
 include '../db_conn.php';
 
 // Retrieve data from the form
-$account = $_POST['account'];
+$user_id = $_POST['user_id'];
 $password = $_POST['password'];
 
 // Perform SQL query to check user credentials
-$sql = "SELECT * FROM users WHERE Account='$account' AND Password='$password'";
+$sql = "SELECT * FROM users WHERE User_ID='$user_id' AND Password='$password'";
 $result = $conn->query($sql);
 
 // Check if the query returns a row (valid user)
@@ -17,9 +17,7 @@ if ($result->num_rows > 0) {
     // Set session variables
     session_start();
     $_SESSION['user_id'] = $row['User_ID'];
-    echo $_SESSION['user_id'];
     $_SESSION['role'] = $row['Role'];
-    echo $_SESSION['role'];
     // Redirect based on the user's role
     if ($row['Role'] === 'Admin') {
         header("Location: ../student");
