@@ -6,7 +6,7 @@
     <title>SignIn</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
 
 </head>
@@ -20,8 +20,8 @@
     
             <!-- Username Input -->
             <div class="form-group">
-              <label for="username" class="tittle_text">Username:</label>
-              <input type="username" class="form-control" id="username" name="username" placeholder="Enter your username">
+              <label for="account" class="tittle_text">Account:</label>
+              <input type="email" class="form-control" id="account" name="account" placeholder="Enter your account">
               <small class="error-message" id="usernameError"></small>
             </div>
     
