@@ -27,7 +27,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+              <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
                     <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
                   </li>
@@ -51,10 +51,14 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="account_index.php">
-                      <i class="fas fa-user-circle"></i> 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-user-circle"></i>
                     </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="account_index.php">Account</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
                   </li>
                 </ul>
               </div>

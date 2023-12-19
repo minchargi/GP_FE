@@ -6,7 +6,7 @@
     <title>SignIn</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style (1).css">
+    <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
 
 </head>
@@ -18,11 +18,11 @@
     
             <h2 class="text-center header_text">Sign In</h2>
     
-            <!-- Email Input -->
+            <!-- Username Input -->
             <div class="form-group">
-              <label for="email" class="tittle_text">Email:</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-              <small class="error-message" id="emailError"></small>
+              <label for="username" class="tittle_text">Username:</label>
+              <input type="username" class="form-control" id="username" name="username" placeholder="Enter your username">
+              <small class="error-message" id="usernameError"></small>
             </div>
     
             <!-- Password Input -->

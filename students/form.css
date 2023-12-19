@@ -36,7 +36,7 @@
 }
 .form-control{
     background-color:#F6F6F6;
-    color: #fdfcfc;
+    color: #000;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -69,5 +69,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+#password, #oldPassword, #confirmPassword {
+    color: black; 
 }
 
