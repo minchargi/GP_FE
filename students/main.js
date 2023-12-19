@@ -1,16 +1,22 @@
 function validateForm() {
     // Reset error messages
-    document.getElementById("emailError").innerText = "";
+    document.getElementById("usernameError").innerText = "";
     document.getElementById("passwordError").innerText = "";
 
     // Get values from the form
-    var email = document.getElementById("email").value;
+    var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    // Email validation
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      document.getElementById("emailError").innerText = "Please enter a valid email address";
+    // Username validation
+    var usernameRegex = /^[a-zA-Z0-9_-]+$/;
+    if (!usernameRegex.test(username)) {
+      document.getElementById("usernameError").innerText = "Username contains invalid characters. Only letters, numbers, underscores, and hyphens are allowed.";;
+      return; 
+    }
+    
+    // Length constraints
+    if (username.length < 3 || username.length > 20) {
+      document.getElementById("usernameError").innerText = "Username length should be between 3 and 20 characters.";
       return;
     }
 
@@ -24,8 +30,6 @@ function validateForm() {
     // If all validations pass, submit the form or perform further actions
     document.getElementById("signInForm").submit();
 
-    // After successful login, redirect to another page
-    window.location.href = 'announce_index.html';
-  }
+}
 
     

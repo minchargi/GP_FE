@@ -6,14 +6,18 @@
     <title>coursedetail</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="courseDetail.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../Teacher/courseDetail.css">
+    <link rel="stylesheet" href="../Teacher/navbar.css">
+    <link rel="stylesheet" href="../Teacher/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="studentList.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
+    
         <header>
             <nav class="navbar navbar-expand-md navbar-light bg-light">
               <a class="navbar-brand" href="#">
@@ -26,15 +30,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="announcement.php"><i class="fas fa-home"></i> Announcement</a>
+                      <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
                     </li>
                     <li class="nav-item ">
-                      <a class="nav-link" href="course.php"> 
+                      <a class="nav-link" href="../Teacher/course.php"> 
                         <i class="fas fa-book"></i> Course
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                        <a class="nav-link" href="../Teacher/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
                       </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,21 +52,25 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <i class="fas fa-user-circle"></i> 
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i>
                       </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../Teacher/account.php">Account</a></li>
+                        <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
               </div>
             </nav>
         </header>
-    </div>
+    
     <ul class="nav">
-        <li class="active"><a href="coursedetail.php">Overview</a></li>
-        <li><a href="studentList.php">Student List</a></li>
-        <li><a href="attendance.php">Attendance</a></li>
+        <li class="active"><a href="../Teacher/coursedetail.php">Overview</a></li>
+        <li><a href="../Teacher/studentList.php">Student List</a></li>
+        <li><a href="../Teacher/attendance.php">Attendance</a></li>
     </ul>
     
     <div class="container mt-4">

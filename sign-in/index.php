@@ -14,14 +14,14 @@
     <div class="container mt-5 d-flex align-items-center justify-content-center">
         <div class=" col-md-6 theForm">
     
-          <form id="signInForm" class="bg-white p-4 shadow rounded">
+          <form id="signInForm" class="bg-white p-4 shadow rounded" action="login.php" method="post">
     
             <h2 class="text-center header_text">Sign In</h2>
     
             <!-- Username Input -->
             <div class="form-group">
-              <label for="username" class="tittle_text">Username:</label>
-              <input type="email" class="form-control" id="username" name="username" placeholder="Enter your email">
+              <label for="account" class="tittle_text">Account:</label>
+              <input type="email" class="form-control" id="account" name="account" placeholder="Enter your account">
               <small class="error-message" id="usernameError"></small>
             </div>
     

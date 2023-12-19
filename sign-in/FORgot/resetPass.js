@@ -19,7 +19,7 @@ function changePassword() {
       document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
       return;
     }
-
+    
 
     // Display a message for demonstration purposes
     alert("Password changed successfully!");
