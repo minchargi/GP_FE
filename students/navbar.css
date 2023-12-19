@@ -24,23 +24,3 @@
 .dropdown-toggle::after {
     display: none; 
 }
-
-.navbar2 {
-    background-color: #293895; 
-    overflow: hidden; 
-    margin-bottom: 5px; 
-}
-
-.navbar2 a {
-    float: left; 
-    display: block; 
-    color: white; 
-    text-align: center; 
-    padding: 14px 14px; 
-    text-decoration: none; 
-}
-
-.navbar2 a:hover {
-    background-color: #EB1C24;
-    color: white; 
-}
