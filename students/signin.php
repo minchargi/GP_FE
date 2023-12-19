@@ -14,7 +14,7 @@
     <div class="container mt-5 d-flex align-items-center justify-content-center">
         <div class=" col-md-6 theForm">
     
-          <form id="signInForm" class="bg-white p-4 shadow rounded">
+          <form id="signInForm" class="bg-white p-4 shadow rounded" action="login.php" method="post">
     
             <h2 class="text-center header_text">Sign In</h2>
     

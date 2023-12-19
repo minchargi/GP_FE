@@ -1,3 +1,19 @@
+<?php
+
+  include '../db_conn.php';
+  session_start();
+  if(!isset($_SESSION["user_id"]))
+  {
+    header('location: ../sign-in');
+  } else {
+    $user_id = $_SESSION["user_id"];
+    $sql = "SELECT * FROM users WHERE User_ID = '$user_id'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
@@ -66,7 +82,7 @@
             <div class="container-fluid">
               <div class="name-box">
                 <div class="container">
-                  <span>Student's Name</span>
+                  <span><?php echo $row['FirstName'],' ',$row['LastName']; ?></span>
                 </div>
               </div>
               <div class="detail-box"> 
@@ -76,15 +92,15 @@
                 </div>
                 <div class="container">
                   <p><b>Email:</b></p>
-                  <span>abc@gmail.com</span>
+                  <span><?php echo $row['Email']; ?></span>
                 </div>
                 <div class="container">
-                  <p><b>Intake:</b></p>
-                  <span>2021-2024</span>
+                  <p><b>Phone:</b></p>
+                  <span><?php echo $row['Phone']; ?></span>
                 </div>
                 <div class="container">
-                  <p><b>Username:</b></p>
-                  <span>abcde12345</span>
+                  <p><b>Training Program:</b></p>
+                  <span><?php echo $row['TProgram_ID']; ?></span>
                 </div>
                 <div class="container">
                   <p><b>Password:</b></p>
@@ -96,6 +112,11 @@
               </div>
             </div>
         </section>
+        <?php       
+              }
+            }
+          }
+        ?>   
         
         <!-- Footer -->
         <div class="container-fluid mt-2">

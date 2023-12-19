@@ -24,8 +24,6 @@ function validateForm() {
     // If all validations pass, submit the form or perform further actions
     document.getElementById("signInForm").submit();
 
-    // After successful login, redirect to another page
-    window.location.href = 'announce_index.html';
-  }
+}
 
     
