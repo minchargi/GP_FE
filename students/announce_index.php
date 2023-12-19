@@ -57,7 +57,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="account_index.php">Account</a></li>
-                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                      <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                     </ul>
                   </li>
                 </ul>
