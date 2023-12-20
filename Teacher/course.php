@@ -14,37 +14,41 @@
     <title>Course</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="course.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../Teacher/course.css">
+    <link rel="stylesheet" href="../Teacher/navbar.css">
+    <link rel="stylesheet" href="../Teacher/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="course.js"></script>
 
 </head>
 <body>
-    <div class="container-fluid">
-        <header>
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-              <a class="navbar-brand" href="#">
-                <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
-              </a>
-              <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="announcement.php"><i class="fas fa-home"></i> Announcement</a>
+    
+<header>
+          <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
+            </a>
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="../Teacher/course.php"> 
+                      <i class="fas fa-book"></i> Course
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../Teacher/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
                     </li>
-                    <li class="nav-item ">
-                      <a class="nav-link" href="course.php"> 
-                        <i class="fas fa-book"></i> Course
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
-                      </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-calendar"></i> Timetable
@@ -57,16 +61,22 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="profile.php">
-                        <i class="fas fa-user-circle"></i> 
-                      </a>
-                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-user-circle"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../Teacher/profile.php">Account</a></li>
+                      <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
+                    </ul>
+                  </li>
                   </ul>
                 </div>
               </div>
-            </nav>
-        </header>
+            </div>
+          </nav>
+      </header>
+
     </div>
     <div class="container mt-4">
         <p class="header_text">Courses</p>
@@ -124,55 +134,86 @@
                 while ($row = $result->fetch_assoc()) {
         ?>
         <div class="courseDetail">
-            <a class="link_course" href="coursedetail.php?id=<?php echo $row['Course_ID']; ?>"><?php echo $row['Course_Name']; ?></a>
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
         </div>
-        <?php       
-                }
-            }
-        ?>   
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+        </div>
    </div>
-   <div class="container-fluid mt-4">
-    <footer>
-        <div class="row">
-            <div class="col-md-4 infor">
-                <img class="white-logo" src="../images/white_logo.png">
-                <!--Address-->
-                <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
-                    Address
-                </p>
-                <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
-                <hr class="divider">
+      <div class="container-fluid mt-4">
+        <footer>
+            <div class="row">
+                <div class="col-md-4 infor">
+                    <img class="white-logo" src="../images/white_logo.png">
+                    <!--Address-->
+                    <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
+                        Address
+                    </p>
+                    <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
+                    <hr class="divider">
 
-                <!--Phone-->
-                <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
-                Phone</p>
-                <p class="text-detail"> +84-24 37 91 69 60</p>
-                <hr class="divider">
-                
-                <!--Email-->
-                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                    Email
-                </p>
-                <p class="text-detail">officeusth@usth.edu.vn</p>
-                <hr class="divider">
-                
-                <!--Contact-->
-                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                    Contact
-                <p class="text-detail">webmaster@usth.edu.vn</p>
-                <hr class="divider">
+                    <!--Phone-->
+                    <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
+                    Phone</p>
+                    <p class="text-detail"> +84-24 37 91 69 60</p>
+                    <hr class="divider">
+                    
+                    <!--Email-->
+                    <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                        Email
+                    </p>
+                    <p class="text-detail">officeusth@usth.edu.vn</p>
+                    <hr class="divider">
+                    
+                    <!--Contact-->
+                    <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                        Contact
+                    <p class="text-detail">webmaster@usth.edu.vn</p>
+                    <hr class="divider">
+                    
+                </div>
+
                 
             </div>
+        </footer>
+    </div>
 
-            
-        </div>
-    </footer>
-</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script src="course.js"></script>
-
-</body>
+  </body>
 </html>

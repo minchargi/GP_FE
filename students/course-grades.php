@@ -38,54 +38,59 @@ include '../db_conn.php';
 <body>
   <!-- Navbar-->
   <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
-      </a>
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="announce_index.php"><i class="fas fa-home"></i> Announcement</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="course-overview_index.php">
-                <i class="fas fa-book"></i> Course
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-calendar"></i> Timetable
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
-                <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="account_index.php">
-                <i class="fas fa-user-circle"></i>
-              </a>
-            </li>
-          </ul>
+          <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+          <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
+            </a>
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../students/announce.php">
+                  <i class="fas fa-home"></i> Announcement</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../students/course-overview.php"> 
+                  <i class="fas fa-book"></i> Course
+                </a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="../students/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+                  </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-calendar"></i> Timetable
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
+                  <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-user-circle"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../students/account.php">Account</a></li>
+                  <li><a class="dropdown-item" href="../students/course-gpa.php">GPA</a></li>
+                  <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
   <ul class="nav">
-    <li class="active"><a href="course-grades_index.php">Grades</a></li>
-    <li><a href="attendance_index.php">Attendance</a></li>
-    <li><a href="course-grades-gpa_index.php">GPA</a></li>
+    <li class="active"><a href="../students/course-grades.php">Grades</a></li>
+    <li><a href="../students/attendance.php">Attendance</a></li>
   </ul>
 
   
