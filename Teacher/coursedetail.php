@@ -67,7 +67,51 @@
     
     <div class="container mt-4">
         <p class="header_text">Course Name</p>
+        <div class="button-container">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="button-content gap-4">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  Edit
+              </span>
+          </button>
+      </div>
     </div>
+
+    <!-- Edit Modal -->
+  <!-- Edit Modal -->
+  <div class="modal" id="editModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Course Overview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your form elements for editing here -->
+          <label for="editedContent">Edit Content:</label>
+          <textarea class="form-control" id="editedContent" rows="4"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4 course-detail">
+        <dl>
+          <dt>Attendance
+            <dd>Attendance will be checked for every labwork</dd>
+            <dd>Students should remind the lecturers to check attendance if they forget it.</dd>
+          </dt>
+        </dl>
+        <ul class="sub">After a labwork session, you have 7 days to complete the exercises 
+          <li>Write a report of at least 2 pages to describe your work (figure and table), discussion, and analysis of lab work. </li>
+          <li> Submit in PDF format to Google Classroom (link above) </li>
+          <li><b>Source code is optional</b> in the report</li>
+        </ul>
+
+  </div>
 
     <div class="container-fluid mt-4">
         <footer>
@@ -106,6 +150,11 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="courseDetail.js"></script>
 
 </body>
 </html>
