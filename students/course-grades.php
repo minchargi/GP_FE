@@ -1,22 +1,43 @@
+<?php
+
+
+include '../db_conn.php';
+  session_start();
+  if(!isset($_SESSION["user_id"]))
+  {
+    header('location: ../sign-in');
+  } else {
+    $user_id = $_SESSION["user_id"];
+    $sql = "SELECT u.*, g.*, c.Course_Name, c.Course_ID
+    FROM users u
+    INNER JOIN grade g ON u.User_ID = g.Student_ID
+    INNER JOIN course c ON c.Course_ID = g.Course_ID
+    WHERE u.User_ID = '$user_id'";
+    $result = $conn->query($sql);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
-    <head> 
-        <title>Grades</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="../students/style.css">
-        <link rel="stylesheet" href="../students/navbar.css">
-        <link rel="stylesheet" href="../students/footer.css">
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </head>
 
-    <body> 
-        <!-- Navbar-->
-        <header>
+<head>
+  <title>Grades</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <!-- Navbar-->
+  <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
           <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -57,6 +78,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="../students/account.php">Account</a></li>
+                  <li><a class="dropdown-item" href="../students/course-gpa.php">GPA</a></li>
                   <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                 </ul>
               </li>
@@ -65,84 +87,92 @@
         </div>
       </nav>
     </header>
-        <ul class="nav">
-          <li class="active"><a href="../students/course-grades.php">Grades</a></li>
-          <li><a href="../students/attendance.php">Attendance</a></li>
-          <li><a href="../students/course-grades-gpa.php">GPA</a></li>
-        </ul>
 
-        <h1>Course Name</h1>
-        <div class="container mt-2">
-          <table class="table table-bordered">
-              <thead>
-                <tr class="tb-row">
-                  <th class="td-head" scope="col">Student ID</th>
-                  <th class="td-head" scope="col">Name</th>
-                  <th class="td-head" scope="col">Attendance</th>
-                  <th class="td-head" scope="col">Midterm </th>
-                  <th class="td-head" scope="col">Final </th>
-                  <th class="td-head" scope="col">Total </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row"> </th>
-                  <td class="td-custom"> </td>
-                  <td class="td-custom">10%</td>
-                  <td class="td-custom">40%</td>
-                  <td class="td-custom">50%</td>
-                  <td class="td-custom">100%</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                
-              </tbody>
-            </table>
-      </div>
+  <ul class="nav">
+    <li class="active"><a href="../students/course-grades.php">Grades</a></li>
+    <li><a href="../students/attendance.php">Attendance</a></li>
+  </ul>
 
-         <!-- Footer -->
-         <div class="container-fluid mt-2">
-          <footer>
-              <div class="row">
-                  <div class="col-md-4 infor">
-                      <img class="white-logo" src="../images/white_logo.png">
-                      <!--Address-->
-                      <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
-                          Address
-                      </p>
-                      <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
-                      <hr class="divider">
   
-                      <!--Phone-->
-                      <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
-                      Phone</p>
-                      <p class="text-detail"> +84-24 37 91 69 60</p>
-                      <hr class="divider">
-                      
-                      <!--Email-->
-                      <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                          Email
-                      </p>
-                      <p class="text-detail">officeusth@usth.edu.vn</p>
-                      <hr class="divider">
-                      
-                      <!--Contact-->
-                      <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                          Contact
-                      <p class="text-detail">webmaster@usth.edu.vn</p>
-                      <hr class="divider">
-                      
-                  </div>
-  
-                  
-              </div>
-          </footer>
+
+  <h1>Course Name</h1>
+  <div class="container mt-2">
+    <table class="table table-bordered">
+      <thead>
+        <tr class="tb-row">
+          <th class="td-head" scope="col">Course ID</th>
+          <th class="td-head" scope="col">Course Name</th>
+          <th class="td-head" scope="col">Attendance</th>
+          <th class="td-head" scope="col">Midterm </th>
+          <th class="td-head" scope="col">Final </th>
+          <th class="td-head" scope="col">Total </th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+        ?>
+
+            <tr class="tb-row">
+              <td><?= $row['Course_ID'] ?></td>
+              <td><?= $row['Course_Name'] ?></td>
+              <td><?= $row['Attendance'] ?></td>
+              <td><?= $row['Midterm'] ?></td>
+              <td><?= $row['Final'] ?></td>
+              <td><?= $row['Overall'] ?></td>
+            </tr>
+          <?php }
+        } else { ?>
+
+          <tr>
+            <td colspan="5">No records found...</td>
+          </tr>
+
+        <?php }} ?>
+      </tbody>
+
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid mt-2">
+    <footer>
+      <div class="row">
+        <div class="col-md-4 infor">
+          <img class="white-logo" src="../images/white_logo.png">
+          <!--Address-->
+          <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
+            Address
+          </p>
+          <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
+          <hr class="divider">
+
+          <!--Phone-->
+          <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
+            Phone</p>
+          <p class="text-detail"> +84-24 37 91 69 60</p>
+          <hr class="divider">
+
+          <!--Email-->
+          <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+            Email
+          </p>
+          <p class="text-detail">officeusth@usth.edu.vn</p>
+          <hr class="divider">
+
+          <!--Contact-->
+          <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+            Contact
+          <p class="text-detail">webmaster@usth.edu.vn</p>
+          <hr class="divider">
+
+        </div>
+
+
       </div>
-    </body>
+    </footer>
+  </div>
+</body>
+
 </html>

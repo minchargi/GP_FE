@@ -57,6 +57,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="../students/account.php">Account</a></li>
+                  <li><a class="dropdown-item" href="../students/course-gpa.php">GPA</a></li>
                   <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                 </ul>
               </li>
@@ -65,12 +66,6 @@
         </div>
       </nav>
     </header>
-
-        <ul class="nav">
-          <li><a href="../students/course-grades.php">Grades</a></li>
-          <li><a href="../students/attendance.php">Attendance</a></li>
-          <li class="active"><a href="../students/course-grades-gpa.php">GPA</a></li>
-        </ul>
 
         <h1>GPA</h1>
         <div class="container mt-2">

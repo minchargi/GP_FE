@@ -55,6 +55,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="../students/account.php">Account</a></li>
+                  <li><a class="dropdown-item" href="../students/course-gpa.php">GPA</a></li>
                   <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                 </ul>
               </li>
