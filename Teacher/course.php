@@ -27,7 +27,7 @@
 </head>
 <body>
     
-<header>
+    <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
               <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -75,7 +75,7 @@
               </div>
             </div>
           </nav>
-      </header>
+    </header>
 
     </div>
     <div class="container mt-4">

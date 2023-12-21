@@ -1,0 +1,50 @@
+.name-box .container { 
+    display: flex; 
+    align-items: center;  
+}
+
+.name-box .container span {
+    margin: 15px 15px 10px 20px;
+    font-size: 30px; 
+    color:#2A3C95;
+}
+
+.detail-box {
+    display: block; 
+    border-radius: 5px; 
+    width: 40%; 
+    margin-left: 100px; 
+}
+
+.detail-box .container {
+    display: flex; 
+    margin-left: 20px; 
+}
+
+.detail-box .container p {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px; 
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+}
+.detail-box .container span {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px; 
+    margin-left: 8px; 
+    margin-top: 10px; 
+}
+
+.detail-box button {
+    background-color: #2A3C95;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    margin-left: 300px; 
+    margin-bottom: 5px;  
+}
+
+.detail-box button:hover {
+    background-color: #EB1C24;
+}

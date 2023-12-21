@@ -17,7 +17,7 @@
 
 </head>
 <body>
-<header>
+      <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
               <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -66,124 +66,58 @@
             </div>
           </nav>
       </header>
-<ul class="nav">
-    <li><a href="../Teacher/coursedetail.php">Overview</a></li>
-    <li class="active"><a href="../Teacher/studentList.php">Student List</a></li>
-    <li><a href="../Teacher/attendance.php">Attendance</a></li>
-</ul>
-  <div class="container mt-4">
-    <p class="header-text">Student List</p>
-    <div class="button-container">
-        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#updateGradesModal">
-            <span class="button-content gap-4">
-                <i class="fas fa-plus-circle"></i>
-                Update Grade
-            </span>
-        </button>
-    </div>
-</div>
-
-<!-- Update Grades Modal -->
-<div class="modal fade" id="updateGradesModal" tabindex="-1" role="dialog" aria-labelledby="updateGradesModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="updateGradesModalLabel">Update Grade</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link" href="../Teacher/course.php"> 
-                        <i class="fas fa-book"></i> Course
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Teacher/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
-                      </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-calendar"></i> Timetable
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
-                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i>
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../Teacher/account.php">Account</a></li>
-                        <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-        </header>
-
-  <ul class="nav">
-      <li><a href="../Teacher/coursedetail.php">Overview</a></li>
-      <li class="active"><a href="../Teacher/studentList.php">Student List</a></li>
-      <li><a href="../Teacher/attendance.php">Attendance</a></li>
-  </ul>
-    <div class="container mt-4">
-      <p class="header-text">Student List</p>
-      <div class="button-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#updateGradesModal">
-              <span class="button-content gap-4">
-                  <i class="fas fa-plus-circle"></i>
-                  Update Grade
-              </span>
-          </button>
+      <ul class="nav">
+          <li><a href="../Teacher/coursedetail.php">Overview</a></li>
+          <li class="active"><a href="../Teacher/studentList.php">Student List</a></li>
+          <li><a href="../Teacher/attendance.php">Attendance</a></li>
+      </ul>
+      <div class="container mt-4">
+        <p class="header-text">Student List</p>
+        <div class="button-container">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#updateGradesModal">
+                <span class="button-content gap-4">
+                    <i class="fas fa-plus-circle"></i>
+                    Update Grade
+                </span>
+            </button>
+        </div>
       </div>
-  </div>
 
   <!-- Update Grades Modal -->
-  <div class="modal fade" id="updateGradesModal" tabindex="-1" role="dialog" aria-labelledby="updateGradesModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="updateGradesModalLabel">Update Grade</h5>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <!-- Form for updating grades -->
-                  <form id="updateGradesForm">
-                      <div class="form-group">
-                          <label for="studentInfo">Name or ID of Student:</label>
-                          <input type="text" class="form-control" id="studentInfo" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="gradeType">Select Grade Type:</label>
-                          <select class="form-control" id="gradeType" required>
-                              <option value="attendance">Attendance</option>
-                              <option value="midterm">Midterm</option>
-                              <option value="final">Final</option>
-                          </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="studentInfo">Grade:</label>
-                        <input type="text" class="form-control" id="studentGrade" required>
-                    </div>
-                      <button type="button" class="btn btn-custom" onclick="updateGrades()">Update</button>
-                  </form>
+      <div class="modal fade" id="updateGradesModal" tabindex="-1" role="dialog" aria-labelledby="updateGradesModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="updateGradesModalLabel">Update Grade</h5>
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Form for updating grades -->
+                      <form id="updateGradesForm">
+                          <div class="form-group">
+                              <label for="studentInfo">Name or ID of Student:</label>
+                              <input type="text" class="form-control" id="studentInfo" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="gradeType">Select Grade Type:</label>
+                              <select class="form-control" id="gradeType" required>
+                                  <option value="attendance">Attendance</option>
+                                  <option value="midterm">Midterm</option>
+                                  <option value="final">Final</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="studentInfo">Grade:</label>
+                            <input type="text" class="form-control" id="studentGrade" required>
+                        </div>
+                          <button type="button" class="btn btn-custom" onclick="updateGrades()">Update</button>
+                      </form>
+                  </div>
               </div>
           </div>
       </div>
-  </div>
       <div class="container mt-2">
           <table class="table table-bordered table-hover">
               <thead>
