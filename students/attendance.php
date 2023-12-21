@@ -89,7 +89,7 @@
                   <th class="td-head" scope="col">8 </th>
                   <th class="td-head" scope="col">9 </th>
                   <th class="td-head" scope="col">10 </th>
-                  <th class="td-head" scope="col"> 11 </th>
+                  <th class="td-head" scope="col">11 </th>
                   <th class="td-head" scope="col">12 </th>
                   <th class="td-head" scope="col">13</th>
                 </tr>
