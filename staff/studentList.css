@@ -10,23 +10,34 @@ h1 {
     padding-bottom: 20px; 
 }
 
-.courseDetail{
-    background-color:white;
-    border-radius: 5px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border: #000;
-    margin-bottom: 10px;
+.td-head{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
 }
-.link_course{
-    text-decoration: none;
-    font-size: 18px;
-    color:#293895;
-    margin-left:80px;
+.th-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
 }
-.link_course:hover{
-    color:#EB1C24;
+.td-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.container .text {
+    margin-left: 10px; 
+    font-size: 20px; 
+    text-align: left; 
+    
 }
 
 .custom-button:hover {
