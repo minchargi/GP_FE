@@ -1,0 +1,93 @@
+h1 {
+    font-size: 37px;
+    line-height: 1.3; 
+    color: #2A3C95;
+    font-weight: 700; 
+    font-family: 'Roboto Slab', serif; 
+    margin: 15px 15px 30px 80px; 
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    text-align: left; 
+    padding-bottom: 20px; 
+}
+
+.accordion {
+    width: 700px; 
+    padding-bottom: 20px; 
+    margin-left: 80px; 
+}
+
+.accordion-item {
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+}
+
+.accordion-header {
+    background-color: white;
+    font-weight: 600px;
+    border-radius: 5px; 
+    color: #2A3C95;
+    padding: 10px;
+    cursor: pointer; 
+    width: 100%; 
+    text-align: left; 
+    border: none; 
+    outline: none; 
+    font-size: 16px; 
+}
+
+.accordion-content {
+    font-family: 'Roboto', sans-serif; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease-out; 
+}
+
+.accordion-content ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.accordion-content li a {
+    display: block; 
+    padding: 10px; 
+    text-decoration: none; 
+    color: #000; 
+}
+
+.accordion-content li a:hover {
+    background-color: #f0f0f0; 
+    color: #EB1C24;
+}
+
+.custom-button:hover {
+    background-color: #EB1C24;
+    color: white; 
+}
+
+.btn-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-button {
+    background-color: #293895;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    height: 50px; 
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    border: none;
+    border-radius: 5px;
+}
+
+.custom-button i{
+    color:#EB1C24;
+}
