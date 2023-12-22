@@ -1,34 +1,14 @@
-<?php
-
-
-include '../db_conn.php';
-  session_start();
-  if(!isset($_SESSION["user_id"]))
-  {
-    header('location: ../sign-in');
-  } else {
-    $user_id = $_SESSION["user_id"];
-    $sql = "SELECT u.*, g.*, c.Course_Name, c.Course_ID
-    FROM users u
-    INNER JOIN grade g ON u.User_ID = g.Student_ID
-    INNER JOIN course c ON c.Course_ID = g.Course_ID
-    WHERE u.User_ID = '$user_id'";
-    $result = $conn->query($sql);
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
-  <title>Grades</title>
+  <title>Course Details</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="coursedetail.css">
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="footer.css">
   <!-- JQuery -->
@@ -89,52 +69,27 @@ include '../db_conn.php';
     </header>
 
   <ul class="nav">
-    <li><a href="../students/coursedetail.php">Overview</a></li>
-    <li class="active"><a href="../students/course-grades.php">Grades</a></li>
+    <li class="active"><a href="../students/coursedetail.php">Overview</a></li>
+    <li><a href="../students/course-grades.php">Grades</a></li>
     <li><a href="../students/attendance.php">Attendance</a></li>
   </ul>
 
-  
-
   <h1>Course Name</h1>
-  <div class="container mt-2">
-    <table class="table table-bordered">
-      <thead>
-        <tr class="tb-row">
-          <th class="td-head" scope="col">Course ID</th>
-          <th class="td-head" scope="col">Course Name</th>
-          <th class="td-head" scope="col">Attendance</th>
-          <th class="td-head" scope="col">Midterm </th>
-          <th class="td-head" scope="col">Final </th>
-          <th class="td-head" scope="col">Total </th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-        ?>
+  <div class="container mt-4 course-detail">
+        <dl>
+          <dt>Attendance
+            <dd>Attendance will be checked for every labwork</dd>
+            <dd>Students should remind the lecturers to check attendance if they forget it.</dd>
+          </dt>
+        </dl>
+        <ul class="sub">After a labwork session, you have 7 days to complete the exercises 
+          <li>Write a report of at least 2 pages to describe your work (figure and table), discussion, and analysis of lab work. </li>
+          <li> Submit in PDF format to Google Classroom (link above) </li>
+          <li><b>Source code is optional</b> in the report</li>
+        </ul>
 
-            <tr class="tb-row">
-              <td><?= $row['Course_ID'] ?></td>
-              <td><?= $row['Course_Name'] ?></td>
-              <td><?= $row['Attendance'] ?></td>
-              <td><?= $row['Midterm'] ?></td>
-              <td><?= $row['Final'] ?></td>
-              <td><?= $row['Overall'] ?></td>
-            </tr>
-          <?php }
-        } else { ?>
-
-          <tr>
-            <td colspan="5">No records found...</td>
-          </tr>
-
-        <?php }} ?>
-      </tbody>
-
-    </table>
   </div>
+  
 
   <!-- Footer -->
   <div class="container-fluid mt-2">

@@ -28,19 +28,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/grades.html">Grades</a></li>
+                  <a class="nav-link" href="../staff/grades.php">Grades</a></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../staff/courses.html">Courses</a></li>
+                    <a class="nav-link" href="../staff/courses.php">Courses</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/students.html">Students</a></li>
+                  <a class="nav-link" href="../staff/students.php">Students</a></li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../staff/departments.html">Departments</a></li>
+                    <a class="nav-link" href="../staff/departments.php">Departments</a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user-circle"></i>
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="../staff/account.html">Account</a></li>
+                    <li><a class="dropdown-item" href="../staff/account.php">Account</a></li>
                     <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                   </ul>
                 </li>
@@ -51,8 +51,8 @@
       </header>
 
       <ul class="nav">
-        <li class="active"><a href="../staff/attend.html">Attendance</a></li>
-        <li><a href="../staff/enroll.html">Enrollment</a></li>
+        <li class="active"><a href="../staff/attend.php">Attendance</a></li>
+        <li><a href="../staff/enroll.php">Enrollment</a></li>
       </ul>
 
         <!-- Main content -->

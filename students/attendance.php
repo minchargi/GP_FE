@@ -68,6 +68,7 @@
     </header>
 
         <ul class="nav">
+        <li><a href="../students/coursedetail.php">Overview</a></li>
           <li><a href="../students/course-grades.php">Grades</a></li>
           <li class="active"><a href="../students/attendance.php">Attendance</a></li>
         </ul>

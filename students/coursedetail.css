@@ -1,0 +1,92 @@
+h1 {
+    font-size: 37px;
+    line-height: 1.3; 
+    color: #2A3C95;
+    font-weight: 700; 
+    font-family: 'Roboto Slab', serif; 
+    margin: 15px 15px 30px 80px; 
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    text-align: left; 
+    padding-bottom: 20px; 
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+
+ul.nav {
+    padding: 0px;
+    background-color: #293895;
+    text-align: center;
+    justify-content: center;
+  }
+  ul.nav > li {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 5px;
+  }
+  ul.nav > li:hover {
+    background-color: #EB1C24;
+  }
+  ul.nav > li.active {
+    background-color: #EB1C24 ;
+  }
+  ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+.sub{
+  margin-left:0px;
+
+}
+.custom-button:hover {
+  background-color: none;
+  color: #EB1C24;
+}
+.button-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.custom-button {
+  background-color: #FFF;
+  color: #293895;
+  cursor: pointer;
+  width: 178px;
+  height: 61px;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+  border:none;
+}
+
+.custom-button i{
+  color:#EB1C24;
+}
+
+  
+
+.header_text{
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    font-family: 'Roboto Slab', serif; 
+    color: #293895;
+    margin: 15px 15px 30px 10px;
+    padding-bottom: 20px;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

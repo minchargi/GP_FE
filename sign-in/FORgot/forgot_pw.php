@@ -28,7 +28,7 @@
             <!-- Search Button -->
             <button type="button" class="btn btn-primary btn-block btn-click" onclick="searchEmail()">Search</button>
             <div>
-            <a class="link" href="resetPass.php">Reset?</a>
+            <a class="link" href="../sign-in/FORgot/resetPass.php">Reset?</a>
             </div>
           </form>
     
