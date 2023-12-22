@@ -89,6 +89,7 @@ include '../db_conn.php';
     </header>
 
   <ul class="nav">
+    <li><a href="../students/announceCourse.php">Announcement</a></li>
     <li><a href="../students/coursedetail.php">Overview</a></li>
     <li class="active"><a href="../students/course-grades.php">Grades</a></li>
     <li><a href="../students/attendance.php">Attendance</a></li>

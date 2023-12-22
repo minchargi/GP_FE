@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="../students/style.css">
+        <link rel="stylesheet" href="../students/courseList.css">
         <link rel="stylesheet" href="../students/navbar.css">
         <link rel="stylesheet" href="../students/footer.css">
         <script src="accordion.js"></script>
@@ -69,85 +69,41 @@
     </header>
 
          <!-- Main Content -->
-        <h1>Training Programs</h1>
+        <h1>Courses</h1>
 
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+        </div>
 
         <!-- Footer -->
         <div class="container-fluid mt-2">

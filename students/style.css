@@ -160,7 +160,6 @@ td {
 
 .accordion {
     width: 700px; 
-    padding-left: 20px; 
     padding-bottom: 20px; 
     margin-left: 80px; 
 }
@@ -171,6 +170,7 @@ td {
 }
 
 .accordion-header {
+    background-color: white;
     font-weight: 600px;
     border-radius: 5px; 
     color: #2A3C95;

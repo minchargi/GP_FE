@@ -1,0 +1,45 @@
+h1 {
+    font-size: 37px;
+    line-height: 1.3; 
+    color: #2A3C95;
+    font-weight: 700; 
+    font-family: 'Roboto Slab', serif; 
+    margin: 15px 15px 30px 80px; 
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    text-align: left; 
+    padding-bottom: 20px; 
+}
+
+.announce-accordion {
+    width: 700px;
+    padding-bottom: 20px; 
+    margin-left: 80px; 
+}
+
+.announce-accordion .accordion-item {
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+}
+
+.announce-accordion .accordion-header {
+    font-weight: 600;
+    background-color: white; 
+    color: #000000; 
+    padding: 10px; 
+    cursor: pointer; 
+    text-align: left; 
+    border: none; 
+    outline: none; 
+    font-size: 16px; 
+}
+
+.announce-accordion .accordion-content {
+    font-family: 'Roboto', sans-serif; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease-out; 
+}
+
+.announce-accordion p {
+    padding: 10px; 
+}

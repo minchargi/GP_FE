@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../staff/footer.css">
         <link rel="stylesheet" href="../staff/navbar.css">
-        <link rel="stylesheet" href="../staff/c_overview.css">
+        <link rel="stylesheet" href="../staff/courseList.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     </head>
@@ -62,37 +62,148 @@
         </button>
         </div>
       </div>
-      
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
       <div class="courseDetail">
         <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
       </div>
+
+      <div class="courseDetail">
+        <a class="link_course" href="../staff/attend.php">Machine Learning and Data Mining</a>
+        <span class="dropdown">
+          <a class="icon dropdown-toggle" id="iDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add to calendar</a></li>
+          </ul>
+          </div>
+        </span>
+      </div>
+
 
         <!-- Footer -->
         <div class="container-fluid mt-2">
