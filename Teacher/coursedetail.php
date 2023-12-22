@@ -39,11 +39,11 @@
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="studentList.js"></script>
+    <script src="courseDetail.js"></script>
 </head>
 <body>
     
-<header>
+      <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
               <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -94,8 +94,10 @@
       </header>
     
     <ul class="nav">
+        <li><a href="../Teacher/courseAnnounce.php">Announcement</a></li>
         <li class="active"><a href="../Teacher/coursedetail.php">Overview</a></li>
         <li><a href="../Teacher/studentList.php">Student List</a></li>
+        <li><a href="../Teacher/grades.php">Grades</a></li>
         <li><a href="../Teacher/attendance.php">Attendance</a></li>
     </ul>
     
@@ -136,6 +138,7 @@
           <dt>Attendance
             <dd>Attendance will be checked for every labwork</dd>
             <dd>Students should remind the lecturers to check attendance if they forget it.</dd>
+            <button class="btn-custom" onclick="checkAttendance()">Check Attendance</button>
           </dt>
         </dl>
         <ul class="sub">After a labwork session, you have 7 days to complete the exercises 
@@ -143,7 +146,8 @@
           <li> Submit in PDF format to Google Classroom (link above) </li>
           <li><b>Source code is optional</b> in the report</li>
         </ul>
-
+        <p class="head"><b>Student Score Chart </b></p>
+        <canvas id="gradesChart" width="400" height="200"></canvas>
   </div>
 
     <div class="container-fluid mt-4">
