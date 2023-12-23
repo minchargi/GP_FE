@@ -35,3 +35,25 @@ ul.nav {
     line-height: normal;
   }
   
+.td-head{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.th-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.td-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
