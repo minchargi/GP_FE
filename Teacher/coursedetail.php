@@ -94,7 +94,7 @@
       </header>
     
     <ul class="nav">
-        <li><a href="../Teacher/courseAnnounce.php">Announcement</a></li>
+        <li><a href="../Teacher/courseAnnouncement.php">Announcement</a></li>
         <li class="active"><a href="../Teacher/coursedetail.php">Overview</a></li>
         <li><a href="../Teacher/studentList.php">Student List</a></li>
         <li><a href="../Teacher/grades.php">Grades</a></li>
