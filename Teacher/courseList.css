@@ -60,32 +60,34 @@ h1 {
 }
 
 .custom-button:hover {
-    background-color: #EB1C24;
-    color: white; 
+    background-color: none;
+    color: #EB1C24;
 }
-
-.btn-container {
+.button-container {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 .custom-button {
-    background-color: #293895;
-    color: white;
+    background-color: #FFF;
+    color: #293895;
     cursor: pointer;
-    width: 100px;
-    height: 50px; 
+    width: 178px;
+    height: 61px;
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
     font-style: normal;
     line-height: normal;
-    border: none;
-    border-radius: 5px;
+    border:none;
+}
+
+.custom-button i{
+    color:#EB1C24;
 }
 
 .custom-button i{
