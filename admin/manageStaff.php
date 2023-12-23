@@ -32,11 +32,11 @@
                   <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../admin/manageAccount.html"><i class="fas fa-home"></i> Account</a>
-                </li>
+                    <a class="nav-link" href="../admin/manageAccount.html"><i class="fas fa-users-cog"></i> Account</a>
+                  </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-calendar"></i> Academic
+                        <i class="fas fa-graduation-cap"></i> Academic
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="../admin/curriculumList.html">Curriculum</a></li>
@@ -44,7 +44,7 @@
                 </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-calendar"></i> System
+                        <i class="fas fa-cog"></i> System
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="../admin/systemSetting.html">System Settings</a></li>
@@ -55,7 +55,7 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../admin/manageStaff.php"><i class="fas fa-home"></i> Staff</a>
+                    <a class="nav-link" href="../admin/manageStaff.php"><i class="fas fa-clipboard-user"></i> Staff</a>
                   </li>
                   <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
