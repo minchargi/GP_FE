@@ -84,8 +84,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -95,8 +95,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -106,8 +106,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -117,8 +117,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -128,8 +128,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -139,8 +139,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -150,8 +150,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -161,8 +161,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -172,8 +172,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -183,8 +183,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -194,8 +194,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -205,8 +205,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -216,8 +216,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
@@ -227,8 +227,8 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../Teacher/course.php">Second Year</a></li>
+              <li><a href="../Teacher/course.php">Third Year</a></li>
             </ul>
           </div>
         </div>
