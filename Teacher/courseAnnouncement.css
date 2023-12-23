@@ -1,0 +1,59 @@
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+
+ul.nav {
+    padding: 0px;
+    background-color: #293895;
+    text-align: center;
+    justify-content: center;
+  }
+  ul.nav > li {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 5px;
+  }
+  ul.nav > li:hover {
+    background-color: #EB1C24;
+  }
+  ul.nav > li.active {
+    background-color: #EB1C24 ;
+  }
+  ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .header-text{
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    font-family: 'Roboto Slab', serif; 
+    color: #293895;
+    margin: 15px 15px 30px 10px;
+    padding-bottom: 20px; 
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.link{
+    text-decoration: none;
+    color:#000;
+}
+.card{
+    margin-top: 5px;
+    overflow:hidden;
+}
+.delete-icon{
+    display: none;
+    position: absolute;
+    right: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #727272;
+}

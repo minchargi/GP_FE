@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,7 +17,7 @@
 
 </head>
 <body>
-      <header>
+        <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
               <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -67,277 +67,234 @@
           </nav>
       </header>
       <ul class="nav">
-          <li><a href="../Teacher/coursedetail.php">Overview</a></li>
-          <li class="active"><a href="../Teacher/studentList.php">Student List</a></li>
-          <li><a href="../Teacher/attendance.php">Attendance</a></li>
-      </ul>
-      <div class="container mt-4">
-        <p class="header-text">Student List</p>
-        <div class="button-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#updateGradesModal">
-                <span class="button-content gap-4">
-                    <i class="fas fa-plus-circle"></i>
-                    Update Grade
-                </span>
-            </button>
-        </div>
-      </div>
-
-  <!-- Update Grades Modal -->
-      <div class="modal fade" id="updateGradesModal" tabindex="-1" role="dialog" aria-labelledby="updateGradesModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="updateGradesModalLabel">Update Grade</h5>
-                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <!-- Form for updating grades -->
-                      <form id="updateGradesForm">
-                          <div class="form-group">
-                              <label for="studentInfo">Name or ID of Student:</label>
-                              <input type="text" class="form-control" id="studentInfo" required>
-                          </div>
-                          <div class="form-group">
-                              <label for="gradeType">Select Grade Type:</label>
-                              <select class="form-control" id="gradeType" required>
-                                  <option value="attendance">Attendance</option>
-                                  <option value="midterm">Midterm</option>
-                                  <option value="final">Final</option>
-                              </select>
-                          </div>
-                          <div class="form-group">
-                            <label for="studentInfo">Grade:</label>
-                            <input type="text" class="form-control" id="studentGrade" required>
-                        </div>
-                          <button type="button" class="btn btn-custom" onclick="updateGrades()">Update</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
+        <li><a href="../Teacher/courseAnnounce.php">Announcement</a></li>
+        <li><a href="../Teacher/coursedetail.php">Overview</a></li>
+        <li class="active"><a href="../Teacher/studentList.php">Student List</a></li>
+        <li><a href="../Teacher/grades.php">Grades</a></li>
+        <li><a href="../Teacher/attendance.php">Attendance</a></li>
+    </ul>
       <div class="container mt-2">
-          <table class="table table-bordered table-hover">
-              <thead>
-                <tr class="tb-row">
-                  <th class="td-head" scope="col">Student ID</th>
-                  <th class="td-head" scope="col">Name</th>
-                  <th class="td-head" scope="col">Attendance</th>
-                  <th class="td-head" scope="col">Midterm </th>
-                  <th class="td-head" scope="col">Final </th>
-                  <th class="td-head" scope="col">Total </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row"> </th>
-                  <td class="td-custom"> </td>
-                  <td class="td-custom">10%</td>
-                  <td class="td-custom">40%</td>
-                  <td class="td-custom">50%</td>
-                  <td class="td-custom">100%</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                
-                
-              </tbody>
-            </table>
-      </div>
-      <footer>
-            <div class="row mt-4">
+        <table class="table table-bordered table-hover">
+            <thead>
+              <tr class="tb-row">
+                <th class="td-head" scope="col">Student ID</th>
+                <th class="td-head" scope="col">Name</th>
+                <th class="td-head" scope="col">Date of birth</th>
+                <th class="td-head" scope="col">Phone Number</th>
+                <th class="td-head" scope="col">Class</th>
+                <th class="td-head" scope="col">Major</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+              <tr class="tb-row">
+                <th class="th-custom" scope="row">BI12-001 </th>
+                <td class="td-custom">Nguyễn Văn A</td>
+                <td class="td-custom">01/01/2003</td>
+                <td class="td-custom">0999999999</td>
+                <td class="td-custom">02</td>
+                <td class="td-custom">ICT</td>
+              </tr>
+
+              
+              
+            </tbody>
+          </table>
+    </div>
+    <div class="container-fluid mt-4">
+        <footer>
+            <div class="row">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->
@@ -367,10 +324,10 @@
                     <hr class="divider">
                     
                 </div>
-                <div class="copy-right  py-2 mt-4">
-                    <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
-                </div>
+
+                
             </div>
-      </footer>
-  </body>
+        </footer>
+    </div>
+</body>
 </html>
