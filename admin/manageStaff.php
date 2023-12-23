@@ -39,7 +39,7 @@
                       <i class="fas fa-calendar"></i> Academic
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../admin/curriculum.html">Curriculum</a></li>
+                      <li><a class="dropdown-item" href="../admin/curriculumList.html">Curriculum</a></li>
                     </ul>
                 </li>
                   <li class="nav-item dropdown">

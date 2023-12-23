@@ -17,7 +17,7 @@
 
     <body> 
         <!-- Navbar-->
-  <header>
+        <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light">
           <a class="navbar-brand" href="#">
             <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -39,7 +39,7 @@
                       <i class="fas fa-calendar"></i> Academic
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../admin/curriculum.html">Curriculum</a></li>
+                      <li><a class="dropdown-item" href="../admin/curriculumList.html">Curriculum</a></li>
                     </ul>
                 </li>
                   <li class="nav-item dropdown">
@@ -71,7 +71,7 @@
             </div>
           </div>
         </nav>
-  </header>
+        </header>
 
         <!-- Main content -->
         <section>

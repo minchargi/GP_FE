@@ -9,3 +9,77 @@
     font-weight: 700;
     line-height: normal;
 }
+.custom-button:hover {
+    background-color: none;
+    color: #EB1C24;
+}
+.button-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-button {
+    background-color: #FFF;
+    color: #293895;
+    cursor: pointer;
+    width: 178px;
+    height: 61px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    border:none;
+}
+
+.custom-button i{
+    color:#EB1C24;
+}
+
+.modal-title{
+    font-size: 20px;
+    color:#293895;
+    font-weight: 600px;
+}
+.form-group{
+    margin: 15px;
+    font-size: 18px;
+    color:#000;
+    font-weight:500
+}
+.btn-custom{
+    background:#293895;
+    color:#FFF;
+    font-weight:500px;
+    margin:15px;
+}
+.btn-custom:hover{
+    background:#EB1C24;
+    color:#FFF;
+}
+.td-head{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.th-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.td-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+}

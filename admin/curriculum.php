@@ -39,7 +39,7 @@
                       <i class="fas fa-calendar"></i> Academic
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../admin/curriculum.html">Curriculum</a></li>
+                      <li><a class="dropdown-item" href="../admin/curriculumList.html">Curriculum</a></li>
                     </ul>
                 </li>
                   <li class="nav-item dropdown">
@@ -73,35 +73,152 @@
         </nav>
   </header>
     <div class="container mt-4">
-        <p class="header-text">Curriculum Management</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCurriculumModal">
-            Add Curriculum
-        </button>
+        <p class="header-text">Curriculum</p>
+        <div class="button-container">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
+                <span class="button-content gap-4">
+                    <i class="fas fa-plus-circle"></i>
+                    Create Course
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Create Class Modal -->
+    <div class="modal fade" id="createClassModal" tabindex="-1" role="dialog" aria-labelledby="createClassModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createClassModalLabel">Create Class</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for creating a class -->
+                    <form id="createClassForm" action="create_class.php" method=post>
+                        <div class="form-group">
+                            <label for="classCode">Class Code:</label>
+                            <input type="text" class="form-control" id="classCode" name="classCode" required>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="className">Class Name:</label>
+                            <input type="text" class="form-control" id="className" name="className" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tprogram">Training program:</label>
+                            <input type="text" class="form-control" id="tprogram" name="tprogram" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="optional">Optional:</label>
+                            <input type="hidden" name="optional" value="0">
+                            <input type="checkbox" name="optional" value="1">
+                        </div>
+
+                        <button type="submit" class="btn btn-custom" name="submit">Create Class</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container mt-4">
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Course Code</th>
-                <th>Course Title</th>
-                <th>Credit Hours</th>
-                <th>Semester</th>
+                <th class="td-head">Course Code</th>
+                <th class="td-head">Course Title</th>
+                <th class="td-head">Credit Points</th>
+                <th class="td-head">Semester</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>IT101</td>
-                <td>Introduction to Information Technology</td>
-                <td>3</td>
-                <td>1</td>
+                <td class="td-custom"><b>MATH 2.1</b></td>
+                <td class="td-custom"> Probabilities & Statistic</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
             </tr>
             <tr>
-                <td>IT102</td>
-                <td>Programming Fundamentals</td>
-                <td>4</td>
-                <td>1</td>
+                <td class="td-custom"><b>ICT 2.1</b></td>
+                <td class="td-custom">Algorithms and Data Structures</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
             </tr>
-            <!-- Add more rows as needed -->
+            <tr>
+                <td class="td-custom"><b>MATH 2.1</b></td>
+                <td class="td-custom"> Probabilities & Statistic</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>ICT 2.1</b></td>
+                <td class="td-custom">Algorithms and Data Structures</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>MATH 2.1</b></td>
+                <td class="td-custom"> Probabilities & Statistic</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>ICT 2.1</b></td>
+                <td class="td-custom">Algorithms and Data Structures</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>MATH 2.1</b></td>
+                <td class="td-custom"> Probabilities & Statistic</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>ICT 2.1</b></td>
+                <td class="td-custom">Algorithms and Data Structures</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>MATH 2.1</b></td>
+                <td class="td-custom"> Probabilities & Statistic</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>ICT 2.1</b></td>
+                <td class="td-custom">Algorithms and Data Structures</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>MATH 2.1</b></td>
+                <td class="td-custom"> Probabilities & Statistic</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>ICT 2.1</b></td>
+                <td class="td-custom">Algorithms and Data Structures</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>MATH 2.1</b></td>
+                <td class="td-custom"> Probabilities & Statistic</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            <tr>
+                <td class="td-custom"><b>ICT 2.1</b></td>
+                <td class="td-custom">Algorithms and Data Structures</td>
+                <td class="th-custom">4</td>
+                <td class="th-custom">1</td>
+            </tr>
+            
+            
+            
             </tbody>
         </table>
     </div>
