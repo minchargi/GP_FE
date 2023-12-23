@@ -17,55 +17,61 @@
 
     <body> 
         <!-- Navbar-->
-        <header>
-          <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-              <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
-            </a>
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="../Teacher/course.php"> 
-                      <i class="fas fa-book"></i> Course
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../Teacher/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-calendar"></i> System
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">Second Year</a></li>
-                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-                    </li>
-                    <li class="nav-item dropdown">
+  <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <a class="navbar-brand" href="#">
+            <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
+          </a>
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manageAccount.html"><i class="fas fa-home"></i> Account</a>
+                </li>
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-user-circle"></i>
+                      <i class="fas fa-calendar"></i> Academic
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../admin/admin_profile.php">Account</a></li>
-                      <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
+                      <li><a class="dropdown-item" href="../admin/curriculum.html">Curriculum</a></li>
+                    </ul>
+                </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-calendar"></i> System
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../admin/systemSetting.html">System Settings</a></li>
+                      <li><a class="dropdown-item" href="../admin/security.html">System Security</a></li>
+                      <li><a class="dropdown-item" href="../admin/upgradeMaintance.html">Upgrade & Maintance</a></li>
+                      <div class="dropdown-divider"></div>
+                      <li><a class="dropdown-item" href="../admin/integrations.html">System Integrations</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../admin/manageStaff.php"><i class="fas fa-home"></i> Staff</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="../admin/admin_profile.php">Account</a></li>
+                    <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                   </ul>
-                </div>
+                </li>
+                </ul>
               </div>
             </div>
-          </nav>
-      </header>
+          </div>
+        </nav>
+  </header>
 
         <!-- Main content -->
         <section>
