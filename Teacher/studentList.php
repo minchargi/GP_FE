@@ -336,8 +336,7 @@
               </tbody>
             </table>
       </div>
-      <div class="container-fluid mt-4">
-        <footer>
+      <footer>
             <div class="row">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
@@ -368,10 +367,10 @@
                     <hr class="divider">
                     
                 </div>
-
-                
+                <div class="copy-right text-light  py-2 mt-4">
+                    <p>&copy; 2023 Curriculum System</p>
+                </div>
             </div>
         </footer>
-    </div>
   </body>
 </html>
