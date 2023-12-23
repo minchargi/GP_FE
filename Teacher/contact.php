@@ -33,7 +33,7 @@
                     <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
                   </li>
                   <li class="nav-item ">
-                    <a class="nav-link" href="../Teacher/course.php"> 
+                    <a class="nav-link" href="../Teacher/courseList.php"> 
                       <i class="fas fa-book"></i> Course
                     </a>
                   </li>
