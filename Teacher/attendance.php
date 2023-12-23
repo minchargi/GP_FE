@@ -66,9 +66,11 @@
           </nav>
       </header>
 
-    <ul class="nav">
+      <ul class="nav">
+        <li><a href="../Teacher/courseAnnounce.php">Announcement</a></li>
         <li><a href="../Teacher/coursedetail.php">Overview</a></li>
         <li><a href="../Teacher/studentList.php">Student List</a></li>
+        <li ><a href="../Teacher/grades.php">Grades</a></li>
         <li class="active"><a href="../Teacher/attendance.php">Attendance</a></li>
     </ul>
     <div class="container mt-4">
