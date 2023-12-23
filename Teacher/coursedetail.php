@@ -150,9 +150,8 @@
         <canvas id="gradesChart" width="400" height="200"></canvas>
   </div>
 
-    <div class="container-fluid mt-4">
-        <footer>
-            <div class="row">
+  <footer>
+            <div class="row mt-4">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->
@@ -182,11 +181,11 @@
                     <hr class="divider">
                     
                 </div>
-
-                
+                <div class="copy-right text-light  py-2 mt-4">
+                    <p>&copy; 2023 Curriculum System</p>
+                </div>
             </div>
-        </footer>
-    </div>
+  </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

@@ -337,7 +337,7 @@
             </table>
       </div>
       <footer>
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->

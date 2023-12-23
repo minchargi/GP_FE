@@ -176,9 +176,8 @@
             <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
         </div>
    </div>
-      <div class="container-fluid mt-4">
-        <footer>
-            <div class="row">
+   <footer>
+            <div class="row mt-4">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->
@@ -208,11 +207,11 @@
                     <hr class="divider">
                     
                 </div>
-
-                
+                <div class="copy-right text-light  py-2 mt-4">
+                    <p>&copy; 2023 Curriculum System</p>
+                </div>
             </div>
         </footer>
-    </div>
 
 
   </body>

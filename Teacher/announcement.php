@@ -17,7 +17,7 @@
     <script src="annoucement.js"></script>
 </head>
 <body>
-<header>
+        <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
               <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -347,9 +347,8 @@
 
         
     </div>
-    <div class="container-fluid mt-4">
-        <footer>
-            <div class="row">
+    <footer>
+            <div class="row mt-4">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->
@@ -379,10 +378,10 @@
                     <hr class="divider">
                     
                 </div>
-
-                
+                <div class="copy-right text-light  py-2 mt-4">
+                    <p>&copy; 2023 Curriculum System</p>
+                </div>
             </div>
         </footer>
-    </div>
 </body>
 </html>
