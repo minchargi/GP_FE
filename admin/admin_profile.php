@@ -41,10 +41,10 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-calendar"></i> Timetable
+                        <i class="fas fa-calendar"></i> System
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
+                        <li><a class="dropdown-item" href="">Second Year</a></li>
                         <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
                       </ul>
                     </li>
@@ -56,7 +56,7 @@
                       <i class="fas fa-user-circle"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../admin/admin_profile.html">Account</a></li>
+                      <li><a class="dropdown-item" href="../admin/admin_profile.php">Account</a></li>
                       <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                     </ul>
                   </li>

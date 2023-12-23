@@ -292,9 +292,8 @@
             </tbody>
           </table>
     </div>
-    <div class="container-fluid mt-4">
-        <footer>
-            <div class="row">
+    <footer>
+            <div class="row mt-4">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->
@@ -324,10 +323,11 @@
                     <hr class="divider">
                     
                 </div>
-
-                
+                <div class="copy-right  py-2 mt-4">
+                    <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
+                </div>
             </div>
         </footer>
-    </div>
+
 </body>
 </html>

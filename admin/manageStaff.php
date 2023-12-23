@@ -29,34 +29,40 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="../Teacher/course.php"> 
-                    <i class="fas fa-book"></i> Course
-                  </a>
+                  <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Teacher/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
-                  </li>
-                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="../admin/manageAccount.html"><i class="fas fa-home"></i> Account</a>
+                </li>
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-calendar"></i> Timetable
+                      <i class="fas fa-calendar"></i> Academic
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
-                      <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
+                      <li><a class="dropdown-item" href="../admin/curriculum.html">Curriculum</a></li>
+                    </ul>
+                </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-calendar"></i> System
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../admin/systemSetting.html">System Settings</a></li>
+                      <li><a class="dropdown-item" href="../admin/security.html">System Security</a></li>
+                      <li><a class="dropdown-item" href="../admin/upgradeMaintance.html">Upgrade & Maintance</a></li>
+                      <div class="dropdown-divider"></div>
+                      <li><a class="dropdown-item" href="../admin/integrations.html">System Integrations</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
+                    <a class="nav-link" href="../admin/manageStaff.php"><i class="fas fa-home"></i> Staff</a>
                   </li>
                   <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user-circle"></i>
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="../admin/admin_profile.html">Account</a></li>
+                    <li><a class="dropdown-item" href="../admin/admin_profile.php">Account</a></li>
                     <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
                   </ul>
                 </li>
@@ -301,9 +307,8 @@
         </table>
     </div>
 
-    <div class="container-fluid mt-4">
-        <footer>
-            <div class="row">
+    <footer>
+            <div class="row mt-4">
                 <div class="col-md-4 infor">
                     <img class="white-logo" src="../images/white_logo.png">
                     <!--Address-->
@@ -333,11 +338,11 @@
                     <hr class="divider">
                     
                 </div>
-
-                
+                <div class="copy-right  py-2 mt-4">
+                    <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
+                </div>
             </div>
-        </footer>
-    </div>
+    </footer>
     
 </body>
 </html>
