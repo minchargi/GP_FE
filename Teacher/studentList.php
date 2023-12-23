@@ -367,10 +367,10 @@
                     <hr class="divider">
                     
                 </div>
-                <div class="copy-right text-light  py-2 mt-4">
-                    <p>&copy; 2023 Curriculum System</p>
+                <div class="copy-right  py-2 mt-4">
+                    <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
                 </div>
             </div>
-        </footer>
+      </footer>
   </body>
 </html>
