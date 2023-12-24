@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="../students/contact.css">
     <link rel="stylesheet" href="../students/navbar.css">
     <link rel="stylesheet" href="../students/footer.css">
+    <script src="../students/contact.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
     <body>
         <!-- Navbar-->
@@ -96,48 +99,41 @@
             </ul>
         </div>
         
+        <footer>
+            <div class="row mt-4">
+                <div class="col-md-4 infor">
+                    <img class="white-logo" src="../images/white_logo.png">
+                    <!--Address-->
+                    <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
+                        Address
+                    </p>
+                    <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
+                    <hr class="divider">
 
-        <div class="container-fluid mt-4">
-            <footer>
-                <div class="row">
-                    <div class="col-md-4 infor">
-                        <img class="white-logo" src="../images/white_logo.png">
-                        <!--Address-->
-                        <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
-                            Address
-                        </p>
-                        <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
-                        <hr class="divider">
-
-                        <!--Phone-->
-                        <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
-                        Phone</p>
-                        <p class="text-detail"> +84-24 37 91 69 60</p>
-                        <hr class="divider">
-                        
-                        <!--Email-->
-                        <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                            Email
-                        </p>
-                        <p class="text-detail">officeusth@usth.edu.vn</p>
-                        <hr class="divider">
-                        
-                        <!--Contact-->
-                        <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                            Contact
-                        <p class="text-detail">webmaster@usth.edu.vn</p>
-                        <hr class="divider">
-                        
-                    </div>
-
+                    <!--Phone-->
+                    <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
+                    Phone</p>
+                    <p class="text-detail"> +84-24 37 91 69 60</p>
+                    <hr class="divider">
+                    
+                    <!--Email-->
+                    <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                        Email
+                    </p>
+                    <p class="text-detail">officeusth@usth.edu.vn</p>
+                    <hr class="divider">
+                    
+                    <!--Contact-->
+                    <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                        Contact
+                    <p class="text-detail">webmaster@usth.edu.vn</p>
+                    <hr class="divider">
                     
                 </div>
-            </footer>
-        </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script src="contact.js"></script>
+                <div class="copy-right  py-2 mt-4">
+                    <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
+                </div>
+            </div>
+    </footer>
     </body>
 </html>
