@@ -31,14 +31,14 @@
                   <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../admin/manageAccount.html"><i class="fas fa-users-cog"></i> Account</a>
+                    <a class="nav-link" href="../admin/manageAccount.php"><i class="fas fa-users-cog"></i> Account</a>
                   </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-graduation-cap"></i> Academic
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../admin/curriculumList.html">Curriculum</a></li>
+                      <li><a class="dropdown-item" href="../admin/curriculumList.php">Curriculum</a></li>
                     </ul>
                 </li>
                   <li class="nav-item dropdown">
@@ -46,11 +46,11 @@
                         <i class="fas fa-cog"></i> System
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../admin/systemSetting.html">System Settings</a></li>
-                      <li><a class="dropdown-item" href="../admin/security.html">System Security</a></li>
-                      <li><a class="dropdown-item" href="../admin/upgradeMaintance.html">Upgrade & Maintance</a></li>
+                      <li><a class="dropdown-item" href="../admin/systemSetting.php">System Settings</a></li>
+                      <li><a class="dropdown-item" href="../admin/security.php">System Security</a></li>
+                      <li><a class="dropdown-item" href="../admin/upgradeMaintance.php">Upgrade & Maintance</a></li>
                       <div class="dropdown-divider"></div>
-                      <li><a class="dropdown-item" href="../admin/integrations.html">System Integrations</a></li>
+                      <li><a class="dropdown-item" href="../admin/integrations.php">System Integrations</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
