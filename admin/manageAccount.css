@@ -9,3 +9,17 @@
     font-weight: 700;
     line-height: normal;
 }
+.custom-button{
+    background-color: #293895;
+    color:#FFF;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600px;
+}
+.custom-button:hover{
+    background-color: #EB1C24;
+    color:#FFF;
+}
+.total{
+    font-size: 15px;
+}

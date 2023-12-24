@@ -81,7 +81,7 @@
     </div>
   </div>
 
-    <!-- Update Grades Modal -->
+    <!-- Update Staff Modal -->
     <div class="modal fade" id="addStaffsModal" tabindex="-1" role="dialog" aria-labelledby="addStaffsModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -99,9 +99,13 @@
                             <input type="text" class="form-control" id="staffInfo" required>
                         </div>
                         <div class="form-group">
-                        <label for="staffInfo">Staff's Email:</label>
-                        <input type="text" class="form-control" id="staffEmail" required>
-                    </div>
+                            <label for="staffInfo">Staff's Email:</label>
+                            <input type="text" class="form-control" id="staffEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="staffInfo">Staff's Position:</label>
+                            <input type="text" class="form-control" id="staffPosition" required>
+                        </div>
                         <button type="button" class="btn btn-custom" onclick="addStaff()">Add</button>
                     </form>
                 </div>

@@ -74,50 +74,37 @@
   </div>
   <div class= "container mt-4">
     <div class="row">
-      <div class="col">
+      <div class="col-md-6">
             <!-- Student Account Button -->
-        <a href="student_account.html" class="btn btn-primary mb-3">
+        <a href="student_account.html" class="btn custom-button mb-3">
           Student Account
-          <div>Total: 10</div>
+          <div class="total">Total: 10</div>
         </a>
       </div>
-      <div clas="col">
+      <div class="col-md-6">
             <!-- Teacher Account Button -->
-        <a href="teacher_account.html" class="btn btn-primary mb-3">
+        <a href="teacher_account.php" class="btn custom-button mb-3">
           Teacher Account
-          <div>Total: 10</div>
+          <div class="total">Total: 10</div>
         </a>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
             <!-- Admin Account Button -->
-        <a href="admin_account.html" class="btn btn-primary mb-3">
+        <a href="admin_account.php" class="btn custom-button mb-3">
           Admin Account
-          <div>Total: 10</div>
+          <div class="total">Total: 10</div>
         </a>
       </div>
       <div class="col-md-6">
             <!-- Staff Account Button -->
-        <a href="manageStaff.php" class="btn btn-primary mb-3">
+        <a href="manageStaff.php" class="btn custom-button mb-3">
           Staff Account
-          <div>Total: 10</div>
+          <div class="total">Total: 10</div>
         </a>
       </div>
     </div>
-
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
   </div>
   <footer>
     <div class="row mt-4">
