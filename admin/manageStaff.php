@@ -49,7 +49,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="../admin/systemSetting.php">System Settings</a></li>
                       <li><a class="dropdown-item" href="../admin/security.php">System Security</a></li>
-                      <li><a class="dropdown-item" href="../admin/upgradeMaintance.php">Upgrade & Maintance</a></li>
+                      <li><a class="dropdown-item" href="../admin/upgradeMain.php">Upgrade & Maintance</a></li>
                       <div class="dropdown-divider"></div>
                       <li><a class="dropdown-item" href="../admin/integrations.php">System Integrations</a></li>
                     </ul>
