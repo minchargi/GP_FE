@@ -54,9 +54,6 @@
                       <li><a class="dropdown-item" href="../admin/integrations.php">System Integrations</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../admin/manageStaff.php"><i class="fas fa-clipboard-user"></i> Staff</a>
-                  </li>
                   <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user-circle"></i>

@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 </head>
 <body>
-    <header>
+  <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light">
           <a class="navbar-brand" href="#">
             <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -48,13 +48,10 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="../admin/systemSetting.php">System Settings</a></li>
                       <li><a class="dropdown-item" href="../admin/security.php">System Security</a></li>
-                      <li><a class="dropdown-item" href="../admin/upgradeMain.php">Upgrade & Maintance</a></li>
+                      <li><a class="dropdown-item" href="../admin/upgradeMaintance.php">Upgrade & Maintance</a></li>
                       <div class="dropdown-divider"></div>
                       <li><a class="dropdown-item" href="../admin/integrations.php">System Integrations</a></li>
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../admin/manageStaff.php"><i class="fas fa-clipboard-user"></i> Staff</a>
                   </li>
                   <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
