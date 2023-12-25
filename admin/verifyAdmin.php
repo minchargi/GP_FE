@@ -3,13 +3,11 @@
   if(!isset($_SESSION["user_id"]))
   {
     header('location: ../sign-in');
-  } 
-
-  if ($row['Role'] === 'Staff') {
+  } elseif ($_SESSION['role'] === 'Staff') {
     header("Location: ../staff");
-  } elseif ($row['Role'] === 'Teacher') {
+  } elseif ($_SESSION['role'] === 'Teacher') {
     header("Location: ../teacher");
-  } elseif ($row['Role'] === 'Student') {
+  } elseif ($_SESSION['role'] === 'Student') {
     header("Location: ../students");
   }
 ?>
