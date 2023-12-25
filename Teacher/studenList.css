@@ -9,6 +9,12 @@
     font-weight: 700;
     line-height: normal;
 }
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+
 ul.nav {
     padding: 0px;
     background-color: #293895;
@@ -34,7 +40,7 @@ ul.nav {
     font-weight: 500;
     line-height: normal;
   }
-  
+
 .td-head{
     color: #000;
     font-size: 16px;

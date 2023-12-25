@@ -72,7 +72,7 @@
         <li class="active"><a href="../Teacher/studentList.php">Student List</a></li>
         <li><a href="../Teacher/grades.php">Grades</a></li>
         <li><a href="../Teacher/attendance.php">Attendance</a></li>
-    </ul>
+      </ul>
       <div class="container mt-2">
         <table class="table table-bordered table-hover">
             <thead>
