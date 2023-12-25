@@ -73,6 +73,7 @@
         <div class="btn-container">
           <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editAttend">
             <span class="button-content gap-4">
+                <i class="fas fa-plus-circle"></i>
                 Add
             </span>
         </button>
