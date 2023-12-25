@@ -20,11 +20,13 @@ if ($result->num_rows > 0) {
     $_SESSION['role'] = $row['Role'];
     // Redirect based on the user's role
     if ($row['Role'] === 'Admin') {
-        header("Location: ../student");
+        header("Location: ../admin");
     } elseif ($row['Role'] === 'Teacher') {
         header("Location: ../teacher");
     } elseif ($row['Role'] === 'Student') {
         header("Location: ../students");
+    } elseif ($row['Role'] === 'Staff') {
+        header("Location: ../staff");
     }
 } else {
     // Invalid credentials, redirect to login page
