@@ -9,5 +9,8 @@
     header("Location: ../staff");
   } elseif ($_SESSION['role'] === 'Student') {
     header("Location: ../students");
+  } else {
+    $user_id = $_SESSION["user_id"];
+    $role = $_SESSION['role'];
   }
 ?>

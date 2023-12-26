@@ -108,10 +108,6 @@
                   <p><b>Training Program:</b></p>
                   <span><?php echo $row['TProgram_ID']; ?></span>
                 </div>
-                <div class="container">
-                  <p><b>Password:</b></p>
-                  <span>********</span> <!-- Hide the password-->
-                </div>
                 <a href="../students/resetPass.php">
                   <button>Change</button>
                 </a>

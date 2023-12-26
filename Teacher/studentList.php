@@ -1,3 +1,6 @@
+<?php
+  include "verifyTeacher.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

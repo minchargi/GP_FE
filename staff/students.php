@@ -1,3 +1,7 @@
+<?php
+  include "verifyStaff.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
