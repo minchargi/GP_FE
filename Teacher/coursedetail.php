@@ -1,14 +1,11 @@
 <?php 
 
   include '../db_conn.php';
+  include 'verifyTeacher.php';
+  include 'teacher_function.php';
+  
   if (isset($_GET['id'])) {
-
-    $course_id = $_GET['id']; 
-
-    $sql = "SELECT * FROM `course` WHERE `Course_ID`='$course_id'";
-
-    $result = $conn->query($sql); 
-
+  $result = fetch_course_detail($course_id);
     if ($result->num_rows > 0) {        
 
         while ($row = $result->fetch_assoc()) {
@@ -21,6 +18,7 @@
         } 
       }
     }
+    
 ?>
 
 <!DOCTYPE html>

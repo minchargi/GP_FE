@@ -1,6 +1,6 @@
 <?php
   include "verifyTeacher.php";
-  include "function.php";
+  include "teacher_function.php";
 ?>
 
 <!DOCTYPE html>

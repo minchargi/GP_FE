@@ -1,9 +1,7 @@
 <?php 
     include '../db_conn.php';
-    session_start();
-    $user_id = $_SESSION['user_id'];
-    $sql = "SELECT * FROM course WHERE Teacher_ID = '$user_id'";
-    $result = $conn->query($sql);
+    include 'teacher.function.php';
+    include 'verifyTeacher.php'
 ?>
 
 <!DOCTYPE html>
@@ -130,6 +128,7 @@
     
    <div class="container mt-4">
         <?php
+        $result = fetch_account($user_id);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {}}
         ?>

@@ -2,18 +2,8 @@
 
 
 include '../db_conn.php';
-  session_start();
-  if(!isset($_SESSION["user_id"]))
-  {
-    header('location: ../sign-in');
-  } else {
-    $user_id = $_SESSION["user_id"];
-    $sql = "SELECT u.*, g.*, c.Course_Name, c.Course_ID
-    FROM users u
-    INNER JOIN grade g ON u.User_ID = g.Student_ID
-    INNER JOIN course c ON c.Course_ID = g.Course_ID
-    WHERE u.User_ID = '$user_id'";
-    $result = $conn->query($sql);
+include 'student_function.php';
+include 'verifyStudent.php';
 
 
 ?>
@@ -112,6 +102,7 @@ include '../db_conn.php';
       </thead>
       <tbody>
         <?php
+        $result = fetch_grades($user_id);
         if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
         ?>
@@ -131,7 +122,7 @@ include '../db_conn.php';
             <td colspan="5">No records found...</td>
           </tr>
 
-        <?php }} ?>
+        <?php } ?>
       </tbody>
 
     </table>
