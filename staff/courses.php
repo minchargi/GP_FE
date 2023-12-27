@@ -34,8 +34,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -45,8 +46,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -56,8 +58,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -67,8 +70,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -78,8 +82,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -89,8 +94,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -100,8 +106,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -111,8 +118,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -122,8 +130,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>
@@ -133,52 +142,9 @@
           <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
           <div class="accordion-content">
             <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
-            </ul>
-          </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
-            </ul>
-          </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
-            </ul>
-          </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
-            </ul>
-          </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Second Year</a></li>
-              <li><a href="../staff/courseList.php">Third Year</a></li>
+              <li><a href="../staff/#">Information and Communication Technology (ICT)</a></li>
+              <li><a href="../staff/#">Cyber Security (CS)</a></li>
+              <li><a href="../staff/#">Data Science (DS)</a></li>
             </ul>
           </div>
         </div>

@@ -426,11 +426,11 @@
       <div class="container">
         <nav class="list-pagination">
             <ul class="pagination justify-content-center">
-              <li class="page-item disabled"><a class="pre-item page-link" href="#">Previous</a></li>
-              <li class="page-item active"><a class="page-link" href="../staff/attend.php">1</a></li>
-              <li class="page-item"><a class="page-link" href="../staff/attend2.php">2</a></li>
+              <li class="page-item"><a class="pre-item page-link" href="../staff/attend.php">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="../staff/attend.php">1</a></li>
+              <li class="page-item active"><a class="page-link" href="../staff/attend2.php">2</a></li>
               <li class="page-item"><a class="page-link" href="../staff/attend3.php">3</a></li>
-              <li class="page-item"><a class="next-item page-link" href="../staff/attend2.php">Next</a></li>
+              <li class="page-item"><a class="next-item page-link" href="../staff/attend3.php">Next</a></li>
             </ul>
           </nav>
       </div>

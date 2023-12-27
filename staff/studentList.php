@@ -166,8 +166,17 @@
             </table>
       </div>
 
-  
-       </script>
+      <div class="container">
+        <nav class="list-pagination">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled"><a class="pre-item page-link" href="#">Previous</a></li>
+              <li class="page-item active"><a class="page-link" href="../staff/studentList.php">1</a></li>
+              <li class="page-item"><a class="page-link" href="../staff/studentList2.php">2</a></li>
+              <li class="page-item"><a class="page-link" href="../staffstudentList3.php">3</a></li>
+              <li class="page-item"><a class="next-item page-link" href="../staff/studentList2.php">Next</a></li>
+            </ul>
+          </nav>
+      </div>
 
         <!-- Footer -->
         <?php include '../footer/footer.php'; ?>
