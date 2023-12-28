@@ -1,10 +1,7 @@
 <?php
-
-include '../db_conn.php';
 include 'verifyStudent.php';
 include 'student_function.php'
-
-  ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en-US">

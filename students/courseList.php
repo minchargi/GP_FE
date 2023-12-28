@@ -1,3 +1,13 @@
+<?php 
+  include 'verifyStudent.php';
+  include 'student_function.php';
+  if (!isset($_GET['id'])){
+    header('Location: course-overview.php');
+  };
+  $bachelor_year = $_GET['id'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
@@ -19,41 +29,19 @@
 
          <!-- Main Content -->
         <h1>Courses</h1>
-
+        <?php
+            $result = fetch_course($user_id,$bachelor_year);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+        
+        ?>
         <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
+            <a class="link_course" href="../students/announceCourse.php?id=<?php echo $row['Course_ID']; ?>"><?php echo $row['Course_Name']; ?></a>
         </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php">Machine Learning and Data Mining</a>
-        </div>
-
+        <?php       
+                }
+            }
+        ?>  
         <!-- Footer -->
         <?php include '../footer/footer.php'; ?>
 

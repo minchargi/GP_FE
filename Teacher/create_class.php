@@ -1,5 +1,4 @@
 <?php 
-    echo $_POST['submit'];
     include '../db_conn.php';
     if (isset($_POST['submit'])) {
         $code = $_POST['classCode'];

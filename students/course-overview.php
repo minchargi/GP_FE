@@ -1,3 +1,8 @@
+<?php 
+  include 'verifyStudent.php';
+  include 'student_function.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
@@ -8,6 +13,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../students/style.css">
+        <link rel="stylesheet" href="../students/courseList.css">
         <script src="accordion.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -19,84 +25,15 @@
 
          <!-- Main Content -->
         <h1>Training Programs</h1>
-
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../students/courseList.php">Second Year</a></li>
-                <li><a href="../students/courseList.php">Third Year</a></li>
-              </ul>
-            </div>
-          </div>
-       </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/courseList.php?id=B1">First Year</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/courseList.php?id=B2">Second year</a>
+        </div>
+        <div class="courseDetail">
+            <a class="link_course" href="../students/courseList.php?id=B3">Third year</a>
+        </div>
 
         <!-- Footer -->
         <?php include '../footer/footer.php'; ?>
