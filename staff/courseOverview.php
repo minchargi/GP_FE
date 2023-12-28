@@ -31,6 +31,35 @@
 
         <div class="container mt-4 course-detail">
             <dl>
+                <dt>Number of lectures: 10
+                </dt>
+            </dl>
+
+            <div class="container mt-2">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="tb-row">
+                        <th class="td-head" scope="col">Attendance</th>
+                        <th class="td-head" scope="col">Exercies</th>
+                        <th class="td-head" scope="col">Practice</th>
+                        <th class="td-head" scope="col">Project work</th>
+                        <th class="td-head" scope="col">Final Exam</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tb-row">
+                        <td class="td-custom">10% </td>
+                        <td class="td-custom">30%</td>
+                        <td class="td-custom">0%</td>
+                        <td class="td-custom">0%</td>
+                        <td class="td-custom">60%</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <dl>
                 <dt>Attendance
                     <dd>Attendance will be checked for every labwork</dd>
                     <dd>Students should remind the lecturers to check attendance if they forget it.</dd>

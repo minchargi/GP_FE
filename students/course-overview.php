@@ -24,15 +24,21 @@
         <?php include '../navbar/navbar.php'; ?>
 
          <!-- Main Content -->
-        <h1>Training Programs</h1>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/courseList.php?id=B1">First Year</a>
+         <h1>Training Programs</h1>
+        <div class="training">
+          <button class="btn btn-primary btn-lg year-btn" type="button">
+            <a href="../students/courseList.php?id=B1">First Year</a>
+          </button>
         </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/courseList.php?id=B2">Second year</a>
+        <div class="training">
+          <button class="btn btn-primary btn-lg year-btn" type="button">
+            <a href="../students/courseList.php?id=B2">Second Year</a>
+          </button>
         </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../students/courseList.php?id=B3">Third year</a>
+        <div class="training">
+          <button class="btn btn-primary btn-lg year-btn" type="button">
+            <a href="../students/courseList.php?id=B3">Third Year</a>
+          </button>
         </div>
 
         <!-- Footer -->

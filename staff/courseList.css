@@ -10,62 +10,37 @@ h1 {
     padding-bottom: 20px; 
 }
 
-.courseDetail{
-    background-color:white;
-    border-radius: 5px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border: #000;
-    margin-bottom: 10px;
-}
-.link_course{
-    text-decoration: none;
-    font-size: 18px;
-    color:#293895;
-    margin-left:80px;
-}
-.link_course:hover{
-    color:#EB1C24;
+a {
+    text-decoration: none; 
 }
 
-.custom-button:hover {
-    background-color: #EB1C24;
-    color: white; 
+.training {
+    margin-top: 20px; 
 }
 
-.btn-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+.course-card {
+    border: none; 
 }
-.custom-button {
+
+.year-btn {
+    margin-left: 80px; 
+    border: none; 
     background-color: #293895;
-    color: white;
-    cursor: pointer;
-    width: 100px;
-    height: 50px; 
-    transition: background-color 0.3s, color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 18px;
-    font-style: normal;
-    line-height: normal;
-    border: none;
-    border-radius: 5px;
 }
 
-.custom-button i{
-    color:#EB1C24;
+.yearCourse {
+    list-style-type: none; 
 }
 
-.courseDetail .icon {
-    margin-left: 20px; 
+.courseList {
+    margin-left: 50px; 
 }
 
-.fa-ellipsis-vertical {
-    color: #808080; 
+.courseName {
+    font-size: 18px; 
+    color: #293895;  
+}
+
+.courseName:hover {
+    color: #EB1C24;
 }

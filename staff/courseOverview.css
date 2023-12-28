@@ -19,6 +19,10 @@ h1 {
   margin-left:0px;
 
 }
+
+.sub li {
+  margin-left: 20px; 
+}
 .custom-button:hover {
   background-color: none;
   color: #EB1C24;
@@ -61,4 +65,31 @@ h1 {
 .btn-custom:hover{
   background:#EB1C24;
   color:#FFF;
+}
+
+.table {
+  margin-top: 20px; 
+}
+
+.td-head{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.th-custom{
+  color:#000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+.td-custom{
+  color:#000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
 }
