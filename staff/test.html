@@ -3,121 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course</title>
+    <title>coursedetail</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../staff/courseList.css">
+    <link rel="stylesheet" href="../Teacher/courseDetail.css">
+    <link rel="stylesheet" href="../Teacher/navbar.css">
+    <link rel="stylesheet" href="../Teacher/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="course.js"></script>
-
+    <script src="courseDetail.js"></script>
 </head>
 <body>
     
-    <!-- Navbar-->
-    <?php include '../navbar/staffnav.php'; ?>
-
-    </div>
+      <!-- Navbar-->
+      <?php include '../navbar/teachernav.php'; ?>
+    
+    <ul class="nav">
+        <li><a href="../Teacher/courseAnnouncement.php">Announcement</a></li>
+        <li class="active"><a href="../Teacher/coursedetail.php">Overview</a></li>
+        <li><a href="../Teacher/studentList.php">Student List</a></li>
+        <li><a href="../Teacher/grades.php">Grades</a></li>
+        <li><a href="../Teacher/attendance.php">Attendance</a></li>
+    </ul>
+    
     <div class="container mt-4">
-        <p class="header_text">Courses</p>
+        <p class="header_text">Course Name</p>
         <div class="button-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
-                <span class="button-content gap-4">
-                    <i class="fas fa-plus-circle"></i>
-                    Create Class
-                </span>
-            </button>
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="button-content gap-4">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  Edit
+              </span>
+          </button>
         </div>
     </div>
     
-    <!-- Create Class Modal -->
-    <div class="modal fade" id="createClassModal" tabindex="-1" role="dialog" aria-labelledby="createClassModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="createClassModalLabel">Create Class</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Form for creating a class -->
-                    <form id="createClassForm" action="../staff/create_class.php" method=post>
-                        <div class="form-group">
-                            <label for="classCode">Class Code:</label>
-                            <input type="text" class="form-control" id="classCode" name="classCode" required>
-                        </div>                        
-                        <div class="form-group">
-                            <label for="className">Class Name:</label>
-                            <input type="text" class="form-control" id="className" name="className" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tprogram">Training program:</label>
-                            <input type="text" class="form-control" id="tprogram" name="tprogram" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="optional">Optional:</label>
-                            <input type="hidden" name="optional" value="0">
-                            <input type="checkbox" name="optional" value="1">
-                        </div>
-
-                        <button type="submit" class="btn btn-custom" name="submit">Create Class</button>
-                    </form>
-                </div>
-            </div>
+  <!-- Edit Modal -->
+  <div class="modal" id="editModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Course Overview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <!-- Add your form elements for editing here -->
+          <label for="editedContent">Edit Content:</label>
+          <textarea class="form-control" id="editedContent" rows="4"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+        </div>
+      </div>
     </div>
-    
-   <div class="container mt-4">
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
+  </div>
+  <div class="container mt-4 course-detail">
+        <dl>
+          <dt>Attendance
+            <dd>Attendance will be checked for every labwork</dd>
+            <dd>Students should remind the lecturers to check attendance if they forget it.</dd>
+            <button class="btn-custom" onclick="checkAttendance()">Check Attendance</button>
+          </dt>
+        </dl>
+        <div class="button-container">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editTableModal">
+              <span class="button-content gap-4">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  Edit
+              </span>
+          </button>
         </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../staff/courseOverview.php">Machine Learning and Data Mining</a>
-        </div>
-   </div>
-   <!-- Footer -->
-   <?php include '../footer/footer.php'; ?>
+        <div class="modal fade" id="editTableModal" tabindex="-1" role="dialog" aria-labelledby="editTableModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="editTableModalLabel">Update Grade</h5>
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Form for updating grades -->
+                      <form id="editForm">
+                          <div class="form-group">
+                              <label for="courseInfo">Attendance:</label>
+                              <input type="text" class="form-control" id="courseInfo" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Exercies:</label>
+                            <input type="text" class="form-control" id="courseInfo" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Practice:</label>
+                            <input type="text" class="form-control" id="courseGrade" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Project work:</label>
+                            <input type="text" class="form-control" id="courseGrade" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Final Exam:</label>
+                            <input type="text" class="form-control" id="courseGrade" required>
+                          </div>
+                          <button type="button" class="btn btn-custom" onclick="Save()">Save Change</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
 
+        <div class="container mt-2">
+          <table class="table table-bordered">
+              <thead>
+                  <tr class="tb-row">
+                  <th class="td-head" scope="col">Attendance</th>
+                  <th class="td-head" scope="col">Exercies</th>
+                  <th class="td-head" scope="col">Practice</th>
+                  <th class="td-head" scope="col">Project work</th>
+                  <th class="td-head" scope="col">Final Exam</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="tb-row">
+                  <td class="td-custom">10% </td>
+                  <td class="td-custom">30%</td>
+                  <td class="td-custom">0%</td>
+                  <td class="td-custom">0%</td>
+                  <td class="td-custom">60%</td>
+                  </tr>
 
-  </body>
+              </tbody>
+          </table>
+      </div>
+        <ul class="sub">After a labwork session, you have 7 days to complete the exercises 
+          <li>Write a report of at least 2 pages to describe your work (figure and table), discussion, and analysis of lab work. </li>
+          <li> Submit in PDF format to Google Classroom (link above) </li>
+          <li><b>Source code is optional</b> in the report</li>
+        </ul>
+        <p class="head"><b>Student Score Chart </b></p>
+        <canvas id="gradesChart" width="400" height="200"></canvas>
+  </div>
+
+  <<!-- Footer -->
+  <?php include '../footer/footer.php'; ?>
+
+</body>
 </html>
