@@ -86,8 +86,31 @@ ul.nav {
   border:none;
   font-weight: 700px;
   font-size: 16px;
+  margin-top: 10px;
 }
 .btn-custom:hover{
   background:#EB1C24;
   color:#FFF;
+}
+.td-head{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.th-custom{
+  color:#000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+.td-custom{
+  color:#000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
 }

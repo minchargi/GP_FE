@@ -61,7 +61,7 @@
                   Edit
               </span>
           </button>
-      </div>
+        </div>
     </div>
     
   <!-- Edit Modal -->
@@ -92,6 +92,76 @@
             <button class="btn-custom" onclick="checkAttendance()">Check Attendance</button>
           </dt>
         </dl>
+        <div class="button-container">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editTableModal">
+              <span class="button-content gap-4">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  Edit
+              </span>
+          </button>
+        </div>
+        <div class="modal fade" id="editTableModal" tabindex="-1" role="dialog" aria-labelledby="editTableModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="editTableModalLabel">Update Grade</h5>
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Form for updating grades -->
+                      <form id="editForm">
+                          <div class="form-group">
+                              <label for="courseInfo">Attendance:</label>
+                              <input type="text" class="form-control" id="courseInfo" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Exercies:</label>
+                            <input type="text" class="form-control" id="courseInfo" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Practice:</label>
+                            <input type="text" class="form-control" id="courseGrade" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Project work:</label>
+                            <input type="text" class="form-control" id="courseGrade" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="courseInfo">Final Exam:</label>
+                            <input type="text" class="form-control" id="courseGrade" required>
+                          </div>
+                          <button type="button" class="btn btn-custom" onclick="Save()">Save Change</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <div class="container mt-2">
+          <table class="table table-bordered">
+              <thead>
+                  <tr class="tb-row">
+                  <th class="td-head" scope="col">Attendance</th>
+                  <th class="td-head" scope="col">Exercies</th>
+                  <th class="td-head" scope="col">Practice</th>
+                  <th class="td-head" scope="col">Project work</th>
+                  <th class="td-head" scope="col">Final Exam</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="tb-row">
+                  <td class="td-custom">10% </td>
+                  <td class="td-custom">30%</td>
+                  <td class="td-custom">0%</td>
+                  <td class="td-custom">0%</td>
+                  <td class="td-custom">60%</td>
+                  </tr>
+
+              </tbody>
+          </table>
+      </div>
         <ul class="sub">After a labwork session, you have 7 days to complete the exercises 
           <li>Write a report of at least 2 pages to describe your work (figure and table), discussion, and analysis of lab work. </li>
           <li> Submit in PDF format to Google Classroom (link above) </li>
