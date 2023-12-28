@@ -1,0 +1,45 @@
+.header-text{
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    font-family: 'Roboto Slab', serif; 
+    color: #293895;
+    margin: 15px 15px 30px 10px;
+    padding-bottom: 20px; 
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.td-head{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.th-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.td-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.page-custom{
+  justify-content: center;
+}
+.custom-color{
+  background:#E9F4FF;
+  color: #293895;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  border:none;
+}
