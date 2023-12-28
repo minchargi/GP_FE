@@ -167,10 +167,10 @@
             <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
             <div class="accordion-content">
               <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
+                <li><a href="../admin/student_trainingProgram.php">Department of Space and Applications</a></li>
+                <li><a href="../admin/student_trainingProgram.php">Department of Energy</a></li>
+                <li><a href="../admin/student_trainingProgram.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../admin/student_trainingProgram.php">Department of Life Sciences</a></li>
               </ul>
             </div>
           </div>
