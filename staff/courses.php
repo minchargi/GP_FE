@@ -17,138 +17,153 @@
         <?php include '../navbar/staffnav.php'; ?>
 
         <!-- Main content -->
-      <h1>Intake</h1>
-
+      <div class="container mt-4">
+        <p class="header-text">Intake</p>
+      </div>
       <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editAttend">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#add">
             <span class="button-content gap-4">
+                <i class="fas fa-plus-circle"></i>
                 Add
             </span>
         </button>
         </div>
       </div>
 
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+      <div class="container mt-4">
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
-       <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-          <div class="accordion-content">
-            <ul>
-              <li><a href="../staff/courseList.php">Information and Communication Technology (ICT)</a></li>
-              <li><a href="../staff/courseList.php">Cyber Security (CS)</a></li>
-              <li><a href="../staff/courseList.php">Data Science (DS)</a></li>
-            </ul>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/trainProg.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/trainProg.php">Department of Energy</a></li>
+                <li><a href="../staff/trainProg.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/trainProg.php">Department of Life Sciences</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-       </div>
+         </div>
+      </div>
+      
 
        <script>
         function toggleAccordion(btn) {

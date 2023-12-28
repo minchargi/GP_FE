@@ -18,7 +18,7 @@
 
         <!-- Main content -->
       <div class="container mt-4">
-        <p class="header-text">Intake</>
+        <p class="header-text">Intake</p>
       </div>
       <div class="container mt-4">
         <div class="btn-container">

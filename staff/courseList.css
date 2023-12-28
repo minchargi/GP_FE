@@ -10,37 +10,120 @@ h1 {
     padding-bottom: 20px; 
 }
 
-a {
-    text-decoration: none; 
+.header_text{
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    font-family: 'Roboto Slab', serif; 
+    color: #293895;
+    margin: 15px 15px 30px 10px;
+    padding-bottom: 20px; 
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
-
-.training {
-    margin-top: 20px; 
-}
-
-.course-card {
-    border: none; 
-}
-
-.year-btn {
-    margin-left: 80px; 
-    border: none; 
-    background-color: #293895;
-}
-
-.yearCourse {
-    list-style-type: none; 
-}
-
-.courseList {
-    margin-left: 50px; 
-}
-
-.courseName {
-    font-size: 18px; 
-    color: #293895;  
-}
-
-.courseName:hover {
+.custom-button:hover {
+    background-color: none;
     color: #EB1C24;
+}
+.button-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-button {
+    background-color: #FFF;
+    color: #293895;
+    cursor: pointer;
+    width: 178px;
+    height: 61px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    border:none;
+}
+
+.custom-button i{
+    color:#EB1C24;
+}
+
+.modal-title{
+    font-size: 20px;
+    color:#293895;
+    font-weight: 600px;
+}
+.close{
+    background-color: #FFF;
+    border:none;
+}
+.form-group{
+    margin: 15px;
+    font-size: 18px;
+    color:#000;
+    font-weight:500
+}
+.btn-custom{
+    background:#293895;
+    color:#FFF;
+    font-weight:500px;
+    margin:15px;
+}
+.btn-custom:hover{
+    background:#EB1C24;
+    color:#FFF;
+}
+.courseDetail{
+    background-color:#fbfbfb;
+    border-radius: 5px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border: #000;
+    margin-bottom: 10px;
+}
+.link_course{
+    text-decoration: none;
+    font-size: 18px;
+    color:#293895;
+    margin-left:30px;
+}
+.link_course:hover{
+    color:#EB1C24;
+}
+
+.list{
+    font-size: 18px;
+    color:#293895;
+}
+.list:hover{
+    color:#EB1C24
+}
+ul{
+    list-style-type: none;
+}
+ul.horizontal-list{
+    list-style: none;
+    background-color:#293895;
+    display:flex;
+    justify-content: center;
+    height: 54px;
+    align-items: center;
+}
+.link{
+    text-decoration: none;
+    font-size: 18px;
+    color:#293895;
+    margin-left:30px;
+}
+.link:hover{
+    color:#EB1C24;
+}
+ul.horizontal-list li {
+    display: inline-block;
+    color:#FFF;
 }
