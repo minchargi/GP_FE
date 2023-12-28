@@ -73,6 +73,61 @@
               </div>
             </nav>
         </header>
+        <div class="container mt-4">
+            <p class="header-text">Manage Student</p>
+            <div class="button-container">
+                <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addTeachersModal">
+                    <span class="button-content gap-4">
+                        <i class="fas fa-plus-circle"></i>
+                        Add Student
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Update Student Modal -->
+        <div class="modal fade" id="addStudentsModal" tabindex="-1" role="dialog" aria-labelledby="addStudentsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addStudentsModalLabel">Create Student</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for add Student -->
+                        <form id="addStudentsForm">
+                            <div class="form-group">
+                                <label for="studentInfo">Student's ID:</label>
+                                <input type="text" class="form-control" id="studentInfo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentInfo">Student's Name:</label>
+                                <input type="text" class="form-control" id="studentInfo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentInfo">Student's DOB:</label>
+                                <input type="text" class="form-control" id="studentInfo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentInfo">Student's Phone Number:</label>
+                                <input type="text" class="form-control" id="studentInfo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentInfo">Student's Class:</label>
+                                <input type="text" class="form-control" id="studentInfo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentInfo">Student's Major:</label>
+                                <input type="text" class="form-control" id="studentInfo" required>
+                            </div>
+                            <button type="button" class="btn btn-custom" onclick="addStudent()">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container mt-2">
             <table class="table table-bordered table-hover">
                 <thead>
