@@ -119,3 +119,15 @@ ul.nav {
     line-height: normal;
     text-align: center;
 }
+.page-custom{
+    justify-content: center;
+  }
+.custom-color{
+    background:#E9F4FF;
+    color: #293895;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    border:none;
+}

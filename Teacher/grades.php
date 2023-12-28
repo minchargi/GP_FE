@@ -292,6 +292,34 @@
               </tbody>
             </table>
       </div>
+      <div class="container mt-4">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination page-custom">
+            <li class="page-item" style="padding-right: 10px;">
+              <a class="page-link custom-color" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item" style="padding-right: 10px;">
+              <a class="page-link custom-color" href="#">1</a>
+            </li>
+            <li class="page-item" style="padding-right: 10px;">
+              <a class="page-link custom-color" href="#">2</a>
+            </li>
+            <li class="page-item" style="padding-right: 10px;">
+              <a class="page-link custom-color" href="#">...</a>
+            </li>
+            <li class="page-item" style="padding-right: 10px;">
+              <a class="page-link custom-color" href="#">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link custom-color" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       
       <!-- Footer -->
       <?php include '../footer/footer.php'; ?>
