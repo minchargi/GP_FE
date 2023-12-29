@@ -60,7 +60,8 @@
 }
 
 .custom-button:hover {
-    color: #EB1C24; 
+    background-color: #EB1C24;
+    color: white; 
 }
 
 .btn-container {
@@ -70,20 +71,21 @@
     justify-content: flex-end;
 }
 .custom-button {
-    background-color: #FFF;
-    color: #293895;
+    background-color: #293895;
+    color: white;
     cursor: pointer;
-    width: 178px;
-    height: 61px;
+    width: 100px;
+    height: 50px; 
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
     font-style: normal;
     line-height: normal;
-    border:none;
+    border: none;
+    border-radius: 5px;
 }
 
 .custom-button i{

@@ -28,7 +28,7 @@
         <h1>Course Name</h1>
         <div class="container mt-4">
           <div class="btn-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editGrade">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
               <span class="button-content gap-4">
                   Edit
               </span>

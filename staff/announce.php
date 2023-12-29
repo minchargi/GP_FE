@@ -24,7 +24,7 @@
 
         <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addAnnounce">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#add">
             <span class="button-content gap-4">
                 Add
             </span>

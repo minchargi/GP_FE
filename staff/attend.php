@@ -28,14 +28,14 @@
         <!-- Main content -->
         <h1>Attendance</h1>
         <div class="container mt-4">
-          <div class="btn-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editAttend">
-              <span class="button-content gap-4">
-                  Edit
-              </span>
-          </button>
-          </div>
+        <div class="btn-container">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
+            <span class="button-content gap-4">
+                Edit
+            </span>
+        </button>
         </div>
+      </div>
         <div class="container mt-2">
           <table class="table table-bordered table-hover">
               <thead>

@@ -30,14 +30,15 @@
         <div class="container mt-4">
         <p class="header_text">Course Name</p>
 
-        <div class="button-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editTableModal">
-              <span class="button-content gap-4">
-                  <i class="fa-regular fa-pen-to-square"></i>
-                  Edit
-              </span>
-          </button>
+        <div class="container mt-4">
+        <div class="btn-container">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
+            <span class="button-content gap-4">
+                Edit
+            </span>
+        </button>
         </div>
+      </div>
         <div class="modal fade" id="editTableModal" tabindex="-1" role="dialog" aria-labelledby="editTableModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -101,14 +102,15 @@
           </table>
       </div>
 
-        <div class="button-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editModal">
-              <span class="button-content gap-4">
-                  <i class="fa-regular fa-pen-to-square"></i>
-                  Edit
-              </span>
-          </button>
+      <div class="container mt-4">
+        <div class="btn-container">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
+            <span class="button-content gap-4">
+                Edit
+            </span>
+        </button>
         </div>
+      </div>
     </div>
     
   <!-- Edit Modal -->
