@@ -22,9 +22,10 @@ h1 {
     line-height: normal;
 }
 .custom-button:hover {
-    background-color: none;
-    color: #EB1C24;
+    background-color: #EB1C24;
+    color: white; 
 }
+
 .button-container {
     position: relative;
     width: 100%;
@@ -32,24 +33,21 @@ h1 {
     justify-content: flex-end;
 }
 .custom-button {
-    background-color: #FFF;
-    color: #293895;
+    background-color: #293895;
+    color: white;
     cursor: pointer;
-    width: 178px;
-    height: 61px;
+    width: 150px;
+    height: 50px; 
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
     font-style: normal;
     line-height: normal;
-    border:none;
-}
-
-.custom-button i{
-    color:#EB1C24;
+    border: none;
+    border-radius: 5px;
 }
 
 .modal-title{
@@ -67,6 +65,7 @@ h1 {
     color:#000;
     font-weight:500
 }
+
 .btn-custom{
     background:#293895;
     color:#FFF;
@@ -78,7 +77,7 @@ h1 {
     color:#FFF;
 }
 .courseDetail{
-    background-color:#fbfbfb;
+    background-color:transparent;
     border-radius: 5px;
     height: 52px;
     display: flex;

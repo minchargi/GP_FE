@@ -26,7 +26,6 @@
         <div class="button-container">
             <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
                 <span class="button-content gap-4">
-                    <i class="fas fa-plus-circle"></i>
                     Create Class
                 </span>
             </button>
