@@ -40,6 +40,7 @@ h1 {
     color: white; 
 }
 
+/* modal */
 .modal-title {
     font-size: 20px; 
     color: #293895; 
@@ -71,6 +72,7 @@ h1 {
     color: black; 
     font-weight: 500; 
 }
+/**/
 
 a {
     text-decoration: none; 

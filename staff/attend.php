@@ -29,13 +29,89 @@
         <h1>Attendance</h1>
         <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#attendM">
             <span class="button-content gap-4">
-                Edit
+                Add
             </span>
         </button>
         </div>
       </div>
+      <!-- Add Attend Modal-->
+        <div class="modal fade" id="attendM" tabindex="-1" role="dialog" aria-labelledby="attendMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="attendMLabel">Add Attendance</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding attend -->
+                        <form id="attendForm" action="../staff/attendM.php" method="post">
+                            <div class="form-group">
+                                <label for="studentMajor">Major:</label>
+                                <input type="text" class="form-control" id="studentMajor" name="studentMajor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentID">Student ID:</label>
+                                <input type="text" class="form-control" id="studentID" name="studentID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentName">Student Name:</label>
+                                <input type="text" class="form-control" id="studentName" name="studentName" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="lectureChoose">Choose lecture(s):</label>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture1" name="lecture[]" value="Lecture 1">
+                                <label class="form-check-label" for="lecture1">1</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture2" name="lecture[]" value="Lecture 2">
+                                <label class="form-check-label" for="lecture2">2</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture3" name="lecture[]" value="Lecture 3">
+                                <label class="form-check-label" for="lecture3">3</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture4" name="lecture[]" value="Lecture 4">
+                                <label class="form-check-label" for="lecture4">4</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture5" name="lecture[]" value="Lecture 5">
+                                <label class="form-check-label" for="lecture5">5</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture6" name="lecture[]" value="Lecture 6">
+                                <label class="form-check-label" for="lecture6">6</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture7" name="lecture[]" value="Lecture 7">
+                                <label class="form-check-label" for="lecture7">7</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture8" name="lecture[]" value="Lecture 8">
+                                <label class="form-check-label" for="lecture8">8</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture9" name="lecture[]" value="Lecture 9">
+                                <label class="form-check-label" for="lecture9">9</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="lecture10" name="lecture[]" value="Lecture 10">
+                                <label class="form-check-label" for="lecture10">10</label>
+                              </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container mt-2">
           <table class="table table-bordered table-hover">
               <thead>

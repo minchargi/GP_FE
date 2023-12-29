@@ -20,18 +20,59 @@
         <h1>Teacher List</h1>
         <div class="container mt-4">
           <div class="btn-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edi">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#departM">
               <span class="button-content gap-4">
-                  Edit
+                  Add
               </span>
           </button>
           </div>
         </div>
+        <!-- Add Teacher List Modal-->
+        <div class="modal fade" id="departM" tabindex="-1" role="dialog" aria-labelledby="departMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="departMLabel">Add Teacher</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new teacher -->
+                        <form id="departForm" action="../staff/departM.php" method="post">
+                            <div class="form-group">
+                                <label for="teacherDept">Dept:</label>
+                                <input type="text" class="form-control" id="teacherDept" name="teacherDept" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="teacherName">Teacher Name:</label>
+                                <input type="text" class="form-control" id="teacherName" name="teacherName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="teacherDOB">Date of birth:</label>
+                                <input type="date" class="form-control" id="teacherDOB" name="teacherDOB" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone number:</label>
+                                <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="teacherEmail">Email:</label>
+                              <input type="email" class="form-control" id="teacherEmail" name="teacherEmail" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container mt-2">
           <table class="table table-bordered table-hover">
               <thead>
                 <tr class="tb-row">
-                  <th class="td-head" scope="col">Dep.</th>
+                  <th class="td-head" scope="col">Dept.</th>
                   <th class="td-head" scope="col">Name</th>
                   <th class="td-head" scope="col">DOB</th>
                   <th class="td-head" scope="col">Phone number</th>

@@ -28,13 +28,62 @@
         <h1>Course Name</h1>
         <div class="container mt-4">
           <div class="btn-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#gradeDetailM">
               <span class="button-content gap-4">
-                  Edit
+                  Add
               </span>
           </button>
           </div>
         </div>
+        <!-- Add Course List Modal-->
+        <div class="modal fade" id="gradeDetailM" tabindex="-1" role="dialog" aria-labelledby="gradeDetailMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gradeDetailMLabel">Add Grade</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new grade -->
+                        <form id="gradeDetailForm" action="../staff/gradeDetailM.php" method="post">
+                            <div class="form-group">
+                                <label for="studentMajor">Major:</label>
+                                <input type="text" class="form-control" id="studentMajor" name="studentMajor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentID">Student ID:</label>
+                                <input type="text" class="form-control" id="studentID" name="studentID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentName">Student Name:</label>
+                                <input type="text" class="form-control" id="studentName" name="studentName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="attendGrade">Attendance:</label>
+                                <input type="text" class="form-control" id="attendGrade" name="attendGrade" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="midTerm">Midterm:</label>
+                                <input type="text" class="form-control" id="midTerm" name="midTerm" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="finalGrade">Final:</label>
+                                <input type="text" class="form-control" id="finalGrade" name="finalGrade" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="totalGrade">Total:</label>
+                                <input type="text" class="form-control" id="totalGrade" name="totalGrade" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container mt-2">
             <table class="table table-bordered table-hover">
                 <thead>

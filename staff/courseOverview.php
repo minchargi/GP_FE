@@ -31,52 +31,54 @@
         <p class="header_text">Course Name</p>
 
         <div class="container mt-4">
-        <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
-            <span class="button-content gap-4">
-                Edit
-            </span>
-        </button>
+          <div class="btn-container">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editBoxM">
+              <span class="button-content gap-4">
+                  Edit
+              </span>
+          </button>
+          </div>
         </div>
-      </div>
-        <div class="modal fade" id="editTableModal" tabindex="-1" role="dialog" aria-labelledby="editTableModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="editTableModalLabel">Update Grade</h5>
-                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <!-- Form for updating grades -->
-                      <form id="editForm">
-                          <div class="form-group">
+        <!-- Add %Grade Modal-->
+        <div class="modal fade" id="editBoxM" tabindex="-1" role="dialog" aria-labelledby="editBoxMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editBoxMLabel">Update Grade</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new student -->
+                        <form id="editBoxForm" action="../staff/courseOverviewM.php" method="post">
+                            <div class="form-group">
                               <label for="courseInfo">Attendance:</label>
                               <input type="text" class="form-control" id="courseInfo" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="courseInfo">Exercies:</label>
-                            <input type="text" class="form-control" id="courseInfo" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="courseInfo">Practice:</label>
-                            <input type="text" class="form-control" id="courseGrade" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="courseInfo">Project work:</label>
-                            <input type="text" class="form-control" id="courseGrade" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="courseInfo">Final Exam:</label>
-                            <input type="text" class="form-control" id="courseGrade" required>
-                          </div>
-                          <button type="button" class="btn btn-custom" onclick="Save()">Save Change</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="courseInfo">Exercies:</label>
+                              <input type="text" class="form-control" id="courseInfo" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="courseInfo">Practice:</label>
+                              <input type="text" class="form-control" id="courseGrade" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="courseInfo">Project work:</label>
+                              <input type="text" class="form-control" id="courseGrade" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="courseInfo">Final Exam:</label>
+                              <input type="text" class="form-control" id="courseGrade" required>
+                            </div>
+                            
+                            <button type="button" class="btn btn-custom" onclick="Save()">Save Change</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="container mt-2">
           <table class="table table-bordered">
@@ -103,36 +105,37 @@
       </div>
 
       <div class="container mt-4">
-        <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
-            <span class="button-content gap-4">
-                Edit
-            </span>
-        </button>
+          <div class="btn-container">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editOverviewM">
+              <span class="button-content gap-4">
+                  Edit
+              </span>
+          </button>
+          </div>
         </div>
-      </div>
-    </div>
-    
-  <!-- Edit Modal -->
-  <div class="modal" id="editModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Edit Course Overview</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Add Student List Modal-->
+        <div class="modal fade" id="editOverviewM" tabindex="-1" role="dialog" aria-labelledby="editOverviewMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editOverviewMLabel">Edit Course Overview</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Edit Course Overview -->
+                        <label for="editedContent">Edit Content:</label>
+                        <textarea class="form-control" id="editedContent" rows="4"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <!-- Add your form elements for editing here -->
-          <label for="editedContent">Edit Content:</label>
-          <textarea class="form-control" id="editedContent" rows="4"></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+      
   <div class="container mt-4 course-detail">
         <dl>
           <dt>Attendance

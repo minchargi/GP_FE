@@ -20,12 +20,60 @@
         <h1>Student List</h1>
         <div class="container mt-4">
           <div class="btn-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentListM">
               <span class="button-content gap-4">
-                  Edit
+                  Add
               </span>
           </button>
           </div>
+        </div>
+        <!-- Add Student List Modal-->
+        <div class="modal fade" id="studentListM" tabindex="-1" role="dialog" aria-labelledby="studentListMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studentListMLabel">Add Student</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new student -->
+                        <form id="studentListForm" action="../staff/studentListM.php" method="post">
+                            <div class="form-group">
+                                <label for="studentMajor">Major:</label>
+                                <input type="text" class="form-control" id="studentMajor" name="studentMajor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentID">Student ID:</label>
+                                <input type="text" class="form-control" id="studentID" name="studentID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentName">Student Name:</label>
+                                <input type="text" class="form-control" id="studentName" name="studentName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentDOB">Date of birth:</label>
+                                <input type="date" class="form-control" id="studentDOB" name="studentDOB" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="studentSex">Gender:</label>
+                              <select class="form-control" id="studentSex" name="studentSex" required>
+                                  <option value="Male">Male</option>
+                                  <option value="Female">Female</option>
+                                  <option value="Other">Other</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="studentEmail">Email:</label>
+                              <input type="email" class="form-control" id="studentEmail" name="studentEmail" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         

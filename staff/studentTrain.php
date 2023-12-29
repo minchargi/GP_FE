@@ -21,26 +21,26 @@
 
       <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addTrainProg">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentTrainM">
             <span class="button-content gap-4">
                 Add
             </span>
-            </button>
+          </button>
         </div>
 
         <!-- Add trainProg Modal-->
-        <div class="modal fade" id="addTrainProg" tabindex="-1" role="dialog" aria-labelledby="addTrainProgLabel" aria-hidden="true">
+        <div class="modal fade" id="studentTrainM" tabindex="-1" role="dialog" aria-labelledby="studentTrainMLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addTrainProgLabel">New Training Program</h5>
+                        <h5 class="modal-title" id="studentTrainMLabel">New Training Program</h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <!-- Form for adding new training program -->
-                        <form id="addTrainForm" action="../staff/addSTrain.php" method="post" enctype="multipart/form-data">
+                        <form id="studentTrainForm" action="../staff/studentTrainM.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="progName">Program Name:</label>
                                 <input type="text" class="form-control" id="progName" name="progName" required>
@@ -54,7 +54,7 @@
                                 <input type="file" class="form-control" id="thirdYear" name="thirdYear" required>
                             </div>
 
-                            <button type="submit class" class="btn btn-custom" name="submit">Add</button>
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
                         </form>
                     </div>
                 </div>
