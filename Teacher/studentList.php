@@ -1,5 +1,6 @@
 <?php
   include "verifyTeacher.php";
+  include "teacher_function.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,8 +39,7 @@
                 <th class="td-head" scope="col">Name</th>
                 <th class="td-head" scope="col">Date of birth</th>
                 <th class="td-head" scope="col">Phone Number</th>
-                <th class="td-head" scope="col">Class</th>
-                <th class="td-head" scope="col">Major</th>
+                <th class="td-head" scope="col">Training Program</th>
               </tr>
             </thead>
             <tbody>

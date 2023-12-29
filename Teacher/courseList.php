@@ -1,3 +1,8 @@
+<?php
+  include "verifyTeacher.php";
+  include "teacher_function.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
@@ -30,141 +35,38 @@
         </button>
         </div>
       </div>
-
       <div class="container mt-4">
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-         <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
-            <div class="accordion-content">
-              <ul>
-                <li><a href="../Teacher/trainingProgram.php">Department of Space and Applications</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Energy</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Information and Communication Technology</a></li>
-                <li><a href="../Teacher/trainingProgram.php">Department of Life Sciences</a></li>
-              </ul>
-            </div>
-          </div>
-         </div>
-      </div>
+      <?php
+        $result = fetch_program_year($user_id);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+      ?>
       
-
+        <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)"><b><?php echo $row['Year']; ?></b></button>
+              <div class="accordion-content">
+                <ul>
+                  <?php
+                    $result2 = fetch_program($user_id,$row['Year']);
+                    if ($result2->num_rows > 0) {
+                      while ($row2 = $result2->fetch_assoc()) {
+                  ?>
+                  <li><a href="../Teacher/trainingProgram.php"><?php echo $row2['TProgram_Name']; ?></a></li>
+                  <?php
+                      }
+                    }
+                  ?>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      <?php
+            }
+          }
+      ?>
+      </div>
        <script>
         function toggleAccordion(btn) {
           let content = btn.nextElementSibling; 
