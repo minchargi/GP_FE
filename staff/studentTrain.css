@@ -10,17 +10,13 @@ h1 {
     padding-bottom: 20px; 
 }
 
-.custom-button:hover {
-    background-color: #EB1C24;
-    color: white; 
-}
-
 .btn-container {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
+
 .custom-button {
     background-color: #293895;
     color: white;
@@ -39,8 +35,41 @@ h1 {
     border-radius: 5px;
 }
 
-.custom-button i{
-    color:#EB1C24;
+.custom-button:hover {
+    background-color: #EB1C24;
+    color: white; 
+}
+
+.modal-title {
+    font-size: 20px; 
+    color: #293895; 
+    font-weight: 600; 
+}
+
+.btn-custom {
+    width: 100px; 
+    background-color: #293895; 
+    color: white; 
+    font-size: 18px; 
+    font-weight: 500; 
+    margin: 15px; 
+}
+
+.btn-custom:hover {
+    background-color: #EB1C24;
+    color: white; 
+}
+
+.close {
+    background-color: white; 
+    border: none; 
+}
+
+.form-group {
+    margin: 15px; 
+    font-size: 18px; 
+    color: black; 
+    font-weight: 500; 
 }
 
 a {
