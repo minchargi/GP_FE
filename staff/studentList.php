@@ -20,7 +20,7 @@
         <h1>Student List</h1>
         <div class="container mt-4">
           <div class="btn-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#editStudentList">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#edit">
               <span class="button-content gap-4">
                   Edit
               </span>
@@ -171,9 +171,9 @@
             <ul class="pagination justify-content-center">
               <li class="page-item disabled"><a class="pre-item page-link" href="#">Previous</a></li>
               <li class="page-item active"><a class="page-link" href="../staff/studentList.php">1</a></li>
-              <li class="page-item"><a class="page-link" href="../staff/studentList2.php">2</a></li>
-              <li class="page-item"><a class="page-link" href="../staffstudentList3.php">3</a></li>
-              <li class="page-item"><a class="next-item page-link" href="../staff/studentList2.php">Next</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="next-item page-link" href="#">Next</a></li>
             </ul>
           </nav>
       </div>
