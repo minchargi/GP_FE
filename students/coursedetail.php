@@ -1,3 +1,12 @@
+<?php 
+  include 'verifyStudent.php';
+  include 'student_function.php';
+  if (!isset($_GET['id'])){
+    header('Location: course-overview.php');
+  };
+  $course_id = $_GET['id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -19,37 +28,61 @@
   <?php include '../navbar/navbar.php'; ?>
 
   <ul class="nav">
-    <li><a href="../students/announceCourse.php">Announcement</a></li>
-    <li class="active"><a href="../students/coursedetail.php">Overview</a></li>
-    <li><a href="../students/course-grades.php">Grades</a></li>
-    <li><a href="../students/attendance.php">Attendance</a></li>
+    <li><a href="announceCourse.php?id=<?php echo $course_id; ?>">Announcement</a></li>
+    <li class="active"><a href="coursedetail.php?id=<?php echo $course_id; ?>">Overview</a></li>
+    <li><a href="course-grades.php?id=<?php echo $course_id; ?>">Grades</a></li>
+    <li><a href="attendance.php?id=<?php echo $course_id; ?>">Attendance</a></li>
   </ul>
-
-  <h1>Course Name</h1>
+    <?php 
+        $result = fetch_course_overview($course_id);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+        }
+    ?>
+  <h1><?php echo $row['Course_Name']; ?></h1>
       <div class="container mt-4 course-detail">
           <dl>
-              <dt>Number of lectures: 10
+              <dt>Info
+                  <dd><?php echo $row['Course_Info']; ?></dd>
               </dt>
           </dl>
+      
+          <div class="container mt-2">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr class="tb-row">
+                      <th class="td-head" scope="col">Credit</th>
+                      <th class="td-head" scope="col">Lecture</th>
+                      <th class="td-head" scope="col">Tutorial</th>
+                      <th class="td-head" scope="col">Practical</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="tb-row">
+                      <td class="td-custom"><?php echo $row['Number_credit']; ?></td>
+                      <td class="td-custom"><?php echo $row['Number_lecture']; ?></td>
+                      <td class="td-custom"><?php echo $row['Number_tutorial']; ?></td>
+                      <td class="td-custom"><?php echo $row['Number_practical']; ?></td>
+                      </tr>
+
+                  </tbody>
+              </table>
+          </div>
 
           <div class="container mt-2">
               <table class="table table-bordered">
                   <thead>
                       <tr class="tb-row">
                       <th class="td-head" scope="col">Attendance</th>
-                      <th class="td-head" scope="col">Exercies</th>
-                      <th class="td-head" scope="col">Practice</th>
-                      <th class="td-head" scope="col">Project work</th>
+                      <th class="td-head" scope="col">Midterm Exam</th>
                       <th class="td-head" scope="col">Final Exam</th>
                       </tr>
                   </thead>
                   <tbody>
                       <tr class="tb-row">
-                      <td class="td-custom">10% </td>
-                      <td class="td-custom">30%</td>
-                      <td class="td-custom">0%</td>
-                      <td class="td-custom">0%</td>
-                      <td class="td-custom">60%</td>
+                      <td class="td-custom"><?php echo $row['Attendance_Percentage']; ?></td>
+                      <td class="td-custom"><?php echo $row['Midterm_Percentage']; ?></td>
+                      <td class="td-custom"><?php echo $row['Final_Percentage']; ?></td>
                       </tr>
 
                   </tbody>
@@ -68,8 +101,6 @@
               <li> Submit in PDF format to Google Classroom (link above) </li>
               <li><b>Source code is optional</b> in the report</li>
           </ul>
-          <p class="head"><b>Student Score Chart </b></p>
-          <canvas id="gradesChart" width="400" height="200"></canvas>
       </div>
   
 

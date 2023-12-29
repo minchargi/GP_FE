@@ -1,3 +1,12 @@
+<?php 
+  include 'verifyStudent.php';
+  include 'student_function.php';
+  if (!isset($_GET['id'])){
+    header('Location: course-overview.php');
+  };
+  $course_id = $_GET['id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -20,10 +29,10 @@
   <?php include '../navbar/navbar.php'; ?>
 
   <ul class="nav">
-    <li class="active"><a href="../students/announceCourse.php">Announcement</a></li>
-    <li><a href="../students/coursedetail.php">Overview</a></li>
-    <li><a href="../students/course-grades.php">Grades</a></li>
-    <li><a href="../students/attendance.php">Attendance</a></li>
+    <li class="active"><a href="announceCourse.php?id=<?php echo $course_id; ?>">Announcement</a></li>
+    <li><a href="coursedetail.php?id=<?php echo $course_id; ?>">Overview</a></li>
+    <li><a href="course-grades.php?id=<?php echo $course_id; ?>">Grades</a></li>
+    <li><a href="attendance.php?id=<?php echo $course_id; ?>">Attendance</a></li>
   </ul>
 
   

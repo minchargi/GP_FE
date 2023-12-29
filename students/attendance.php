@@ -1,3 +1,11 @@
+<?php 
+  include 'verifyStudent.php';
+  include 'student_function.php';
+  if (!isset($_GET['id'])){
+    header('Location: course-overview.php');
+  };
+  $course_id = $_GET['id'];
+?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
@@ -18,12 +26,17 @@
         <?php include '../navbar/navbar.php'; ?>
 
         <ul class="nav">
-          <li><a href="../students/announceCourse.php">Announcement</a></li>
-          <li><a href="../students/coursedetail.php">Overview</a></li>
-          <li><a href="../students/course-grades.php">Grades</a></li>
-          <li class="active"><a href="../students/attendance.php">Attendance</a></li>
+          <li><a href="announceCourse.php?id=<?php echo $course_id; ?>">Announcement</a></li>
+          <li><a href="coursedetail.php?id=<?php echo $course_id; ?>">Overview</a></li>
+          <li><a href="course-grades.php?id=<?php echo $course_id; ?>">Grades</a></li>
+          <li class="active"><a href="attendance.php?id=<?php echo $course_id; ?>">Attendance</a></li>
         </ul>
-
+        <?php 
+          $result = fetch_course_overview($course_id);
+          if ($result->num_rows > 0) {
+              $row = $result->fetch_assoc();
+          }
+        ?>
         <h1>Attendance</h1>
         <div class="container mt-2">
           <table class="table table-bordered">
@@ -31,38 +44,32 @@
                 <tr class="tb-row">
                   <th class="td-head" scope="col">Student ID</th>
                   <th class="td-head" scope="col">Name</th>
-                  <th class="td-head" scope="col">1</th>
-                  <th class="td-head" scope="col">2 </th>
-                  <th class="td-head" scope="col">3 </th>
-                  <th class="td-head" scope="col">4 </th>
-                  <th class="td-head" scope="col">5 </th>
-                  <th class="td-head" scope="col">6 </th>
-                  <th class="td-head" scope="col">7 </th>
-                  <th class="td-head" scope="col">8 </th>
-                  <th class="td-head" scope="col">9 </th>
-                  <th class="td-head" scope="col">10 </th>
-                  <th class="td-head" scope="col">11 </th>
-                  <th class="td-head" scope="col">12 </th>
-                  <th class="td-head" scope="col">13</th>
+                  <?php
+                    for ($i = 1;$i <= $row['Number_lecture'];$i++){
+                  ?>          
+                    <th class="td-head" scope="col"><?php echo $i?></th>
+                  <?php
+                    }
+                  ?>
                 </tr>
               </thead>
               <tbody>
                 <tr class="tb-row">
-                  <td class="td-custom">BI12-001 </td>
-                  <td class="td-custom">Nguyễn Văn A </td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">0</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">0</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">0</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">1</td>
-                  <td class="td-custom">0</td>
+                  <td class="td-custom"><?php echo $user_id; ?></td>
+                  <td class="td-custom"><?php $row2 = fetch_account($user_id)->fetch_assoc(); echo $row2['FirstName'], ' ',  $row2['LastName']; ?></td>
+                  <?php
+                    for ($i = 1;$i <= $row['Number_lecture'];$i++){
+                    $result = fetch_attendance($user_id,$course_id,$i);
+                    if ($result->num_rows > 0) {
+                      $atten = $result->fetch_assoc()['Attendance'];
+                    } else {
+                      $atten = 0;
+                    } 
+                  ?>
+                  <td class="td-custom"><?php echo $atten; ?></td>
+                  <?php
+                    } 
+                  ?>
                 </tr>
 
               </tbody>

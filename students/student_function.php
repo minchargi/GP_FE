@@ -23,10 +23,41 @@ function fetch_account($user_id) {
 
 function fetch_course($user_id,$bachelor_year) {
     include '../db_conn.php';
-    $sql = "SELECT c.Course_ID AND c.Course_Name
+    $sql = "SELECT c.Course_ID,c.Course_Name
     FROM grade g
     INNER JOIN course c ON g.Course_ID = c.Course_ID
     WHERE g.Student_ID = '$user_id' AND c.Bachelor_Year = '$bachelor_year'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_course_overview($course_id) {
+    include '../db_conn.php';
+    $sql = "SELECT *
+    FROM course
+    WHERE Course_ID = '$course_id'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_course_grade($student_id,$course_id){
+    include '../db_conn.php';
+    $sql = "SELECT c.Course_ID,c.Course_Name,g.Attendance,g.Midterm, g.Final
+    FROM grade g
+    INNER JOIN course c ON g.Course_ID = c.Course_ID
+    WHERE g.Student_ID = '$student_id' AND g.Course_ID = '$course_id'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_attendance($student_id,$course_id,$session){
+    include '../db_conn.php';
+    $sql = "SELECT *
+    FROM attendance
+    WHERE Student_ID = '$student_id' AND Course_ID = '$course_id' AND Session = '$session'";
     $result = $conn->query($sql);
     $conn->close();
     return $result;
