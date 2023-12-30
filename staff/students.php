@@ -31,6 +31,11 @@
                 Add
             </span>
         </button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentDeptM">
+            <span class="button-content gap-4">
+                Add Dept
+            </span>
+        </button>
         </div>
       </div>
       <!-- Add Intake Modal -->
@@ -74,6 +79,45 @@
                               </div>
                             </div>
                             
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Student Dept Modal-->
+        <div class="modal fade" id="studentDeptM" tabindex="-1" role="dialog" aria-labelledby="studentDeptMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studentDeptMLabel">Add New Intake</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new intake -->
+                        <form id="studentDeptForm" action="../staff/studentsM.php" method="post">
+                            <div class="form-group">
+                              <label for="intakeChoose">Intake:</label>
+                              <select class="form-control" id="intakeChoose" name="intakeChoose" required>
+                                  <option value="" selected disabled>Select an option</option>
+                                  <option value="dept1">Department of Information and Communication Technology</option>
+                                  <option value="dept2">Department of Space and Applications</option>
+                                  <option value="dept3">Department of Energy</option>
+                                  <option value="dept4">Department of Life Science</option>
+                                  <option value="dept5">Department of Water - Environment - Oceanography</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newDeptName">Department Name:</label>
+                                <input type="text" class="form-control" id="newDeptName" name="newDeptName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newMajor">New Major:</label>
+                                <input type="text" class="form-control" id="newMajor" name="newMajor" required>
+                            </div>
+                              
                             <button type="submit" class="btn btn-custom" name="submit">Add</button>
                         </form>
                     </div>
