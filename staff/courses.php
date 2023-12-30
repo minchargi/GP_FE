@@ -46,7 +46,7 @@
                     </div>
                     <div class="modal-body">
                         <!-- Form for adding new intake -->
-                        <form id="courseForm" action="../staff/courseM.php" method="post">
+                        <form id="courseForm" action="courseM.php" method="post">
                             <div class="form-group">
                                 <label for="courseIntake">Intake:</label>
                                 <input type="text" class="form-control" id="courseIntake" name="courseIntake" required>

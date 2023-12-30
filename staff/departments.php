@@ -39,7 +39,7 @@
                     </div>
                     <div class="modal-body">
                         <!-- Form for adding new teacher -->
-                        <form id="departForm" action="../staff/departM.php" method="post">
+                        <form id="departForm" action="add_department.php" method="post">
                             <div class="form-group">
                                 <label for="teacherDept">Dept:</label>
                                 <input type="text" class="form-control" id="teacherDept" name="teacherDept" required>

@@ -1,3 +1,7 @@
+<?php
+include 'staff_function.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +30,7 @@
         <div class="button-container">
             <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
                 <span class="button-content gap-4">
-                    Create Class
+                    Create Course
                 </span>
             </button>
         </div>
@@ -44,18 +48,18 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for creating a class -->
-                    <form id="createClassForm" action="../staff/create_class.php" method=post>
+                    <form id="createClassForm" action="courseListM.php" method=post>
                         <div class="form-group">
-                            <label for="classCode">Class Code:</label>
-                            <input type="text" class="form-control" id="classCode" name="classCode" required>
+                            <label for="classCode">Course Id:</label>
+                            <input type="text" class="form-control" id="course_id" name="course_id" required>
                         </div>                        
                         <div class="form-group">
-                            <label for="className">Class Name:</label>
-                            <input type="text" class="form-control" id="className" name="className" required>
+                            <label for="className">Course Name:</label>
+                            <input type="text" class="form-control" id="course_name" name="course_name" required>
                         </div>
                         <div class="form-group">
                             <label for="tprogram">Training program:</label>
-                            <input type="text" class="form-control" id="tprogram" name="tprogram" required>
+                            <input type="text" class="form-control" id="tprogram_id" name="tprogram_id" required>
                         </div>
                         <div class="form-group">
                             <label for="optional">Optional:</label>
@@ -63,8 +67,13 @@
                             <input type="checkbox" name="optional" value="1">
                         </div>
 
-                        <button type="submit" class="btn btn-custom" name="submit">Create Class</button>
+                        <button type="submit" class="btn btn-custom" name="submit">Create Course</button>
                     </form>
+
+                    <?php
+
+                    ?>
+
                 </div>
             </div>
         </div>
