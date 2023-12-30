@@ -42,15 +42,27 @@
                         <form id="studentListForm" action="../staff/studentListM.php" method="post">
                             <div class="form-group">
                                 <label for="studentMajor">Major:</label>
-                                <input type="text" class="form-control" id="studentMajor" name="studentMajor" required>
+                                <input type="text" class="form-control" id="tprogram_id" name="tprogram_id" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentMajor">Year Start:</label>
+                                <input type="text" class="form-control" id="year" name="year" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentMajor">Progress:</label>
+                                <input type="text" class="form-control" id="progress" name="progress" required>
                             </div>
                             <div class="form-group">
                                 <label for="studentID">Student ID:</label>
                                 <input type="text" class="form-control" id="studentID" name="studentID" required>
                             </div>
                             <div class="form-group">
-                                <label for="studentName">Student Name:</label>
-                                <input type="text" class="form-control" id="studentName" name="studentName" required>
+                                <label for="studentName">First Name:</label>
+                                <input type="text" class="form-control" id="studentName" name="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentName">Last Name:</label>
+                                <input type="text" class="form-control" id="studentName" name="lastname" required>
                             </div>
                             <div class="form-group">
                                 <label for="studentDOB">Date of birth:</label>
@@ -58,7 +70,7 @@
                             </div>
                             <div class="form-group">
                               <label for="studentSex">Gender:</label>
-                              <select class="form-control" id="studentSex" name="studentSex" required>
+                              <select class="form-control" id="gender" name="gender" required>
                                   <option value="Male">Male</option>
                                   <option value="Female">Female</option>
                                   <option value="Other">Other</option>
@@ -66,7 +78,11 @@
                             </div>
                             <div class="form-group">
                               <label for="studentEmail">Email:</label>
-                              <input type="email" class="form-control" id="studentEmail" name="studentEmail" required>
+                              <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentName">Phone:</label>
+                                <input type="text" class="form-control" id="studentName" name="lastname" required>
                             </div>
                             
                             <button type="submit" class="btn btn-custom" name="submit">Add</button>

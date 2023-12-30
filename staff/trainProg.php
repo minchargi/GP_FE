@@ -41,10 +41,14 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for adding new (course) training program -->
-                    <form id="trainProgMForm" action="../staff/trainProgM.php" method="post">
+                    <form id="trainProgMForm" action="trainProgM.php" method="post">
+                        <div class="form-group">
+                            <label for="progName">Program Id:</label>
+                            <input type="text" class="form-control" id="progId" name="tprogram_id" required>
+                        </div>
                         <div class="form-group">
                             <label for="progName">Program Name:</label>
-                            <input type="text" class="form-control" id="progName" name="progName" required>
+                            <input type="text" class="form-control" id="progName" name="tprogram_name" required>
                         </div>
 
                         <button type="submit" class="btn btn-custom" name="submit">Add</button>
