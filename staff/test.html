@@ -1,14 +1,17 @@
+<?php
+  include "verifyStaff.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>       
-        <title>Announcements</title>
+    <head> 
+        <title>Students</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="../staff/announce.css">
-        <script scr="../staff/announce.js"></script>
+        <link rel="stylesheet" href="../staff/students.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     </head>
@@ -19,329 +22,266 @@
 
         <!-- Main content -->
         <div class="container mt-4">
-            <p class="header-text">Announcements</p>
-        </div>
-
-        <div class="container mt-4">
+        <p class="header-text">Intake</p>
+      </div>
+      <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#announceM">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentM">
             <span class="button-content gap-4">
                 Add
             </span>
         </button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentDeptM">
+            <span class="button-content gap-4">
+                Add Dept
+            </span>
+        </button>
         </div>
       </div>
-      <!-- Add Announce Modal-->
-        <div class="modal fade" id="announceM" tabindex="-1" role="dialog" aria-labelledby="announceMLabel" aria-hidden="true">
+      <!-- Add Intake Modal -->
+      <div class="modal fade" id="studentM" tabindex="-1" role="dialog" aria-labelledby="studentMLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="announceMLabel">Add Announcements</h5>
+                        <h5 class="modal-title" id="studentMLabel">New Intake</h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- Form for adding new announce -->
-                        <form id="announceForm" action="../staff/announceM.php" method="post">
-                          <div class="form-group">
-                            <label for="announceTitle">Title:</label>
-                            <input type="text" class="form-control" id="announceTitle" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="editedContent">Add Content:</label>
-                            <textarea class="form-control" id="editedContent" rows="4"></textarea>
-                          </div>
+                        <!-- Form for adding new intake -->
+                        <form id="studentForm" action="../staff/studentsM.php" method="post">
+                            <div class="form-group">
+                                <label for="progName">Intake:</label>
+                                <input type="text" class="form-control" id="progName" name="progName" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="courseChoose">Choose Department(s):</label>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department1" name="department[]" value="Department 1">
+                                <label class="form-check-label" for="department1">Department of Information and Communication Technology</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department2" name="department[]" value="Department 2">
+                                <label class="form-check-label" for="department3">Department of Space and Applications</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department3" name="department[]" value="Department 3">
+                                <label class="form-check-label" for="department3">Department of Energy</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department4" name="department[]" value="Department 4">
+                                <label class="form-check-label" for="department4">Department of Life Science</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department5" name="department[]" value="Department 5">
+                                <label class="form-check-label" for="department5">Department of Water - Environment - Oceanography</label>
+                              </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
                         </form>
-                        
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add Student Dept Modal-->
+        <div class="modal fade" id="studentDeptM" tabindex="-1" role="dialog" aria-labelledby="studentDeptMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studentDeptMLabel">Add New Intake</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new intake -->
+                        <form id="studentDeptForm" action="../staff/studentsM.php" method="post">
+                            <div class="form-group">
+                              <label for="intakeChoose">Intake:</label>
+                              <select class="form-control" id="intakeChoose" name="intakeChoose" required>
+                                  <option value="" selected disabled>Select an option</option>
+                                  <option value="dept1">Department of Information and Communication Technology</option>
+                                  <option value="dept2">Department of Space and Applications</option>
+                                  <option value="dept3">Department of Energy</option>
+                                  <option value="dept4">Department of Life Science</option>
+                                  <option value="dept5">Department of Water - Environment - Oceanography</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newDeptName">Department Name:</label>
+                                <input type="text" class="form-control" id="newDeptName" name="newDeptName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newMajor">New Major:</label>
+                                <input type="text" class="form-control" id="newMajor" name="newMajor" required>
+                            </div>
+                              
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox1">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(1)"></i>
-                        </div>
-                    </div>
-                </div>
+      <div class="container mt-4">
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox2">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(2)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox3">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="deleteAnnouncement(3)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox4">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(4)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox1">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(1)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox5">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(5)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox6">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(6)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox7">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="deleteAnnouncement(7)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox8">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(8)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox9">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(9)"></i>
-                        </div>
-                    </div>
-                </div>
+          </div>
+         </div>
+         <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><b>2021-2024</b></button>
+            <div class="accordion-content">
+              <ul>
+                <li><a href="../staff/studentTrain.php">Department of Space and Applications</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox10">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(10)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox11">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(11)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox12">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(1)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox13">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(12)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox14">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(13)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox15">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(14)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox16">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(15)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox17">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(16)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox18">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(17)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox1">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(18)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card announcement">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkbox19">
-                            <a class="link" href="../Teacher/link_announcement.php">Updated invitation: FINAL EXAM MOODLE - Mobile application development - Dr. ... @ Fri Dec 1, 2023 1pm - 2:45pm (ICT)</a>
-                            <i class="fas fa-trash-can delete-icon" onclick="confirmDeleteAnnouncement(19)"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </div>
+         </div>
 
-        
-    </div>
+       <script>
+        function toggleAccordion(btn) {
+          let content = btn.nextElementSibling; 
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null; 
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        }
+       </script>
 
         <!-- Footer -->
         <?php include '../footer/footer.php'; ?>
+
+
+
     </body>
 </html>
