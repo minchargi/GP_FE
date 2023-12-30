@@ -69,11 +69,6 @@ include 'staff_function.php'
 
                         <button type="submit" class="btn btn-custom" name="submit">Create Course</button>
                     </form>
-
-                    <?php
-
-                    ?>
-
                 </div>
             </div>
         </div>
