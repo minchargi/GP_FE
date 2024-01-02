@@ -26,6 +26,11 @@
           Add
         </span>
       </button>
+      <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importM">
+        <span class="button-content gap-4">
+          Import
+        </span>
+      </button>
     </div>
   </div>
   <!-- Add Teacher List Modal-->
@@ -76,6 +81,30 @@
             <div class="form-group">
               <label for="teacherEmail">Email:</label>
               <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Import List Modal-->
+  <div class="modal fade" id="importM" tabindex="-1" role="dialog" aria-labelledby="importMLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="importMLabel">Import List</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form for adding new teacher -->
+          <form id="departForm" action="add_teacher.php" method="post">
+            <div class="form-group">
+                <label for="fileImport">Choose File:</label>
+                <input type="file" class="form-control" id="fileImport" name="fileImport" required>
             </div>
 
             <button type="submit" class="btn btn-custom" name="submit">Add</button>
@@ -241,8 +270,17 @@
     </table>
   </div>
 
-
-  </script>
+  <div class="container">
+    <nav class="list-pagination">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a class="pre-item page-link" href="#">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="../staff/department.php">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="next-item page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- Footer -->
   <?php include '../footer/footer.php'; ?>

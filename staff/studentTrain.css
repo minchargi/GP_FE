@@ -33,6 +33,7 @@ h1 {
     line-height: normal;
     border: none;
     border-radius: 5px;
+    margin-left: 10px; 
 }
 
 .custom-button:hover {
@@ -86,8 +87,7 @@ a {
     border: none; 
 }
 
-.major-btn {
-    margin-left: 80px; 
+.major-btn { 
     border: none; 
     background-color: transparent;
     color: #293895; 
@@ -104,7 +104,6 @@ a {
 }
 
 .yearMajor {
-    margin-left: 50px; 
     font-size: 20px; 
     color: #293895;  
 }

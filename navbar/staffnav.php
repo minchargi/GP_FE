@@ -28,8 +28,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/announce.php">Announcements</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/manageAccount.php">Accounts</a></li>
-                <li class="nav-item">
                   <a class="nav-link" href="../staff/courses.php">Courses</a></li>
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/students.php">Students</a></li>
