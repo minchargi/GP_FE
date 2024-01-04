@@ -52,7 +52,7 @@
                     if ($result2->num_rows > 0) {
                       while ($row2 = $result2->fetch_assoc()) {
                   ?>
-                  <li><a href="../Teacher/trainingProgram.php"><?php echo $row2['TProgram_Name']; ?></a></li>
+                  <li><a href="../Teacher/bachelor_year.php?tp_id=<?php echo $row2['TProgram_ID']; ?>&year=<?php echo $row2['Year']; ?>"><?php echo $row2['TProgram_Name']; ?></a></li>
                   <?php
                       }
                     }

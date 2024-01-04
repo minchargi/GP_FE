@@ -1,3 +1,15 @@
+<?php 
+
+  include '../db_conn.php';
+  include 'verifyTeacher.php';
+  include 'teacher_function.php';
+  
+  if (!isset($_GET['id']) and !isset($_GET['year'])) {
+    header('Location: courseList.php');
+  }
+  $course_id = $_GET['id'];
+  $year = $_GET['year'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +33,11 @@
       <?php include '../navbar/teachernav.php'; ?>
 
       <ul class="nav">
-        <li><a href="../Teacher/courseAnnouncement.php">Announcement</a></li>
-        <li><a href="../Teacher/coursedetail.php">Overview</a></li>
-        <li><a href="../Teacher/studentList.php">Student List</a></li>
-        <li class="active"><a href="../Teacher/grades.php">Grades</a></li>
-        <li><a href="../Teacher/attendance.php">Attendance</a></li>
+        <li><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+        <li><a href="../Teacher/coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+        <li><a href="../Teacher/studentList.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Student List</a></li>
+        <li class="active"><a href="../Teacher/grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+        <li><a href="../Teacher/attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
       </ul>
       <div class="container mt-4">
         <p class="header-text">Grade</p>
@@ -87,207 +99,55 @@
                 </tr>
               </thead>
               <tbody>
+                <?php
+                  $result = fetch_course_detail($course_id,$year);
+                  $row = $result->fetch_assoc();
+                ?>
                 <tr class="tb-row">
                   <th class="th-custom" scope="row"> </th>
                   <td class="td-custom"> </td>
-                  <td class="td-custom">10%</td>
-                  <td class="td-custom">40%</td>
-                  <td class="td-custom">50%</td>
+                  <td class="td-custom"><?php echo $row['Attendance_Percentage']; ?>%</td>
+                  <td class="td-custom"><?php echo $row['Midterm_Percentage']; ?>%</td>
+                  <td class="td-custom"><?php echo $row['Final_Percentage']; ?>%</td>
                   <td class="td-custom">100%</td>
                 </tr>
+                <?php
+                  $result = fetch_course_grade($course_id,$year);
+                  if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                      if (!isset($row['Attendance'])){
+                        $attendance = 0;
+                      } else {
+                        $attendance = $row['Attendance'];
+                      }
+                      if (!isset($row['Midterm'])){
+                        $midterm = 0;
+                      } else {
+                        $midterm = $row['Midterm'];
+                      }
+                      if (!isset($row['Final'])){
+                        $final = 0;
+                      } else {
+                        $final = $row['Final'];
+                      }
+                      if (!isset($row['Overall'])){
+                        $overall = 0;
+                      } else {
+                        $overall = $row['Overall'];
+                      }
+                ?>
                 <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
+                  <th class="th-custom" scope="row"><?php echo $row['User_ID']; ?></th>
+                  <td class="td-custom"><?php echo $row['FullName']; ?></td>
+                  <td class="td-custom"><?php echo $attendance; ?></td>
+                  <td class="td-custom"><?php echo $midterm; ?></td>
+                  <td class="td-custom"><?php echo $final; ?></td>
+                  <td class="td-custom"><?php echo $overall; ?></td>
                 </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">BI12-001 </th>
-                  <td class="td-custom">Nguyễn Văn A</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                
+                <?php
+                    }
+                  }
+                ?>
                 
               </tbody>
             </table>

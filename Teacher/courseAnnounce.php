@@ -1,3 +1,21 @@
+<?php 
+
+  include '../db_conn.php';
+  include 'verifyTeacher.php';
+  include 'teacher_function.php';
+  
+  if (!isset($_GET['id']) and !isset($_GET['year'])) {
+    header('Location: courseList.php');
+  }
+  $course_id = $_GET['id'];
+  $year = $_GET['year'];
+  $result = fetch_course_detail($course_id,$year);
+  if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+  }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +38,11 @@
     <?php include '../navbar/teachernav.php'; ?>
 
     <ul class="nav">
-        <li class="active"><a href="../Teacher/courseAnnounce.php">Announcement</a></li>
-        <li><a href="../Teacher/coursedetail.php">Overview</a></li>
-        <li><a href="../Teacher/studentList.php">Student List</a></li>
-        <li><a href="../Teacher/grades.php">Grades</a></li>
-        <li><a href="../Teacher/attendance.php">Attendance</a></li>
+        <li class="active"><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+        <li><a href="../Teacher/coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+        <li><a href="../Teacher/studentList.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Student List</a></li>
+        <li><a href="../Teacher/grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+        <li><a href="../Teacher/attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
     </ul>
     <div class="container mt-4">
       <p class="header-text">Announcements</p>

@@ -4,20 +4,15 @@
   include 'verifyTeacher.php';
   include 'teacher_function.php';
   
-  if (isset($_GET['id'])) {
-  $result = fetch_course_detail($course_id);
-    if ($result->num_rows > 0) {        
-
-        while ($row = $result->fetch_assoc()) {
-            $name = $row['Course_Name'];
-            $year = $row['Year'];
-            $lastname = $row['LastName'];
-            $email = $row['Email'];
-            $phone = $row['Phone'];
-            $tprogram_id = $row['TProgram_ID'];
-        } 
-      }
-    }
+  if (!isset($_GET['id']) and !isset($_GET['year'])) {
+    header('Location: courseList.php');
+  }
+  $course_id = $_GET['id'];
+  $year = $_GET['year'];
+  $result = fetch_course_detail($course_id,$year);
+  if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+  }
     
 ?>
 
@@ -45,11 +40,11 @@
       <?php include '../navbar/teachernav.php'; ?>
     
     <ul class="nav">
-        <li><a href="../Teacher/courseAnnouncement.php">Announcement</a></li>
-        <li class="active"><a href="../Teacher/coursedetail.php">Overview</a></li>
-        <li><a href="../Teacher/studentList.php">Student List</a></li>
-        <li><a href="../Teacher/grades.php">Grades</a></li>
-        <li><a href="../Teacher/attendance.php">Attendance</a></li>
+        <li><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+        <li class="active"><a href="../Teacher/coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+        <li><a href="../Teacher/studentList.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Student List</a></li>
+        <li><a href="../Teacher/grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+        <li><a href="../Teacher/attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
     </ul>
     
     <div class="container mt-4">
@@ -117,16 +112,8 @@
                               <input type="text" class="form-control" id="courseInfo" required>
                           </div>
                           <div class="form-group">
-                            <label for="courseInfo">Exercies:</label>
+                            <label for="courseInfo">Midterm:</label>
                             <input type="text" class="form-control" id="courseInfo" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="courseInfo">Practice:</label>
-                            <input type="text" class="form-control" id="courseGrade" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="courseInfo">Project work:</label>
-                            <input type="text" class="form-control" id="courseGrade" required>
                           </div>
                           <div class="form-group">
                             <label for="courseInfo">Final Exam:</label>
@@ -139,24 +126,42 @@
           </div>
       </div>
 
-        <div class="container mt-2">
+      <div class="container mt-2">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr class="tb-row">
+                      <th class="td-head" scope="col">Credit</th>
+                      <th class="td-head" scope="col">Lecture</th>
+                      <th class="td-head" scope="col">Tutorial</th>
+                      <th class="td-head" scope="col">Practical</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="tb-row">
+                      <td class="td-custom"><?php echo $row['Number_credit']; ?></td>
+                      <td class="td-custom"><?php echo $row['Number_lecture']; ?></td>
+                      <td class="td-custom"><?php echo $row['Number_tutorial']; ?></td>
+                      <td class="td-custom"><?php echo $row['Number_practical']; ?></td>
+                      </tr>
+
+                  </tbody>
+              </table>
+        </div>
+
+       <div class="container mt-2">
           <table class="table table-bordered">
               <thead>
                   <tr class="tb-row">
                   <th class="td-head" scope="col">Attendance</th>
-                  <th class="td-head" scope="col">Exercies</th>
-                  <th class="td-head" scope="col">Practice</th>
-                  <th class="td-head" scope="col">Project work</th>
+                  <th class="td-head" scope="col">Midterm</th>
                   <th class="td-head" scope="col">Final Exam</th>
                   </tr>
               </thead>
               <tbody>
                   <tr class="tb-row">
-                  <td class="td-custom">10% </td>
-                  <td class="td-custom">30%</td>
-                  <td class="td-custom">0%</td>
-                  <td class="td-custom">0%</td>
-                  <td class="td-custom">60%</td>
+                  <td class="td-custom"><?php echo $row['Attendance_Percentage']; ?></td>
+                  <td class="td-custom"><?php echo $row['Midterm_Percentage']; ?></td>
+                  <td class="td-custom"><?php echo $row['Final_Percentage']; ?></td>
                   </tr>
 
               </tbody>

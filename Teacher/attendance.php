@@ -1,3 +1,16 @@
+<?php 
+
+  include '../db_conn.php';
+  include 'verifyTeacher.php';
+  include 'teacher_function.php';
+  
+  if (!isset($_GET['id']) and !isset($_GET['year'])) {
+    header('Location: courseList.php');
+  }
+  $course_id = $_GET['id'];
+  $year = $_GET['year'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +33,11 @@
       <?php include '../navbar/teachernav.php'; ?>
 
       <ul class="nav">
-        <li><a href="../Teacher/courseAnnounce.php">Announcement</a></li>
-        <li><a href="../Teacher/coursedetail.php">Overview</a></li>
-        <li><a href="../Teacher/studentList.php">Student List</a></li>
-        <li ><a href="../Teacher/grades.php">Grades</a></li>
-        <li class="active"><a href="../Teacher/attendance.php">Attendance</a></li>
+        <li><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+        <li><a href="../Teacher/coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+        <li><a href="../Teacher/studentList.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Student List</a></li>
+        <li ><a href="../Teacher/grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+        <li class="active"><a href="../Teacher/attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
     </ul>
     <div class="container mt-4">
         <p class="header-text">Attendance</p>
@@ -32,384 +45,49 @@
     <div class="container mt-2">
         <table class="table table-bordered table-hover">
             <thead>
+              <?php
+                $result = fetch_course_detail($course_id,$year);
+                $row = $result->fetch_assoc();
+              ?>
               <tr class="tb-row">
                 <th class="td-head" scope="col">Student ID</th>
                 <th class="td-head" scope="col">Name</th>
-                <th class="td-head" scope="col">1</th>
-                <th class="td-head" scope="col">2 </th>
-                <th class="td-head" scope="col">3 </th>
-                <th class="td-head" scope="col">4 </th>
-                <th class="td-head" scope="col">5 </th>
-                <th class="td-head" scope="col">6 </th>
-                <th class="td-head" scope="col">7 </th>
-                <th class="td-head" scope="col">8 </th>
-                <th class="td-head" scope="col">9 </th>
-                <th class="td-head" scope="col">10 </th>
-                <th class="td-head" scope="col"> 11 </th>
-                <th class="td-head" scope="col">12 </th>
-                <th class="td-head" scope="col">13</th>
+                <?php
+                    for ($i = 1;$i <= $row['Number_lecture'];$i++){
+                  ?>          
+                    <th class="td-head" scope="col"><?php echo $i?></th>
+                  <?php
+                    }
+                ?>
               </tr>
             </thead>
             <tbody>
+              <?php
+               $result2 = fetch_course_student_list($course_id,$year);
+               if ($result2->num_rows > 0) {
+                while ($row2 = $result2->fetch_assoc()) {
+              ?>
               <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
+                <td class="td-custom"><?php echo $row2['User_ID']; ?></td>
+                <td class="td-custom"><?php echo $row2['FullName']; ?></td>
+                <?php
+                    for ($i = 1;$i <= $row['Number_lecture'];$i++){
+                    $result3 = fetch_attendance($row2['User_ID'],$course_id,$i);
+                    if ($result3->num_rows > 0) {
+                      $atten = $result3->fetch_assoc()['Attendance'];
+                    } else {
+                      $atten = 0;
+                    } 
+                ?>
+                <td class="td-custom"><?php echo $atten; ?></td>
+                <?php
+                    } 
+                ?>
               </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              <tr class="tb-row">
-                <td class="td-custom">BI12-001 </td>
-                <td class="td-custom">Nguyễn Văn A </td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">1</td>
-                <td class="td-custom">0</td>
-              </tr>
-              
-              
+              <?php
+                  }
+                }
+              ?>
             </tbody>
           </table>
     </div>

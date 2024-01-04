@@ -1,7 +1,12 @@
 <?php 
-    include '../db_conn.php';
-    include 'teacher.function.php';
-    include 'verifyTeacher.php'
+    include 'teacher_function.php';
+    include 'verifyTeacher.php';
+    if (!isset($_GET['tp_id']) and !isset($_GET['year']) and !isset($_GET['ba_year'])) {
+        header('Location: courseList.php');
+    }
+    $tp_id = $_GET['tp_id'];
+    $year =  $_GET['year'];
+    $ba_year = $_GET['ba_year'];
 ?>
 
 <!DOCTYPE html>
@@ -81,52 +86,17 @@
     
    <div class="container mt-4">
         <?php
-        $result = fetch_account($user_id);
+        $result = fetch_course($user_id,$year,$ba_year,$tp_id);
             if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {}}
+                while ($row = $result->fetch_assoc()) {
         ?>
         <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
+            <a class="link_course" href="../Teacher/coursedetail.php?id=<?php echo $row['Course_ID']; ?>&year=<?php echo $year;?>"><?php echo $row['Course_Name']; ?></a>
         </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
-        <div class="courseDetail">
-            <a class="link_course" href="../Teacher/coursedetail.php">Machine Learning and Data Mining</a>
-        </div>
+        <?php
+                }
+            }
+        ?>
    </div>
    <!-- Footer -->
    <?php include '../footer/footer.php'; ?>
