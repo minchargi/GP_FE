@@ -21,11 +21,40 @@
 
       <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#add">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#trainProgM">
             <span class="button-content gap-4">
                 Add
             </span>
         </button>
+        </div>
+      </div>
+
+      <!-- Add courseProg Modal -->
+      <div class="modal fade" id="trainProgM" tabindex="-1" role="dialog" aria-labelledby="trainProgMLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trainProgMLabel">New Training Program</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for adding new (course) training program -->
+                    <form id="trainProgMForm" action="trainProgM.php" method="post">
+                        <div class="form-group">
+                            <label for="progName">Program Id:</label>
+                            <input type="text" class="form-control" id="progId" name="tprogram_id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="progName">Program Name:</label>
+                            <input type="text" class="form-control" id="progName" name="tprogram_name" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                    </form>
+                </div>
+            </div>
         </div>
       </div>
 

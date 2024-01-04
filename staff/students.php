@@ -26,13 +26,104 @@
       </div>
       <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#add">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentM">
             <span class="button-content gap-4">
                 Add
             </span>
         </button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentDeptM">
+            <span class="button-content gap-4">
+                Add Dept
+            </span>
+        </button>
         </div>
       </div>
+      <!-- Add Intake Modal -->
+      <div class="modal fade" id="studentM" tabindex="-1" role="dialog" aria-labelledby="studentMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studentMLabel">New Intake</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new intake -->
+                        <form id="studentForm" action="../staff/studentsM.php" method="post">
+                            <div class="form-group">
+                                <label for="progName">Intake:</label>
+                                <input type="text" class="form-control" id="progName" name="progName" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="courseChoose">Choose Department(s):</label>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department1" name="department[]" value="Department 1">
+                                <label class="form-check-label" for="department1">Department of Information and Communication Technology</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department2" name="department[]" value="Department 2">
+                                <label class="form-check-label" for="department3">Department of Space and Applications</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department3" name="department[]" value="Department 3">
+                                <label class="form-check-label" for="department3">Department of Energy</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department4" name="department[]" value="Department 4">
+                                <label class="form-check-label" for="department4">Department of Life Science</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="department5" name="department[]" value="Department 5">
+                                <label class="form-check-label" for="department5">Department of Water - Environment - Oceanography</label>
+                              </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Student Dept Modal-->
+        <div class="modal fade" id="studentDeptM" tabindex="-1" role="dialog" aria-labelledby="studentDeptMLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studentDeptMLabel">Add New Intake</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new intake -->
+                        <form id="studentDeptForm" action="../staff/studentsM.php" method="post">
+                            <div class="form-group">
+                              <label for="intakeChoose">Intake:</label>
+                              <select class="form-control" id="intakeChoose" name="intakeChoose" required>
+                                  <option value="" selected disabled>Select an option</option>
+                                  <option value="dept1">Department of Information and Communication Technology</option>
+                                  <option value="dept2">Department of Space and Applications</option>
+                                  <option value="dept3">Department of Energy</option>
+                                  <option value="dept4">Department of Life Science</option>
+                                  <option value="dept5">Department of Water - Environment - Oceanography</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newDeptName">Department Name:</label>
+                                <input type="text" class="form-control" id="newDeptName" name="newDeptName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newMajor">New Major:</label>
+                                <input type="text" class="form-control" id="newMajor" name="newMajor" required>
+                            </div>
+                              
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
       <div class="container mt-4">
         <div class="accordion">
@@ -44,6 +135,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -57,6 +149,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -70,6 +163,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -83,6 +177,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -96,6 +191,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -109,6 +205,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -122,6 +219,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -135,6 +233,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -148,6 +247,7 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
@@ -161,12 +261,11 @@
                 <li><a href="../staff/studentTrain.php">Department of Energy</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Information and Communication Technology</a></li>
                 <li><a href="../staff/studentTrain.php">Department of Life Sciences</a></li>
+                <li><a href="../staff/studentTrain.php">Department of Water - Environment - Oceanography</a></li>
               </ul>
             </div>
           </div>
          </div>
-      </div>
-      
 
        <script>
         function toggleAccordion(btn) {

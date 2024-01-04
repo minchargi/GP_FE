@@ -33,6 +33,7 @@ h1 {
     line-height: normal;
     border: none;
     border-radius: 5px;
+    margin-left: 10px; 
 }
 
 .custom-button:hover {
@@ -40,6 +41,7 @@ h1 {
     color: white; 
 }
 
+/* modal */
 .modal-title {
     font-size: 20px; 
     color: #293895; 
@@ -71,6 +73,7 @@ h1 {
     color: black; 
     font-weight: 500; 
 }
+/**/
 
 a {
     text-decoration: none; 
@@ -84,8 +87,7 @@ a {
     border: none; 
 }
 
-.major-btn {
-    margin-left: 80px; 
+.major-btn { 
     border: none; 
     background-color: transparent;
     color: #293895; 
@@ -102,7 +104,6 @@ a {
 }
 
 .yearMajor {
-    margin-left: 50px; 
     font-size: 20px; 
     color: #293895;  
 }

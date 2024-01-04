@@ -69,7 +69,50 @@ ul.nav {
   color:#EB1C24;
 }
 
-  
+/* modal */
+.modal-title {
+  font-size: 20px; 
+  color: #293895; 
+  font-weight: 600; 
+}
+
+.btn-custom {
+  width: 150px; 
+  background-color: #293895; 
+  color: white; 
+  font-size: 18px; 
+  font-weight: 500; 
+  margin: 15px; 
+}
+
+.btn-custom:hover {
+  background-color: #EB1C24;
+  color: white; 
+}
+
+.close {
+  background-color: white; 
+  border: none; 
+}
+
+.form-group {
+  margin: 15px; 
+  font-size: 18px; 
+  color: black; 
+  font-weight: 500; 
+}
+
+.btn-primary {
+  background-color: #293895; 
+  border: none; 
+  color: white; 
+}
+
+.btn-primary:hover {
+  background-color: #EB1C24;
+  color: white; 
+}
+/**/
 
 .header_text{
     background: url('../images/titlel.svg') no-repeat bottom left;

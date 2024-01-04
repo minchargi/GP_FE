@@ -21,84 +21,115 @@
 
       <div class="container mt-4">
         <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addTrainProg">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#studentTrainM">
             <span class="button-content gap-4">
                 Add
             </span>
-            </button>
+          </button>
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importList">
+            <span class="button-content gap-4">
+                Import
+            </span>
+          </button>
         </div>
 
         <!-- Add trainProg Modal-->
-        <div class="modal fade" id="addTrainProg" tabindex="-1" role="dialog" aria-labelledby="addTrainProgLabel" aria-hidden="true">
+        <div class="modal fade" id="studentTrainM" tabindex="-1" role="dialog" aria-labelledby="studentTrainMLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addTrainProgLabel">New Training Program</h5>
+                        <h5 class="modal-title" id="studentTrainMLabel">New Training Program</h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <!-- Form for adding new training program -->
-                        <form id="addTrainForm" action="../staff/addSTrain.php" method="post" enctype="multipart/form-data">
+                        <form id="studentTrainForm" action="../staff/studentTrainM.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="progName">Program Name:</label>
                                 <input type="text" class="form-control" id="progName" name="progName" required>
                             </div>
                             <div class="form-group">
-                                <label for="secondYear">Second Year List:</label>
-                                <input type="file" class="form-control" id="secondYear" name="secondYear" required>
+                                <label for="progID">Program ID:</label>
+                                <input type="text" class="form-control" id="progID" name="progID" required>
                             </div>
                             <div class="form-group">
-                                <label for="thirdYear">Third Year List:</label>
-                                <input type="file" class="form-control" id="thirdYear" name="thirdYear" required>
+                                <label for="deptID">Department ID:</label>
+                                <input type="text" class="form-control" id="deptID" name="deptID" required>
                             </div>
 
-                            <button type="submit class" class="btn btn-custom" name="submit">Add</button>
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Import List Modal-->
+        <div class="modal fade" id="importList" tabindex="-1" role="dialog" aria-labelledby="importListLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imortListLabel">Import Student List</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new training program -->
+                        <form id="importListForm" action="../staff/studentTrainM.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="fileImport">Choose File:</label>
+                                <input type="file" class="form-control" id="fileImport" name="fileImport" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-custom" name="submit">Add</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
-      <div class="training">
-        <div class=" major-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudent1" aria-expanded="false" aria-controls="collapseStudent1">
-          Information and Communication Technology (ICT)
-        </div>
-        <div class="collapse" id="collapseStudent1">
-          <div class="card card-body course-card">
-            <ul class="trainMajor">
-              <li><a class="yearMajor" href="../staff/studentList.php">Second Year</a></li>
-              <li><a class="yearMajor" href="../staff/studentList.php">Third Year</a></li>
-            </ul>
+      <div class="container mt-4">
+        <div class="training">
+            <div class=" major-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudent1" aria-expanded="false" aria-controls="collapseStudent1">
+              Information and Communication Technology (ICT)
+            </div>
+            <div class="collapse" id="collapseStudent1">
+              <div class="card card-body course-card">
+                <ul class="trainMajor">
+                  <li><a class="yearMajor" href="../staff/studentList.php">Second Year</a></li>
+                  <li><a class="yearMajor" href="../staff/studentList.php">Third Year</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="training">
-        <div class=" major-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudent2" aria-expanded="false" aria-controls="collapseStudent2">
-          Cyber Security (CS)
-        </div>
-        <div class="collapse" id="collapseStudent2">
-          <div class="card card-body course-card">
-            <ul class="trainMajor">
-              <li><a class="yearMajor" href="../staff/studentList.php">Second Year</a></li>
-              <li><a class="yearMajor" href="../staff/studentList.php">Third Year</a></li>
-            </ul>
+          <div class="training">
+            <div class=" major-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudent2" aria-expanded="false" aria-controls="collapseStudent2">
+              Cyber Security (CS)
+            </div>
+            <div class="collapse" id="collapseStudent2">
+              <div class="card card-body course-card">
+                <ul class="trainMajor">
+                  <li><a class="yearMajor" href="../staff/studentList.php">Second Year</a></li>
+                  <li><a class="yearMajor" href="../staff/studentList.php">Third Year</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="training">
-        <div class=" major-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudent3" aria-expanded="false" aria-controls="collapseStudent3">
-          Data Science (DS)
-        </div>
-        <div class="collapse" id="collapseStudent3">
-          <div class="card card-body course-card">
-            <ul class="trainMajor">
-              <li><a class="yearMajor" href="../staff/studentList.php">Second Year</a></li>
-              <li><a class="yearMajor" href="../staff/studentList.php">Third Year</a></li>
-            </ul>
+          <div class="training">
+            <div class=" major-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudent3" aria-expanded="false" aria-controls="collapseStudent3">
+              Data Science (DS)
+            </div>
+            <div class="collapse" id="collapseStudent3">
+              <div class="card card-body course-card">
+                <ul class="trainMajor">
+                  <li><a class="yearMajor" href="../staff/studentList.php">Second Year</a></li>
+                  <li><a class="yearMajor" href="../staff/studentList.php">Third Year</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
       </div>
 
         <!-- Footer -->
