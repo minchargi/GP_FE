@@ -1,0 +1,56 @@
+.navbar-nav .nav-link {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    margin-bottom: -2px;
+  }
+
+.navbar-nav .nav-link:hover {
+    color: #293895 !important;
+    border-bottom-color: #EB1C24;
+}
+
+.navbar-brand img {
+    margin-left: 20px; 
+}
+
+.dropdown-menu {
+    max-width: 500px; 
+    left: auto !important; 
+    right: 0; 
+    top: 100%; 
+}
+
+.dropdown-toggle::after {
+    display: none; 
+}
+
+ul.nav {
+    padding: 0px;
+    background-color: #293895;
+    text-align: center;
+    justify-content: center;
+}
+
+ul.nav > li {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 5px;
+}
+
+ul.nav > li:hover {
+    background-color: #EB1C24;
+}
+
+ul.nav > li.active {
+    background-color: #EB1C24 ;
+}
+
+ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/announce.php">Announcements</a></li>
+                  <a class="nav-link" href="../staff/announce.php"><i class="fa-solid fa-newspaper"></i> Announcements</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/courses.php">Courses</a></li>
+                  <a class="nav-link" href="../staff/courses.php"><i class="fa-solid fa-book"></i> Courses</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/students.php">Students</a></li>
+                  <a class="nav-link" href="../staff/students.php"><i class="fa-solid fa-user-group"></i> Students</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/departments.php">Departments</a></li>
+                  <a class="nav-link" href="../staff/departments.php"><i class="fa-solid fa-chalkboard-user"></i> Departments</a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user-circle"></i>
