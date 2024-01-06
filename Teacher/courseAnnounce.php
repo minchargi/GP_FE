@@ -46,7 +46,47 @@
     </ul>
     <div class="container mt-4">
       <p class="header-text">Announcements</p>
-  </div>
+    </div>
+    <div class="container mt-4">
+        <div class="btn-container">
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#courseAnnounce">
+            <span class="button-content gap-4">
+                Add
+            </span>
+        </button>
+        </div>
+      </div>
+      <!-- Add Announce Modal-->
+        <div class="modal fade" id="courseAnnounce" tabindex="-1" role="dialog" aria-labelledby="courseAnnounceLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="courseAnnounceLabel">Add Announcements</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for adding new announce -->
+                        <form id="courseAnnounceForm" action="#" method="post">
+                          <div class="form-group">
+                            <label for="announceTitle">Title:</label>
+                            <input type="text" class="form-control" id="announceTitle" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="editedContent">Add Content:</label>
+                            <textarea class="form-control" id="editedContent" rows="4"></textarea>
+                          </div>
+                        </form>
+                        
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
   <div class="container mt-4">
       <div class="row">
           <div class="col">
