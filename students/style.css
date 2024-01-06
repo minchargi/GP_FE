@@ -185,6 +185,15 @@ td {
     color: #EB1C24;
 }
 
+.accordion-content a {
+    color:#293895; 
+    text-decoration: underline; 
+}
+
+.accordion-content a:hover {
+    color:#EB1C24;
+}
+
 .announce-accordion {
     width: 700px;
     padding-bottom: 20px; 

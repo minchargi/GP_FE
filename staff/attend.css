@@ -67,6 +67,7 @@ h1 {
     line-height: normal;
     border: none;
     border-radius: 5px;
+    margin-left: 10px; 
 }
 
 .custom-button i{
