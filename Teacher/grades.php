@@ -79,8 +79,13 @@
                           <div class="form-group">
                             <label for="studentInfo">Grade:</label>
                             <input type="text" class="form-control" id="studentGrade" required>
-                        </div>
+                          </div>
                           <button type="button" class="btn btn-custom" onclick="updateGrades()">Update</button>
+                          <div class="form-group">
+                            <label for="fileInput">Import Grades:</label>
+                            <input type="file" class="form-control" id="fileInput" required>
+                          </div>
+                          <button type="button" class="btn btn-custom" onclick="importGrades()">Import</button>
                       </form>
                   </div>
               </div>
