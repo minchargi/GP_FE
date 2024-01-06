@@ -44,13 +44,15 @@
         <div class="button-container">
             <button class="custom-button" data-bs-toggle="modal" data-bs-target="#updateGradesModal">
                 <span class="button-content gap-4">
-                    <i class="fas fa-plus-circle"></i>
-                    Update Grade
+                    Update
+                </span>
+            </button>
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importGradesModal">
+                <span class="button-content gap-4">
+                    Import
                 </span>
             </button>
         </div>
-      </div>
-
   <!-- Update Grades Modal -->
       <div class="modal fade" id="updateGradesModal" tabindex="-1" role="dialog" aria-labelledby="updateGradesModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -81,13 +83,30 @@
                             <input type="text" class="form-control" id="studentGrade" required>
                           </div>
                           <button type="button" class="btn btn-custom" onclick="updateGrades()">Update</button>
-                          <div class="form-group">
-                            <label for="fileInput">Import Grades:</label>
-                            <input type="file" class="form-control" id="fileInput" required>
-                          </div>
-                          <button type="button" class="btn btn-custom" onclick="importGrades()">Import</button>
                       </form>
                   </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="importGradesModal" tabindex="-1" role="dialog" aria-labelledby="importGradesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="importGradesModalLabel">Import Grades</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <!-- Form for importing grades -->
+                  <form id="importGradesForm">
+                      <div class="form-group">
+                          <label for="fileInput">Import Grades:</label>
+                          <input type="file" class="form-control" id="fileInput" required>
+                      </div>
+                      <button type="button" class="btn btn-custom" onclick="importGrades()">Import</button>
+                  </form>
               </div>
           </div>
       </div>
