@@ -81,6 +81,11 @@
                     Add Student
                 </span>
             </button>
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importListsModal">
+                <span class="button-content gap-4">
+                    Import
+                </span>
+            </button>
         </div>
     </div>
 
@@ -144,6 +149,30 @@
             </div>
         </div>
     </div>
+    <!-- Import Lists Modal -->
+    <div class="modal fade" id="importListsModal" tabindex="-1" role="dialog" aria-labelledby="importListsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="importListsModalLabel">Import Lists</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for importing lists -->
+                    <form id="importListsForm">
+                        <div class="form-group">
+                            <label for="fileInput">Import Lists:</label>
+                            <input type="file" class="form-control" id="fileInput" required>
+                        </div>
+                        <button type="button" class="btn btn-custom" onclick="importLists()">Import</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="container mt-2">
         <table class="table table-bordered table-hover">
             <thead>

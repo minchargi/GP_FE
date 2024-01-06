@@ -68,6 +68,11 @@
                 Add
             </span>
         </button>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importList">
+          <span class="button-content gap-4">
+              Import
+          </span>
+        </button>
         </div>
       </div>
       <!-- Add Attend Modal-->
@@ -144,6 +149,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Import List Modal-->
+        <div class="modal fade" id="importList" tabindex="-1" role="dialog" aria-labelledby="importListLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="imortListLabel">Import Student List</h5>
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Form for adding new training program -->
+                      <form id="importListForm" action="../staff/attendM.php" method="post" enctype="multipart/form-data">
+                          <div class="form-group">
+                              <label for="fileImport">Choose File:</label>
+                              <input type="file" class="form-control" id="fileImport" name="fileImport" required>
+                          </div>
+
+                          <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
         </div>
 
         <div class="container mt-2">
