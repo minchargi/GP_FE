@@ -53,11 +53,22 @@ function fetch_course_grade($student_id,$course_id){
     return $result;
 }
 
-function fetch_attendance($student_id,$course_id,$session){
+function fetch_attendance($student_id,$course_id,$year,$session){
     include '../db_conn.php';
     $sql = "SELECT *
     FROM attendance
-    WHERE Student_ID = '$student_id' AND Course_ID = '$course_id' AND Session = '$session'";
+    WHERE Student_ID = '$student_id' AND Course_ID = '$course_id' AND Year = '$year' AND Session = '$session'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_attendance_status($course_id,$year){
+    include '../db_conn.php';
+    $sql = "SELECT *
+    FROM attendance_session
+    WHERE Course_ID = '$course_id' AND Year = '$year'
+    ORDER BY `attendance_session`.`Create_at` DESC";
     $result = $conn->query($sql);
     $conn->close();
     return $result;

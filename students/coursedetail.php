@@ -5,6 +5,7 @@
     header('Location: course-overview.php');
   };
   $course_id = $_GET['id'];
+  $year = 2024;
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +94,36 @@
               <dt>Attendance
                   <dd>Attendance will be checked for every labwork</dd>
                   <dd>Students should remind the lecturers to check attendance if they forget it.</dd>
-                  <button class="btn-custom" onclick="checkAttendance()">Check Attendance</button>
+                    <?php 
+                    $result = fetch_attendance_status($course_id,2024);
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+                    }
+                    date_default_timezone_set("Asia/Ho_Chi_Minh");
+                    $result2 = fetch_attendance($user_id,$course_id,2024,$row['Session']);
+                    if ($result2->num_rows >0) {
+                        $row2 = $result2->fetch_assoc();
+                        $already = $row2['Attendance'];
+                        echo $already;
+                    }
+                    if ($already == 1){
+                        $text = "Checked";
+                    }else if (strtotime($row['Time_close']) > time()){
+                        $text = "Check attendance";
+                    } else {
+                        $text = "Late";
+                    }
+                    ?>
+
+                        <form id="check_attend" action="check_attend.php" method="POST">
+                            <input type="hidden" id="student_id" name="student_id" value=<?php echo $user_id ?>>
+                            <input type="hidden" id="course_id" name="course_id" value=<?php echo $course_id ?>>
+                            <input type="hidden" id="year" name="year" value=<?php echo $year ?>>
+                            <input type="hidden" id="session" name="session" value=<?php echo $row['Session'] ?>>
+                            <input type="hidden" id="time_close" name="time_close" value=<?php echo strtotime($row['Time_close']) ?>>
+                        </form>
+                        <button class="btn-custom" onclick="check_attend()"><?php echo $text?></button>
+                  
               </dt>
           </dl>
           <ul class="sub">After a labwork session, you have 7 days to complete the exercises 
@@ -102,6 +132,7 @@
               <li><b>Source code is optional</b> in the report</li>
           </ul>
       </div>
+      <script src="check_attend.js"></script>
   
 
   <!-- Footer -->
