@@ -93,7 +93,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for add Teacher -->
-                    <form id="addTeachersForm" action="add_teacher.php" method="post">
+                    <form id="addTeachersForm" action="admin_function/add_teacher.php" method="post">
                         <div class="form-group">
                             <label for="teacherDept">Training Program:</label>
                             <input type="text" class="form-control" id="tprogram_id" name="tprogram_id" required>

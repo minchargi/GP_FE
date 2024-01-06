@@ -1,5 +1,5 @@
 <?php 
-    include "../db_conn.php";
+    include "../../db_conn.php";
     if (isset($_POST['submit'])) {
         $id = $_POST['studentID'];
         $year = $_POST['year'];
@@ -22,7 +22,7 @@
 
         if ($result == TRUE) {
             echo "New record created successfully.";
-            header('location:studentList.php');
+            header('location:../studentList.php');
         }else{
             echo "Error:". $sql . "<br>". $conn->error;
         } 

@@ -93,7 +93,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <form id="addAdminsForm" action="add_admin.php" method="post">
+                <form id="addAdminsForm" action="admin_function/add_admin.php" method="post">
                     <!-- Form for add Admin -->
                     <div class="form-group">
                         <label for="studentID">Admin ID:</label>

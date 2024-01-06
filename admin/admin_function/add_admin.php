@@ -1,5 +1,5 @@
 <?php 
-    include "../db_conn.php";
+    include "../../db_conn.php";
     if (isset($_POST['submit'])) {
         $id = $_POST['id'];
         $name = "admin";
@@ -14,7 +14,7 @@
 
         if ($result == TRUE) {
             echo "New record created successfully.";
-            header('location:admin_account.php');
+            header('location:../admin_account.php');
         }else{
             echo "Error:". $sql . "<br>". $conn->error;
         } 

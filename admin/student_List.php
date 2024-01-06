@@ -96,7 +96,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for add Student -->
-                    <form id="addStudentsForm" action="add_student.php" method="post">
+                    <form id="addStudentsForm" action="admin_function/add_student.php" method="post">
                         <div class="form-group">
                             <label for="studentMajor">Year Start:</label>
                             <input type="text" class="form-control" id="year" name="year" required>

@@ -94,7 +94,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for add Staff -->
-                    <form id="addStaffsForm" action="add_staff.php" method="post">
+                    <form id="addStaffsForm" action="admin_function/add_staff.php" method="post">
                         <div class="form-group">
                             <label for="teacherDept">Training Program:</label>
                             <input type="text" class="form-control" id="tprogram_id" name="tprogram_id" required>

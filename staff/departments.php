@@ -78,10 +78,10 @@
         </div>
         <div class="modal-body">
           <!-- Form for adding new teacher -->
-          <form id="departForm" action="add_teacher.php" method="post">
+          <form id="departForm" action="staff_function/add_teacher.php" method="post">
             <div class="form-group">
-              <label for="teacherDept">Training Program:</label>
-              <input type="text" class="form-control" id="tprogram_id" name="tprogram_id" required>
+              <label for="teacherDept">Department:</label>
+              <input type="text" class="form-control" id="department" name="department" required>
             </div>
             <div class="form-group">
               <label for="teacherDept">Teacher ID:</label>
