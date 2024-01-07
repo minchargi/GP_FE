@@ -74,9 +74,9 @@
 
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký thi lại môn Signal and Systems</button>
             <div class="accordion-content">
-              <p>Announcement content here !</p>
+              <p>Điền đơn để đăng ký thi lại: <a href="../students/retakeForm.php">Link</a></p>
             </div>
           </div>
          </div>

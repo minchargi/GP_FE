@@ -20,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../Teacher/studentList.css">
+    <link rel="stylesheet" href="../Teacher/attendance.css">
     <link rel="stylesheet" href="../Teacher/navbar.css">
     <link rel="stylesheet" href="../Teacher/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -41,7 +41,89 @@
     </ul>
     <div class="container mt-4">
         <p class="header-text">Attendance</p>
+        <div class="button-container">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addAttendModal">
+                <span class="button-content gap-4">
+                    Add 
+                </span>
+            </button>
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importListsModal">
+                <span class="button-content gap-4">
+                    Import
+                </span>
+            </button>
+        </div>
     </div>
+
+    <!-- Add Attend Modal-->
+    <div class="modal fade" id="addAttendModal" tabindex="-1" role="dialog" aria-labelledby="addAttendModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="addAttendModalLabel">Add Attendance</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <!-- Form for adding attendance -->
+                  <form id="attendForm" action="#" method="post">
+                      <div class="form-group">
+                          <label for="studentMajor">Major:</label>
+                          <input type="text" class="form-control" id="studentMajor" name="studentMajor" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="studentID">Student ID:</label>
+                          <input type="text" class="form-control" id="studentID" name="studentID" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="studentName">Student Name:</label>
+                          <input type="text" class="form-control" id="studentName" name="studentName" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="lectureChoose">Choose lecture(s):</label>
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="lecture1" name="lecture[]" value="Lecture 1">
+                              <label class="form-check-label" for="lecture1">1</label>
+                          </div>
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="lecture2" name="lecture[]" value="Lecture 2">
+                              <label class="form-check-label" for="lecture2">2</label>
+                          </div>
+                          <!-- Remaining lecture checkboxes -->
+                      </div>
+                      
+                      <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Import Lists Modal -->
+    <div class="modal fade" id="importListsModal" tabindex="-1" role="dialog" aria-labelledby="importListsModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="importListsModalLabel">Import Lists</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <!-- Form for importing lists -->
+                  <form id="importListsForm">
+                      <div class="form-group">
+                          <label for="fileInput">Import Lists:</label>
+                          <input type="file" class="form-control" id="fileInput" required>
+                      </div>
+                      <button type="button" class="btn btn-custom" onclick="importLists()">Import</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
     <div class="container mt-2">
         <table class="table table-bordered table-hover">
             <thead>
