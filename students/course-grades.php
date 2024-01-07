@@ -1,10 +1,11 @@
 <?php 
   include 'verifyStudent.php';
   include 'student_function.php';
-  if (!isset($_GET['id'])){
+  if (!isset($_GET['id']) and !isset($_GET['year'])){
     header('Location: course-overview.php');
   };
   $course_id = $_GET['id'];
+  $year = $_GET['year'];
 ?>
 
 
@@ -80,10 +81,10 @@
     </header>
 
   <ul class="nav">
-    <li><a href="announceCourse.php?id=<?php echo $course_id; ?>">Announcement</a></li>
-    <li><a href="coursedetail.php?id=<?php echo $course_id; ?>">Overview</a></li>
-    <li class="active"><a href="course-grades.php?id=<?php echo $course_id; ?>">Grades</a></li>
-    <li><a href="attendance.php?id=<?php echo $course_id; ?>">Attendance</a></li>
+    <li><a href="announceCourse.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+    <li><a href="coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+    <li class="active"><a href="course-grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+    <li><a href="attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
   </ul>
 
   
@@ -103,7 +104,7 @@
       </thead>
       <tbody>
         <?php
-        $result = fetch_grades($user_id);
+        $result = fetch_course_grade($user_id,$course_id,$year);
         if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
         ?>

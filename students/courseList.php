@@ -88,7 +88,7 @@
         
         ?>
         <div class="courseDetail">
-            <a class="link_course" href="../students/announceCourse.php?id=<?php echo $row['Course_ID']; ?>"><?php echo $row['Course_Name']; ?></a>
+            <a class="link_course" href="../students/announceCourse.php?id=<?php echo $row['Course_ID']; ?>&year=<?php echo $row['Year'];?>"><?php echo $row['Course_Name']; ?></a>
         </div>
         <?php       
                 }

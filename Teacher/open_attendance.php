@@ -1,6 +1,7 @@
 <?php 
     include '../db_conn.php';
     if (isset($_POST['submit'])) {
+        date_default_timezone_set("Asia/Ho_Chi_Minh");
         $couse_id = $_POST['course_id'];
         $year = $_POST['year'];
         $session = $_POST['session'];

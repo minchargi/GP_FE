@@ -23,7 +23,7 @@ function fetch_account($user_id) {
 
 function fetch_course($user_id,$bachelor_year) {
     include '../db_conn.php';
-    $sql = "SELECT c.Course_ID,c.Course_Name
+    $sql = "SELECT c.Course_ID,c.Course_Name,c.Year
     FROM grade g
     INNER JOIN course c ON g.Course_ID = c.Course_ID
     WHERE g.Student_ID = '$user_id' AND c.Bachelor_Year = '$bachelor_year'";
@@ -42,12 +42,12 @@ function fetch_course_overview($course_id) {
     return $result;
 }
 
-function fetch_course_grade($student_id,$course_id){
+function fetch_course_grade($student_id,$course_id,$year){
     include '../db_conn.php';
-    $sql = "SELECT c.Course_ID,c.Course_Name,g.Attendance,g.Midterm, g.Final
+    $sql = "SELECT c.Course_ID,c.Course_Name,g.Attendance,g.Midterm, g.Final,g.Overall
     FROM grade g
     INNER JOIN course c ON g.Course_ID = c.Course_ID
-    WHERE g.Student_ID = '$student_id' AND g.Course_ID = '$course_id'";
+    WHERE g.Student_ID = '$student_id' AND g.Course_ID = '$course_id' AND g.Year = $year";
     $result = $conn->query($sql);
     $conn->close();
     return $result;

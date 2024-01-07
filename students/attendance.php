@@ -1,10 +1,11 @@
 <?php 
   include 'verifyStudent.php';
   include 'student_function.php';
-  if (!isset($_GET['id'])){
+  if (!isset($_GET['id']) and !isset($_GET['year'])){
     header('Location: course-overview.php');
   };
   $course_id = $_GET['id'];
+  $year = $_GET['year'];
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -77,10 +78,10 @@
     </header>
 
         <ul class="nav">
-          <li><a href="announceCourse.php?id=<?php echo $course_id; ?>">Announcement</a></li>
-          <li><a href="coursedetail.php?id=<?php echo $course_id; ?>">Overview</a></li>
-          <li><a href="course-grades.php?id=<?php echo $course_id; ?>">Grades</a></li>
-          <li class="active"><a href="attendance.php?id=<?php echo $course_id; ?>">Attendance</a></li>
+          <li><a href="announceCourse.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+          <li><a href="coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+          <li><a href="course-grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+          <li class="active"><a href="attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
         </ul>
         <?php 
           $result = fetch_course_overview($course_id);
@@ -110,7 +111,7 @@
                   <td class="td-custom"><?php $row2 = fetch_account($user_id)->fetch_assoc(); echo $row2['FirstName'], ' ',  $row2['LastName']; ?></td>
                   <?php
                     for ($i = 1;$i <= $row['Number_lecture'];$i++){
-                    $result = fetch_attendance($user_id,$course_id,$i);
+                    $result = fetch_attendance($user_id,$course_id,$year,$i);
                     if ($result->num_rows > 0) {
                       $atten = $result->fetch_assoc()['Attendance'];
                     } else {
