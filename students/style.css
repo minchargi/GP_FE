@@ -136,6 +136,7 @@ td {
     background-color: #EB1C24;
 }
 
+/* normal accordion*/
 .accordion {
     width: 700px; 
     padding-bottom: 20px; 
@@ -193,6 +194,7 @@ td {
 .accordion-content a:hover {
     color:#EB1C24;
 }
+/**/
 
 .announce-accordion {
     width: 700px;

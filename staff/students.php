@@ -300,6 +300,7 @@
             </div>
           </div>
          </div>
+      </div>
 
        <script>
         function toggleAccordion(btn) {

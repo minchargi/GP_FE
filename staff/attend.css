@@ -107,3 +107,15 @@ h1 {
     font-weight: 500; 
 }
 /**/
+
+/* pagination*/
+.page-link {
+    color: #293895; 
+}
+
+.active .page-link {
+    color: white ;
+    background-color: #293895;
+    border: #293895;
+}
+/**/
