@@ -1,24 +1,35 @@
+<?php 
+  include 'verifyStudent.php';
+  include 'student_function.php';
+  if (!isset($_GET['id']) and !isset($_GET['year'])){
+    header('Location: course-overview.php');
+  };
+  $course_id = $_GET['id'];
+  $year = $_GET['year'];
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
-    <head> 
-        <title>Announcements</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="../students/style.css">
-        <link rel="stylesheet" href="../students/navbar.css">
-        <link rel="stylesheet" href="../students/navbar2.css">
-        <link rel="stylesheet" href="../students/footer.css">
-        <script src="accordion.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    </head>
 
-    <body> 
-        <!-- Navbar-->
-        <header>
+<head>
+  <title>Announcement</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../students/style.css">
+  <link rel="stylesheet" href="../students/navbar.css">
+  <link rel="stylesheet" href="../students/navbar2.css">
+  <link rel="stylesheet" href="../students/footer.css">
+  <script src="../students/accordion.js"></script>
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <!-- Navbar-->
+  <header>
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="#">
           <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -68,38 +79,28 @@
         </div>
       </nav>
     </header>
+  <ul class="nav">
+    <li class="active"><a href="announceCourse.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+    <li><a href="coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+    <li><a href="course-grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+    <li><a href="attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
+  </ul>
 
-        <!-- Main content -->
-        <h1>Announcements</h1>
+  
 
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký thi lại môn Signal and Systems</button>
-            <div class="accordion-content">
-              <p>Điền đơn để đăng ký thi lại: <a href="../students/retakeForm.php">Link</a></p>
-            </div>
-          </div>
-         </div>
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký môn tự chọn</button>
-            <div class="accordion-content">
-              <p>Đăng kí môn tại đây: <a href="../students/course-optionaly.php">Link</a></p>
-            </div>
-          </div>
-         </div>
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
-            <div class="accordion-content">
-              <p>Announcement content here !</p>
-            </div>
-          </div>
-        </div>
-        
+  <h1>Course Name</h1>
 
-        <!-- Footer -->
-        <footer>
+  <div class="announce-accordion">
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
+      <div class="accordion-content">
+        <p>Announcement content here !</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
         <div class="row mt-4">
             <div class="col-md-4 infor">
                 <img class="white-logo" src="../images/white_logo.png">
@@ -136,6 +137,7 @@
         </div>
       </footer>
 
+  </div>
+</body>
 
-    </body>
 </html>

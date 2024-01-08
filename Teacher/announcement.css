@@ -26,3 +26,37 @@
     cursor: pointer;
     color: #727272;
 }
+
+.announce-accordion {
+    width: 700px;
+    padding-bottom: 20px; 
+    margin-left: 80px; 
+}
+
+.announce-accordion .accordion-item {
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+}
+
+.announce-accordion .accordion-header {
+    font-weight: 600;
+    background-color: white; 
+    color: #000000; 
+    padding: 10px; 
+    cursor: pointer; 
+    text-align: left; 
+    border: none; 
+    outline: none; 
+    font-size: 16px; 
+}
+
+.announce-accordion .accordion-content {
+    font-family: 'Roboto', sans-serif; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease-out; 
+}
+
+.announce-accordion p {
+    padding: 10px; 
+}
