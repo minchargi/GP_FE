@@ -44,7 +44,7 @@
         <div class="button-container">
             <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addAttendModal">
                 <span class="button-content gap-4">
-                    Add 
+                  Create Attendance 
                 </span>
             </button>
             <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importListsModal">
@@ -60,40 +60,25 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="addAttendModalLabel">Add Attendance</h5>
+                  <h5 class="modal-title" id="addAttendModalLabel">Create Attendance</h5>
                   <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
               </div>
               <div class="modal-body">
                   <!-- Form for adding attendance -->
-                  <form id="attendForm" action="#" method="post">
+                  <form id="attendForm" action="open_attendance.php" method="POST">
+                      <input type="hidden" id="course_id" name="course_id" value=<?php echo $course_id ?>>
+                      <input type="hidden" id="year" name="year" value=<?php echo $year ?>>
                       <div class="form-group">
-                          <label for="studentMajor">Major:</label>
-                          <input type="text" class="form-control" id="studentMajor" name="studentMajor" required>
+                          <label for="session">Session:</label>
+                          <input type="text" class="form-session" id="session" name="session" required>
                       </div>
                       <div class="form-group">
-                          <label for="studentID">Student ID:</label>
-                          <input type="text" class="form-control" id="studentID" name="studentID" required>
+                          <label for="time_close">Time close:</label>
+                          <input type="time" class="form-control" id="time_close" name="time_close" required>
                       </div>
-                      <div class="form-group">
-                          <label for="studentName">Student Name:</label>
-                          <input type="text" class="form-control" id="studentName" name="studentName" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="lectureChoose">Choose lecture(s):</label>
-                          <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="lecture1" name="lecture[]" value="Lecture 1">
-                              <label class="form-check-label" for="lecture1">1</label>
-                          </div>
-                          <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="lecture2" name="lecture[]" value="Lecture 2">
-                              <label class="form-check-label" for="lecture2">2</label>
-                          </div>
-                          <!-- Remaining lecture checkboxes -->
-                      </div>
-                      
-                      <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                      <button type="submit" class="btn btn-custom" name="submit">Create</button>
                   </form>
               </div>
           </div>
