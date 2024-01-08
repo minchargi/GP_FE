@@ -1,4 +1,6 @@
+
 <?php
+include 'student_function.php';
     $student_id = $_POST['student_id'];
     $course_id = $_POST['course_id'];
     $year = $_POST['year'];
@@ -12,9 +14,10 @@
         SET Attendance = 1
         WHERE Student_ID = '$student_id' AND Course_ID = '$course_id' And Year = '$year' AND Session = '$session'";
         $result = $conn->query($sql);
+        $at_grade=cal_attend_grade($student_id,$course_id,$year);
+        update_attend_grade($student_id,$course_id,$year,$at_grade);
         $conn->close();
-        echo 1;
+        header('location:coursedetail.php');
     }
-
 
 ?>

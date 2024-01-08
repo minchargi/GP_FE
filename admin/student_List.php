@@ -75,7 +75,7 @@
     <div class="container mt-4">
         <p class="header-text">Manage Student</p>
         <div class="button-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addTeachersModal">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addStudentsModal">
                 <span class="button-content gap-4">
                     <i class="fas fa-plus-circle"></i>
                     Add Student

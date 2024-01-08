@@ -1,6 +1,7 @@
 <?php
 
-function fetch_course($user_id,$year,$ba_year,$tp_id) {
+function fetch_course($user_id, $year, $ba_year, $tp_id)
+{
     include '../db_conn.php';
     $sql = "SELECT * FROM course WHERE Teacher_ID = '$user_id' AND Year = '$year'  AND Bachelor_Year = '$ba_year' AND TProgram_ID = '$tp_id'";
     $result = $conn->query($sql);
@@ -9,15 +10,17 @@ function fetch_course($user_id,$year,$ba_year,$tp_id) {
 }
 
 
-function fetch_course_detail($course_id,$year) {
+function fetch_course_detail($course_id, $year)
+{
     include '../db_conn.php';
     $sql = "SELECT * FROM `course` WHERE `Course_ID`='$course_id' AND Year = $year";
-    $result = $conn->query($sql); 
+    $result = $conn->query($sql);
     $conn->close();
     return $result;
 }
 
-function viewProfile($user_id){
+function viewProfile($user_id)
+{
     include '../db_conn.php';
     $sql = "SELECT * FROM users WHERE User_ID = '$user_id'";
     $result = $conn->query($sql);
@@ -25,7 +28,8 @@ function viewProfile($user_id){
     return $result;
 }
 
-function fetch_program_year($user_id){
+function fetch_program_year($user_id)
+{
     include '../db_conn.php';
     $sql = "SELECT DISTINCT tp.Year
             FROM users u
@@ -38,7 +42,8 @@ function fetch_program_year($user_id){
     return $result;
 }
 
-function fetch_program($user_id,$year){
+function fetch_program($user_id, $year)
+{
     include '../db_conn.php';
     $sql = "SELECT  tp.*
             FROM users u
@@ -51,7 +56,8 @@ function fetch_program($user_id,$year){
     return $result;
 }
 
-function fetch_course_student_list($course_id,$year){
+function fetch_course_student_list($course_id, $year)
+{
     include '../db_conn.php';
     $sql = "SELECT u.User_ID,CONCAT(u.FirstName,' ',u.LastName) As FullName,u.Email,u.Phone,u.Dob
     FROM users u
@@ -62,7 +68,8 @@ function fetch_course_student_list($course_id,$year){
     return $result;
 }
 
-function fetch_course_grade($course_id,$year){
+function fetch_course_grade($course_id, $year)
+{
     include '../db_conn.php';
     $sql = "SELECT u.User_ID,CONCAT(u.FirstName,' ',u.LastName) As FullName,g.*
     FROM grade g
@@ -73,7 +80,8 @@ function fetch_course_grade($course_id,$year){
     return $result;
 }
 
-function fetch_attendance($student_id,$course_id,$session){
+function fetch_attendance($student_id, $course_id, $session)
+{
     include '../db_conn.php';
     $sql = "SELECT *
     FROM attendance
@@ -81,5 +89,102 @@ function fetch_attendance($student_id,$course_id,$session){
     $result = $conn->query($sql);
     $conn->close();
     return $result;
+}
+
+function calculate_overall_grade($attendance_grade, $mid_grade, $final_grade, $attendance_percent, $mid_percent, $final_percent)
+{
+    $overall_grade = ($attendance_grade * $attendance_percent) + ($mid_grade * $mid_percent) + ($final_grade * $final_percent);
+    return $overall_grade;
+}
+
+function update_overall_grade($student_id, $course_id, $year, $overall_grade)
+{
+    include '../db_conn.php';
+
+    // Use prepared statements for security
+    $stmt = $conn->prepare("UPDATE grade SET Overall = ?
+                            WHERE Student_ID = ? and Course_ID = ? AND Year = ?");
+    $stmt->bind_param("sssi", $overall_grade, $student_id, $course_id, $year);
+
+    // Execute the update and check the result
+    $stmt->execute();
+}
+function overall_grade($course_id, $year)
+{
+    include '../db_conn.php';
+
+    // Use prepared statements for security and clarity
+    $stmt = $conn->prepare("SELECT c.Attendance_Percentage, c.Midterm_Percentage, c.Final_Percentage, c.Year, g.*
+                             FROM course c
+                             INNER JOIN grade g ON c.Course_ID = g.Course_ID
+                             WHERE c.Course_ID = ? AND c.Year = ?");
+    $stmt->bind_param("si", $course_id, $year);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Fetch results and handle potential errors
+    if ($result->num_rows === 0) {
+        // Handle the case where no data is found
+        return null; // Or provide a default value or take other actions
+    }
+
+    while ($row = $result->fetch_assoc()) {
+        // Access values directly from the fetched row
+        $student_id = $row['Student_ID'];
+        $attendance_grade = $row['Attendance'];
+        $mid_grade = $row['Midterm'];
+        $final_grade = $row['Final'];
+        $attendance_percent = $row['Attendance_Percentage'] / 100;
+        $mid_percent = $row['Midterm_Percentage'] / 100;
+        $final_percent = $row['Final_Percentage'] / 100;
+
+        $overall_grade = calculate_overall_grade($attendance_grade, $mid_grade, $final_grade, $attendance_percent, $mid_percent, $final_percent);
+        update_overall_grade($student_id, $course_id, $year, $overall_grade);
+    }
+    
+}
+
+function cal_credit($year) {
+    include '../db_conn.php';
+
+    $stmt = $conn->prepare("SELECT c.Course_ID, c.Number_credit, g.Overall, g.Course_ID, c.Year, g.Student_ID
+                             FROM course c
+                             INNER JOIN grade g ON c.Course_ID = g.Course_ID
+                             WHERE c.Year = ?");
+    $stmt->bind_param("s", $year); // Bind the year parameter safely
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 0) {
+        // Handle the case where no data is found
+        return null; // Or provide a default value or take other actions
+    }
+
+    while ($row = $result->fetch_assoc()) {
+        $student_id = $row['Student_ID'];
+        $overall = $row['Overall'];
+        $num_credit = $row['Number_credit'];
+        $year = $row['Year'];
+        $credit = 0;
+
+        // Add credit if the overall score is greater than 10 (assuming this means passing the course)
+        
+        if($overall > 10){
+            $credit = $credit + $num_credit;
+        }
+        // Check if the student has accumulated 40 or more credits
+        if($credit >= 40){
+            pass_year($student_id);
+        }
+    
+}
+} 
+function pass_year($student_id){
+    include '../db_conn.php';
+    $sql = "UPDATE Users SET Progress = 'B2'
+    WHERE User_ID = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $student_id);
+    $stmt->execute();
 }
 ?>
