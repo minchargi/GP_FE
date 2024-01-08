@@ -1,3 +1,7 @@
+<?php
+include 'verifyStudent.php';
+include 'student_function.php'
+?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 

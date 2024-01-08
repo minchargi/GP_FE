@@ -1,3 +1,8 @@
+<?php
+include 'verifyStudent.php';
+include 'student_function.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
@@ -82,117 +87,68 @@
                   <th class="td-head" scope="col">Total </th>
                 </tr>
               </thead>
+              <?php 
+                $result = fetch_student_gpa($user_id,'B1');
+                if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+              ?>
+              
               <tbody>
                 <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
+                  <th class="th-custom" scope="row"><?php echo $row['Course_ID'] ?></th>
+                  <td class="td-custom"><?php echo $row['Course_Name'] ?></td>
+                  <td class="td-custom"><?php echo $row['Number_credit'] ?></td>
+                  <td class="td-custom"><?php echo $row['Attendance'] ?></td>
+                  <td class="td-custom"><?php echo $row['Midterm'] ?></td>
+                  <td class="td-custom"><?php echo $row['Final'] ?></td>
+                  <td class="td-custom"><?php echo $row['Overall'] ?></td>
                 </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">ICT3.001 </th>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                  <td class="td-custom">20.0</td>
-                  <td class="td-custom">15.0</td>
-                  <td class="td-custom">16.0</td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row"> </th>
-                  <td class="td-custom"></td>
-                  <td class="td-custom"></td>
-                  <td class="td-custom"></td>
-                  <td class="td-custom"></td>
-                  <td class="td-custom"></td>
-                  <td class="td-custom">16.0</td>
-                </tr>
-                
               </tbody>
+              <?php
+                  }
+                }
+              ?>
+              <?php 
+                $result = fetch_student_gpa($user_id,'B2');
+                if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+              ?>
+              
+              <tbody>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row"><?php echo $row['Course_ID'] ?></th>
+                  <td class="td-custom"><?php echo $row['Course_Name'] ?></td>
+                  <td class="td-custom"><?php echo $row['Number_credit'] ?></td>
+                  <td class="td-custom"><?php echo $row['Attendance'] ?></td>
+                  <td class="td-custom"><?php echo $row['Midterm'] ?></td>
+                  <td class="td-custom"><?php echo $row['Final'] ?></td>
+                  <td class="td-custom"><?php echo $row['Overall'] ?></td>
+                </tr>
+              </tbody>
+              <?php
+                  }
+                }
+              ?>
+                            <?php 
+                $result = fetch_student_gpa($user_id,'B3');
+                if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+              ?>
+              <tbody>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row"><?php echo $row['Course_ID'] ?></th>
+                  <td class="td-custom"><?php echo $row['Course_Name'] ?></td>
+                  <td class="td-custom"><?php echo $row['Number_credit'] ?></td>
+                  <td class="td-custom"><?php echo $row['Attendance'] ?></td>
+                  <td class="td-custom"><?php echo $row['Midterm'] ?></td>
+                  <td class="td-custom"><?php echo $row['Final'] ?></td>
+                  <td class="td-custom"><?php echo $row['Overall'] ?></td>
+                </tr>
+              </tbody>
+              <?php
+                  }
+                }
+              ?>
             </table>
       </div>
 
