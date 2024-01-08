@@ -75,7 +75,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for adding new (course) training program -->
-                    <form id="trainProgMForm" action="trainProgM.php" method="post">
+                    <form id="trainProgMForm" action="staff_function/add_tprogram.php" method="post">
                         <div class="form-group">
                             <label for="progName">Program Id:</label>
                             <input type="text" class="form-control" id="progId" name="tprogram_id" required>

@@ -73,4 +73,15 @@ function fetch_attendance_status($course_id,$year){
     $conn->close();
     return $result;
 }
+
+function cal_attend($student_id, $course_id){
+    include '../db_conn.php';
+    $sql ="SELECT c.Number_lecture, c.Course_ID, a.Course_ID, a.Student_ID, count(a.Attendance) 
+    from course c 
+    inner join attendance a on c.Course_ID = a.Course_ID
+    where a.Student_ID = '$student_id' and c.Course_ID = '$course_id' and a.Attendance = 1";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
 ?>

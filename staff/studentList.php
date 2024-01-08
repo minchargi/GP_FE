@@ -139,13 +139,13 @@
             </div>
             <div class="modal-body">
                 <!-- Form for adding new training program -->
-                <form id="importListForm" action="../staff/studentListM.php" method="post" enctype="multipart/form-data">
+                <form id="importListForm" action="staff_function/import_account.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="fileImport">Choose File:</label>
                         <input type="file" class="form-control" id="fileImport" name="fileImport" required>
                     </div>
 
-                    <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                    <button type="submit" class="btn btn-custom" name="Import">Add</button>
                 </form>
             </div>
         </div>
