@@ -1,3 +1,8 @@
+<?php 
+  include 'verifyTeacher.php';
+  include 'teacher_function.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,15 +28,24 @@
     <div class="container mt-4">
         <p class="header-text">Announcements</p>
     </div>
- 
+    <?php
+      $result = fetch_announcement($user_id);
+      if ($result->num_rows > 0){
+        while ($row = $result->fetch_assoc()){
+    ?>
     <div class="announce-accordion">
       <div class="accordion-item">
-        <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
+        <button class="accordion-header" onclick="toggleAccordion(this)"><?php echo $row['tittle'] ?></button>
         <div class="accordion-content">
-          <p>Announcement content here !</p>
+          <p><?php echo $row['announcement'] ?></p>
         </div>
       </div>
     </div>
+
+    <?php    
+        }
+      }
+    ?>
 
     <!-- Footer -->
     <?php include '../footer/footer.php'; ?>

@@ -6,6 +6,10 @@
   };
   $course_id = $_GET['id'];
   $year = $_GET['year'];
+  $result = fetch_course_overview($course_id);
+  if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -88,16 +92,25 @@
 
   
 
-  <h1>Course Name</h1>
+  <h1><?php echo $row['Course_Name']; ?></h1>
 
-  <div class="announce-accordion">
-    <div class="accordion-item">
-      <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
-      <div class="accordion-content">
-        <p>Announcement content here !</p>
-      </div>
-    </div>
-  </div>
+        <?php
+          $result = fetch_course_announcement($course_id,$year);
+          if ($result->num_rows > 0){
+            while ($row = $result->fetch_assoc()){
+        ?>
+        <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)"><?php echo $row['tittle'] ?></button>
+            <div class="accordion-content">
+              <p><?php echo $row['announcement'] ?></p>
+            </div>
+          </div>
+        </div> 
+        <?php    
+            }
+          }
+        ?>
 
   <!-- Footer -->
   <footer>

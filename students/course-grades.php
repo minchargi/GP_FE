@@ -6,6 +6,10 @@
   };
   $course_id = $_GET['id'];
   $year = $_GET['year'];
+  $result = fetch_course_overview($course_id);
+  if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+  }
 ?>
 
 
@@ -87,7 +91,7 @@
     <li><a href="attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
   </ul>
 
-  <h1>Course Name</h1>
+  <h1><?php echo $row['Course_Name']; ?></h1>
   <div class="container mt-2">
     <table class="table table-bordered">
       <thead>

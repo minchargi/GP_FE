@@ -1,6 +1,4 @@
 <?php 
-
-  include '../db_conn.php';
   include 'verifyTeacher.php';
   include 'teacher_function.php';
   

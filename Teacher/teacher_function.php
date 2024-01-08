@@ -187,4 +187,34 @@ function pass_year($student_id){
     $stmt->bind_param("s", $student_id);
     $stmt->execute();
 }
+
+function fetch_announcement($teacher_id){
+    include '../db_conn.php';
+    $sql = "SELECT *
+    FROM announcements
+    WHERE created_by = '$teacher_id'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_course_announcement($course_id,$year){
+    include '../db_conn.php';
+    $sql = "SELECT *
+    FROM announcements
+    WHERE Year = $year And Course_ID = '$course_id'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_student($tp_id,$progress){
+    include '../db_conn.php';
+    $sql = "SELECT *
+    FROM users
+    WHERE TProgram_ID = '$tp_id' AND Progess = '$progress'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
 ?>

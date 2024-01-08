@@ -118,5 +118,13 @@ function update_attend_grade($student_id, $course_id, $year, $attendance_grade) 
     // Execute the update and check the result
     $stmt->execute();
 }
-
+function fetch_course_announcement($course_id,$year){
+    include '../db_conn.php';
+    $sql = "SELECT *
+    FROM announcements
+    WHERE Year = $year And Course_ID = '$course_id'";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
 ?>
