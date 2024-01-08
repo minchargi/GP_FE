@@ -1,0 +1,130 @@
+.header-text{
+    background: url('../images/titlel.svg') no-repeat bottom left;
+    font-family: 'Roboto Slab', serif; 
+    color: #293895;
+    margin: 15px 15px 30px 10px;
+    padding-bottom: 20px; 
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+
+ul.nav {
+    padding: 0px;
+    background-color: #293895;
+    text-align: center;
+    justify-content: center;
+  }
+  ul.nav > li {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 5px;
+  }
+  ul.nav > li:hover {
+    background-color: #EB1C24;
+  }
+  ul.nav > li.active {
+    background-color: #EB1C24 ;
+  }
+  ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+.button-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-button {
+    background-color: #293895;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    height: 50px; 
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px; 
+}
+
+.custom-button:hover{
+    background-color:#EB1C24;
+    color: white;
+}
+.modal-title{
+    font-size: 20px;
+    color:#293895;
+    font-weight: 600px;
+}
+.close{
+    background-color: #FFF;
+    border:none;
+}
+.form-group{
+    margin: 15px;
+    font-size: 18px;
+    color:#000;
+    font-weight:500
+}
+.btn-custom{
+    background:#293895;
+    color:#FFF;
+    font-weight:500px;
+    margin:15px;
+}
+.btn-custom:hover{
+    background:#EB1C24;
+    color:#FFF;
+}
+.td-head{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.th-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.td-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.page-custom{
+  justify-content: center;
+}
+.custom-color{
+  background:#E9F4FF;
+  color: #293895;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  border:none;
+}

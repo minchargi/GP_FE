@@ -1,10 +1,11 @@
 <?php 
   include 'verifyStudent.php';
   include 'student_function.php';
-  if (!isset($_GET['id'])){
+  if (!isset($_GET['id']) and !isset($_GET['year'])){
     header('Location: course-overview.php');
   };
   $course_id = $_GET['id'];
+  $year = $_GET['year'];
 ?>
 
 <!DOCTYPE html>
@@ -79,10 +80,10 @@
       </nav>
     </header>
   <ul class="nav">
-    <li class="active"><a href="announceCourse.php?id=<?php echo $course_id; ?>">Announcement</a></li>
-    <li><a href="coursedetail.php?id=<?php echo $course_id; ?>">Overview</a></li>
-    <li><a href="course-grades.php?id=<?php echo $course_id; ?>">Grades</a></li>
-    <li><a href="attendance.php?id=<?php echo $course_id; ?>">Attendance</a></li>
+    <li class="active"><a href="announceCourse.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
+    <li><a href="coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
+    <li><a href="course-grades.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Grades</a></li>
+    <li><a href="attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
   </ul>
 
   
