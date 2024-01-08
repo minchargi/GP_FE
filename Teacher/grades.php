@@ -109,6 +109,7 @@
                   </form>
               </div>
           </div>
+        </div>
       </div>
       <div class="container mt-2">
           <table class="table table-bordered table-hover">
