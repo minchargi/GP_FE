@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="../students/retakeForm.css">
+        <link rel="stylesheet" href="../students/style.css">
         <link rel="stylesheet" href="../students/navbar.css">
         <link rel="stylesheet" href="../students/navbar2.css">
         <link rel="stylesheet" href="../students/footer.css">
@@ -70,62 +70,34 @@
     </header>
 
         <!-- Main content -->
-        <h1>Retake Form</h1>
-        <div class="container mt-4">
-            <form id="retakeForm">
-                <div class="mb-3">
-                    <label for="studentEmail" class="form-label">Email: </label>
-                    <input type="email" class="form-control" id="studentEmail" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="studentID" class="form-label">Student ID: </label>
-                    <input type="text" class="form-control" id="studentID" placeholder="Enter student ID" required>
-                </div>
-                <div class="mb-3">
-                    <label for="fullName" class="form-label">Full Name: </label>
-                    <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="phoneNumber" class="form-label">Phone Number: </label>
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
-                </div>
-                <div class="mb-3">
-                    <label for="studentDOB" class="form-label">Date of birth: </label>
-                    <input type="date" class="form-control" id="studentDOB" placeholder="Enter your phone number" required>
-                </div>
-                <div class="mb-3">
-                    <label for="studentSex">Gender:</label>
-                        <select class="form-control" id="gender" name="gender" required>
-                            <option value="" selected disabled hidden>Select</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>
-                        </select>
-                </div>
-                <div class="mb-3">
-                  <label>Retake or Improve Score: </label><br>
-                  <div class="form-check">
-                      <input type="radio" class="form-check-input" id="retake" name="retake" value="retake">
-                      <label class="form-check-label" for="retake">Retake</label>
-                  </div>
-                  <div class="form-check">
-                      <input type="radio" class="form-check-input" id="improve" name="improve" value="improve">
-                      <label class="form-check-label" for="improve">Improve Score</label>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="photoImport">Receipt photo:</label>
-                  <input type="file" class="form-control" id="photoImport" name="photoImport" required>
-                </div>
-                <div class="mb-3">
-                  <label for="note" class="form-label">Note (if any): </label>
-                  <input type="text" class="form-control" id="note">
-              </div>
-                
-                <button type="submit" class="btn btn-custom">Submit</button>
-            </form>
+        <h1>Announcements</h1>
+
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký thi lại môn Signal and Systems</button>
+            <div class="accordion-content">
+              <p>Điền đơn để đăng ký thi lại: <a href="../students/retakeForm.php">Link</a></p>
+            </div>
+          </div>
+         </div>
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký môn tự chọn</button>
+            <div class="accordion-content">
+              <p>Đăng kí môn tại đây: <a href="../students/course-optionaly.php">Link</a></p>
+            </div>
+          </div>
+         </div>
+         <div class="announce-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
+            <div class="accordion-content">
+              <p>Announcement content here !</p>
+            </div>
+          </div>
         </div>
-         
+        
+
         <!-- Footer -->
         <footer>
         <div class="row mt-4">

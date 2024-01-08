@@ -82,9 +82,9 @@
          </div>
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
+            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký môn tự chọn</button>
             <div class="accordion-content">
-              <p>Announcement content here !</p>
+              <p>Đăng kí môn tại đây: <a href="../students/course-optionaly.php">Link</a></p>
             </div>
           </div>
          </div>
@@ -95,112 +95,8 @@
               <p>Announcement content here !</p>
             </div>
           </div>
-         </div>
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
-            <div class="accordion-content">
-              <p>Announcement content here !</p>
-            </div>
-          </div>
-         </div>
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
-            <div class="accordion-content">
-              <p>Announcement content here !</p>
-            </div>
-          </div>
-         </div>
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
-            <div class="accordion-content">
-              <p>Announcement content here !</p>
-            </div>
-          </div>
-         </div>
-
-        <a href="../students/course-optionaly.php">
-          <div class="card mb-3" style="max-width: 700px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://i.pinimg.com/originals/77/76/72/77767259b29984ed278fdbfa5fb01b7a.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Optional Course Registration</h5>
-                  <p class="card-text">Choose your optional course for the year.</p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="card mb-3" style="max-width: 700px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://i.pinimg.com/originals/77/76/72/77767259b29984ed278fdbfa5fb01b7a.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Announcement title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="card mb-3" style="max-width: 700px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://i.pinimg.com/originals/77/76/72/77767259b29984ed278fdbfa5fb01b7a.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Announcement title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="card mb-3" style="max-width: 700px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://i.pinimg.com/originals/77/76/72/77767259b29984ed278fdbfa5fb01b7a.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Announcement title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="card mb-3" style="max-width: 700px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://i.pinimg.com/originals/77/76/72/77767259b29984ed278fdbfa5fb01b7a.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Announcement title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
+        </div>
+        
 
         <!-- Footer -->
         <footer>
