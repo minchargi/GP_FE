@@ -37,10 +37,15 @@
                 <a class="nav-link" href="../students/announce.php">
                   <i class="fas fa-home"></i> Announcement</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../students/course-overview.php"> 
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
                   <i class="fas fa-book"></i> Course
                 </a>
+                <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../students/course-overview.php">Overview</a></li>
+                  <li><a class="dropdown-item" href="../students/retakeForm.php">Retake</a></li>
+                  <li><a class="dropdown-item" href="../students/course-optionaly.php">Optional Course</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                     <a class="nav-link" href="../students/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
