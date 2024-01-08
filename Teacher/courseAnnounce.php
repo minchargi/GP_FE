@@ -9,11 +9,6 @@
   }
   $course_id = $_GET['id'];
   $year = $_GET['year'];
-  $result = fetch_course_detail($course_id,$year);
-  if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-  }
-    
 ?>
 
 <!DOCTYPE html>
@@ -68,21 +63,22 @@
                     </div>
                     <div class="modal-body">
                         <!-- Form for adding new announce -->
-                        <form id="courseAnnounceForm" action="#" method="post">
+                        <form id="courseAnnounceForm" action="createAnnounce.php" method="post">
+                            <input type="hidden" id="teacher_id" name="teacher_id" value=<?php echo $user_id ?>>
+                            <input type="hidden" id="course_id" name="course_id" value=<?php echo $course_id ?>>
+                            <input type="hidden" id="year" name="year" value=<?php echo $year ?>>
                           <div class="form-group">
                             <label for="announceTitle">Title:</label>
-                            <input type="text" class="form-control" id="announceTitle" required>
+                            <input type="text" class="form-control" name="announceTitle" id="announceTitle" required>
                           </div>
                           <div class="form-group">
-                            <label for="editedContent">Add Content:</label>
-                            <textarea class="form-control" id="editedContent" rows="4"></textarea>
+                            <label for="announcement">Announcement:</label>
+                            <textarea class="form-control" name="announcement" id="announcement" rows="4"></textarea>
                           </div>
+                          <div class="modal-footer">
+                                <input type="submit" class="btn btn-secondary" name ="submit" data-bs-dismiss="modal">Close</button>
+                           </div>
                         </form>
-                        
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
                     </div>
                 </div>
             </div>
