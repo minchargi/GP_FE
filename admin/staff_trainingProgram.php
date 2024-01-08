@@ -99,7 +99,7 @@
                         </div>
                         <div class="modal-body">
                             <!-- Form for adding new training program -->
-                            <form id="teacherTrainForm" action="../admin/staffTrainM.php" method="post" enctype="multipart/form-data">
+                            <form id="teacherTrainForm" action="admin_function/import_account.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="progName">Program Name:</label>
                                     <input type="text" class="form-control" id="progName" name="progName" required>
@@ -113,7 +113,7 @@
                                     <input type="text" class="form-control" id="deptID" name="deptID" required>
                                 </div>
     
-                                <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                                <button type="submit" class="btn btn-custom" name="Import">Add</button>
                             </form>
                         </div>
                     </div>

@@ -97,17 +97,14 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="addAdminsForm" action="add_admin.php" method="post">
-                        <!-- Form for add Admin -->
-                        <div class="form-group">
-                            <label for="studentID">Admin ID:</label>
-                            <input type="text" class="form-control" id="id" name="id" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentID">Admin Name:</label>
-                            <input type="text" class="form-control" id="id" name="id" required>
-                        </div>
-                        <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                <form id="addAdminsForm" action="add_admin.php" method="post">
+                    <!-- Form for add Admin -->
+                    <div class="form-group">
+                        <label for="studentID">Admin ID:</label>
+                        <input type="text" class="form-control" id="id" name="id" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-custom" name="submit">Add</button>
                     </form>
                 </div>
             </div>

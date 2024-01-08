@@ -119,6 +119,8 @@
                     $result = fetch_attendance($user_id,$course_id,$year,$i);
                     if ($result->num_rows > 0) {
                       $atten = $result->fetch_assoc()['Attendance'];
+                      $attendance_grade = cal_attend_grade($user_id, $course_id, $year);
+                      update_attend_grade($user_id,$course_id,$year,$attendance_grade);
                     } else {
                       $atten = 0;
                     } 

@@ -79,6 +79,16 @@
         <div class="container mt-4">
             <form id="retakeForm">
                 <div class="mb-3">
+                  <label for="courseOpt">Choose your course:</label>
+                      <select class="form-control" id="courseOpt" name="courseOpt" required>
+                          <option value="" selected disabled hidden>Select</option>
+                          <option value="Male">Web Applicaiton Development</option>
+                          <option value="Female">Computer Graphics</option>
+                          <option value="Female">Computer Vision</option>
+                          <option value="Other">Natural Language Processing</option>
+                      </select>
+                </div>
+                <div class="mb-3">
                     <label for="studentEmail" class="form-label">Email: </label>
                     <input type="email" class="form-control" id="studentEmail" placeholder="Enter your email" required>
                 </div>

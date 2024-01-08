@@ -6,6 +6,10 @@
   };
   $course_id = $_GET['id'];
   $year = $_GET['year'];
+  $result = fetch_course_overview($course_id);
+  if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+  }
 ?>
 
 
@@ -92,9 +96,7 @@
     <li><a href="attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
   </ul>
 
-  
-
-  <h1>Course Name</h1>
+  <h1><?php echo $row['Course_Name']; ?></h1>
   <div class="container mt-2">
     <table class="table table-bordered">
       <thead>
@@ -109,6 +111,8 @@
       </thead>
       <tbody>
         <?php
+        $at_grade=cal_attend_grade($user_id,$course_id,$year);
+        update_attend_grade($user_id,$course_id,$year,$at_grade);
         $result = fetch_course_grade($user_id,$course_id,$year);
         if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {

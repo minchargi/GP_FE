@@ -99,7 +99,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createClassModalLabel">Create Class</h5>
+                    <h5 class="modal-title" id="createClassModalLabel">Create Course</h5>
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -107,17 +107,17 @@
                 <div class="modal-body">
                     <!-- Form for creating a class -->
                     <form id="createClassForm" action="create_class.php" method=post>
+                        <input type="hidden" id="tp_id" name="tp_id" value=<?php echo $tp_id ?>>
+                        <input type="hidden" id="year" name="year" value=<?php echo $year ?>>
+                        <input type="hidden" id="ba_year" name="ba_year" value=<?php echo $ba_year ?>>
+                        
                         <div class="form-group">
-                            <label for="classCode">Class Code:</label>
-                            <input type="text" class="form-control" id="classCode" name="classCode" required>
+                            <label for="courseCode">Course Code:</label>
+                            <input type="text" class="form-control" id="courseCode" name="courseCode" required>
                         </div>                        
                         <div class="form-group">
-                            <label for="className">Class Name:</label>
-                            <input type="text" class="form-control" id="className" name="className" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tprogram">Training program:</label>
-                            <input type="text" class="form-control" id="tprogram" name="tprogram" required>
+                            <label for="courseName">Course Name:</label>
+                            <input type="text" class="form-control" id="courseName" name="courseName" required>
                         </div>
                         <div class="form-group">
                             <label for="optional">Optional:</label>
@@ -125,7 +125,7 @@
                             <input type="checkbox" name="optional" value="1">
                         </div>
 
-                        <button type="submit" class="btn btn-custom" name="submit">Create Class</button>
+                        <button type="submit" class="btn btn-custom" name="submit">Create Course</button>
                     </form>
                 </div>
             </div>

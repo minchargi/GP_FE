@@ -88,7 +88,6 @@
       </header>
     
     <ul class="nav">
-        <li><a href="../Teacher/Open_attendance_index.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
         <li><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
         <li class="active"><a href="../Teacher/coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>
         <li><a href="../Teacher/studentList.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Student List</a></li>
