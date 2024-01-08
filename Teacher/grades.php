@@ -110,7 +110,7 @@ $year = $_GET['year'];
             </form>
           </div>
         </div>
-      </div>
+        </div>
     </div>
     
     <?php
@@ -131,6 +131,7 @@ $year = $_GET['year'];
     <input type="submit" name="passyear" value="pass year">
     </form>
 
+      </div>
     <div class="container mt-2">
       <table class="table table-bordered table-hover">
         <thead>

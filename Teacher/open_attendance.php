@@ -27,7 +27,7 @@
             }
         } 
         $conn->close();
-        header('Location: Open_attendance_index.php');
+        header("Location: attendance.php?id=$couse_id&year=$year");
     }
 
 ?>
