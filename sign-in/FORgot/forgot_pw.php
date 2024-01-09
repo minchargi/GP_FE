@@ -6,7 +6,7 @@
     <title>ForgotPass</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../sign-in/FORgot/style.css">
+    <link rel="stylesheet" href="forgot.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
 
 </head>
@@ -27,9 +27,6 @@
     
             <!-- Search Button -->
             <button type="button" class="btn btn-primary btn-block btn-click" onclick="searchEmail()">Search</button>
-            <div>
-            <a class="link" href="../sign-in/FORgot/resetPass.php">Reset?</a>
-            </div>
           </form>
     
         </div>
