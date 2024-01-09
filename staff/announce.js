@@ -1,10 +1,8 @@
-function confirmDeleteAnnouncement(id) {
-    if (confirm("Are you sure you want to delete this announcement?")) {
-        deleteAnnouncement(id);
+function toggleAccordion(btn) {
+    let content = btn.nextElementSibling; 
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null; 
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
     }
-}
-function deleteAnnouncement(id) {
-    // Handle deletion of the announcement (you can replace this with your logic)
-    const announcement = document.querySelector(`.announcement input[type="checkbox"]#checkbox${id}`).closest('.announcement');
-    announcement.remove();
-}
+  }
