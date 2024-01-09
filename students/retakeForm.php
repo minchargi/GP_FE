@@ -81,69 +81,69 @@ include 'student_function.php'
 
         <!-- Main content -->
         <h1>Retake Form</h1>
-        <div class="container mt-4">
-            <form id="retakeForm">
-                <div class="mb-3">
-                  <label for="courseOpt">Choose your course:</label>
-                      <select class="form-control" id="courseOpt" name="courseOpt" required>
-                          <option value="" selected disabled hidden>Select</option>
-                          <option value="Male">Web Applicaiton Development</option>
-                          <option value="Female">Computer Graphics</option>
-                          <option value="Female">Computer Vision</option>
-                          <option value="Other">Natural Language Processing</option>
-                      </select>
-                </div>
-                <div class="mb-3">
-                    <label for="studentEmail" class="form-label">Email: </label>
-                    <input type="email" class="form-control" id="studentEmail" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="studentID" class="form-label">Student ID: </label>
-                    <input type="text" class="form-control" id="studentID" placeholder="Enter student ID" required>
-                </div>
-                <div class="mb-3">
-                    <label for="fullName" class="form-label">Full Name: </label>
-                    <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="phoneNumber" class="form-label">Phone Number: </label>
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
-                </div>
-                <div class="mb-3">
-                    <label for="studentDOB" class="form-label">Date of birth: </label>
-                    <input type="date" class="form-control" id="studentDOB" placeholder="Enter your phone number" required>
-                </div>
-                <div class="mb-3">
-                    <label for="studentSex">Gender:</label>
-                        <select class="form-control" id="gender" name="gender" required>
-                            <option value="" selected disabled hidden>Select</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>
-                        </select>
-                </div>
-                <div class="mb-3">
-                  <label>Retake or Improve Score: </label><br>
-                  <div class="form-check">
-                      <input type="radio" class="form-check-input" id="retake" name="retake" value="retake">
-                      <label class="form-check-label" for="retake">Retake</label>
-                  </div>
-                  <div class="form-check">
-                      <input type="radio" class="form-check-input" id="improve" name="improve" value="improve">
-                      <label class="form-check-label" for="improve">Improve Score</label>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="photoImport">Receipt photo:</label>
-                  <input type="file" class="form-control" id="photoImport" name="photoImport" required>
-                </div>
-                <div class="mb-3">
-                  <label for="note" class="form-label">Note (if any): </label>
-                  <input type="text" class="form-control" id="note">
-              </div>
+        
+        <div class="container mt-2">
+          <form id="retakeForm">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr class="tb-row">
+                  <th class="td-head" scope="col"> </th>
+                  <th class="td-head" scope="col">Course ID</th>
+                  <th class="td-head" scope="col">Course Name</th>
+                  <th class="td-head" scope="col">Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox1">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox2">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox3">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox4">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
+                <tr class="tb-row">
+                  <th class="th-custom" scope="row">
+                    <input class="tb-check-input" type="checkbox" id="checkbox5">
+                  </th>
+                  <td class="td-custom">ICT3.001</td>
+                  <td class="td-custom">Introduction to Cryptography</td>
+                  <td class="td-custom">4</td>
+                </tr>
                 
-                <button type="submit" class="btn btn-custom">Submit</button>
-            </form>
+              </tbody>
+            </table>
+          </form>
+        </div>
+
+
+        <!-- Submit Button -->
+        <div class="container mt-4 text-end">
+          <button type="submit" class="btn submit-btn btn-primary btn-lg">Submit</button>
         </div>
          
         <!-- Footer -->

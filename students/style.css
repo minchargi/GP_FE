@@ -245,6 +245,10 @@ td {
     margin-bottom: 10px; 
 }
 
+.submit-btn:hover {
+    background-color: #EB1C24;
+}
+
 /*course button*/
 a {
     text-decoration: none; 

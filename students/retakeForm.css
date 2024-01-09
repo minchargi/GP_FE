@@ -25,3 +25,47 @@ h1 {
     color: #FFF;
 }
 
+.td-head{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.th-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.td-custom{
+    color:#000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.container .text {
+    margin-left: 10px; 
+    font-size: 20px; 
+    text-align: left; 
+    
+}
+
+td {
+    height: 50px; 
+}
+
+.submit-btn {
+    background-color: #293895;
+    color: white; 
+    border: none; 
+}
+
+.submit-btn:hover {
+    background-color: #EB1C24;
+    color: white; 
+}

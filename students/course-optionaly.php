@@ -81,7 +81,8 @@ include 'student_function.php'
         <h1>Optional Subjects</h1>
 
         <div class="container mt-2">
-          <div class="text">Semester 1</div>
+          <form id="optionalForm">
+            <div class="text">Semester 1</div>
           <table class="table table-bordered table-hover">
               <thead>
                 <tr class="tb-row">
@@ -135,8 +136,8 @@ include 'student_function.php'
                 
               </tbody>
             </table>
+          </form>
       </div>
-    </div>
 
         <!-- Submit Button -->
         <div class="container mt-4 text-end">
