@@ -4,7 +4,7 @@
         $id = $_POST['id'];
         $name = "admin";
         $role = "Admin";
-        $password = "password";
+        $password = md5('1');
 
 
         $sql = "INSERT INTO users(User_ID, `FirstName`, `Role`, `Password`) 

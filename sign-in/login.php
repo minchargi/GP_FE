@@ -3,7 +3,7 @@ include '../db_conn.php';
 
 // Retrieve data from the form
 $user_id = $_POST['user_id'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 
 // Perform SQL query to check user credentials
 $sql = "SELECT * FROM users WHERE User_ID='$user_id' AND Password='$password'";

@@ -147,11 +147,14 @@ function overall_grade($course_id, $year)
 function cal_credit($year)
 {
     include '../db_conn.php';
-    $stmt = $conn->prepare("SELECT Student_ID, SUM(Number_credit) AS TotalCredits
-                              FROM course c
-                              INNER JOIN grade g ON c.Course_ID = g.Course_ID
-                              WHERE c.Year = ? AND Overall > 10
-                              GROUP BY Student_ID");
+    $stmt = $conn->prepare("SELECT u.*, SUM(c.Number_credit) AS TotalCredits 
+    FROM `users` u 
+    INNER JOIN `grade` g 
+    ON u.User_ID = g.Student_ID
+    INNER JOIN `course` c 
+    ON c.Course_ID = g.Course_ID AND c.Year = g.Year
+    WHERE u.Progress=c.Bachelor_Year AND g.Overall >= 10
+    GROUP BY g.Student_ID;");
     $stmt->bind_param("s", $year);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -171,7 +174,6 @@ function cal_credit($year)
             pass_year($student_id);
         }
     }
-    echo implode(" ",$creditSummary);
     return $creditSummary;
 }
 function pass_year($student_id)
@@ -182,6 +184,14 @@ function pass_year($student_id)
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $student_id);
     $stmt->execute();
+}
+
+function next_year(){
+    include '../db_conn.php';
+    $sql ="INSERT INTO Year () VALUES ()";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
 }
 
 function fetch_announcement($teacher_id)
