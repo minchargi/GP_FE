@@ -97,25 +97,22 @@
             </div>
         </div>
 
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announce Title</button>
-            <div class="accordion-content">
-              <p>Announce content here</p>
+        <div class="container">
+          <div class="accordion" id="accorAnnounce">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Announcement Title
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accorAnnounce">
+                <div class="accordion-body">
+                  Announcement content here!
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <script>
-          function toggleAccordion(btn) {
-            let content = btn.nextElementSibling; 
-            if (content.style.maxHeight) {
-              content.style.maxHeight = null; 
-            } else {
-              content.style.maxHeight = content.scrollHeight + "px";
-            }
-          }
-        </script>
         
         <!-- Footer -->
         <footer>
