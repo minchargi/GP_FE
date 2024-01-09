@@ -96,45 +96,12 @@ include 'student_function.php'
               <tbody>
                 <tr class="tb-row">
                   <th class="th-custom" scope="row">
-                    <input class="tb-check-input" type="checkbox" id="checkbox1">
+                    <input class="tb-check-input" type="checkbox" id="checkbox1" value='1'>
                   </th>
                   <td class="td-custom">ICT3.001</td>
                   <td class="td-custom">Introduction to Cryptography</td>
                   <td class="td-custom">4</td>
                 </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">
-                    <input class="tb-check-input" type="checkbox" id="checkbox2">
-                  </th>
-                  <td class="td-custom">ICT3.001</td>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">
-                    <input class="tb-check-input" type="checkbox" id="checkbox3">
-                  </th>
-                  <td class="td-custom">ICT3.001</td>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">
-                    <input class="tb-check-input" type="checkbox" id="checkbox4">
-                  </th>
-                  <td class="td-custom">ICT3.001</td>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                </tr>
-                <tr class="tb-row">
-                  <th class="th-custom" scope="row">
-                    <input class="tb-check-input" type="checkbox" id="checkbox5">
-                  </th>
-                  <td class="td-custom">ICT3.001</td>
-                  <td class="td-custom">Introduction to Cryptography</td>
-                  <td class="td-custom">4</td>
-                </tr>
-                
               </tbody>
             </table>
           </form>
