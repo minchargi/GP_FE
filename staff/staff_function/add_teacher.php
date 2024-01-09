@@ -19,7 +19,7 @@
 
         if ($result == TRUE) {
             echo "New record created successfully.";
-            header('location:departments.php');
+            header('location:../departments.php');
         }else{
             echo "Error:". $sql . "<br>". $conn->error;
         } 

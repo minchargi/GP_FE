@@ -141,45 +141,41 @@ function overall_grade($course_id, $year)
         $overall_grade = calculate_overall_grade($attendance_grade, $mid_grade, $final_grade, $attendance_percent, $mid_percent, $final_percent);
         update_overall_grade($student_id, $course_id, $year, $overall_grade);
     }
-    
+    $conn->close();
 }
 
-function cal_credit($year) {
+function cal_credit($year)
+{
     include '../db_conn.php';
-
-    $stmt = $conn->prepare("SELECT c.Course_ID, c.Number_credit, g.Overall, g.Course_ID, c.Year, g.Student_ID
-                             FROM course c
-                             INNER JOIN grade g ON c.Course_ID = g.Course_ID
-                             WHERE c.Year = ?");
-    $stmt->bind_param("s", $year); // Bind the year parameter safely
+    $stmt = $conn->prepare("SELECT Student_ID, SUM(Number_credit) AS TotalCredits
+                              FROM course c
+                              INNER JOIN grade g ON c.Course_ID = g.Course_ID
+                              WHERE c.Year = ? AND Overall > 10
+                              GROUP BY Student_ID");
+    $stmt->bind_param("s", $year);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows === 0) {
-        // Handle the case where no data is found
-        return null; // Or provide a default value or take other actions
+        return null; // Or handle no data found appropriately
     }
 
+    $creditSummary = [];
     while ($row = $result->fetch_assoc()) {
         $student_id = $row['Student_ID'];
-        $overall = $row['Overall'];
-        $num_credit = $row['Number_credit'];
-        $year = $row['Year'];
-        $credit = 0;
+        $totalCredits = $row['TotalCredits'];
 
-        // Add credit if the overall score is greater than 10 (assuming this means passing the course)
-        
-        if($overall > 10){
-            $credit = $credit + $num_credit;
-        }
-        // Check if the student has accumulated 40 or more credits
-        if($credit >= 40){
+        $creditSummary[$student_id] = $totalCredits;
+
+        if ($totalCredits >= 40) {
             pass_year($student_id);
         }
-    
+    }
+    echo implode(" ",$creditSummary);
+    return $creditSummary;
 }
-} 
-function pass_year($student_id){
+function pass_year($student_id)
+{
     include '../db_conn.php';
     $sql = "UPDATE Users SET Progress = 'B2'
     WHERE User_ID = ?";
@@ -188,7 +184,8 @@ function pass_year($student_id){
     $stmt->execute();
 }
 
-function fetch_announcement($teacher_id){
+function fetch_announcement($teacher_id)
+{
     include '../db_conn.php';
     $sql = "SELECT *
     FROM announcements
@@ -198,7 +195,8 @@ function fetch_announcement($teacher_id){
     return $result;
 }
 
-function fetch_course_announcement($course_id,$year){
+function fetch_course_announcement($course_id, $year)
+{
     include '../db_conn.php';
     $sql = "SELECT *
     FROM announcements
@@ -208,7 +206,8 @@ function fetch_course_announcement($course_id,$year){
     return $result;
 }
 
-function fetch_student($tp_id,$progress){
+function fetch_student($tp_id, $progress)
+{
     include '../db_conn.php';
     $sql = "SELECT *
     FROM users
@@ -217,4 +216,3 @@ function fetch_student($tp_id,$progress){
     $conn->close();
     return $result;
 }
-?>
