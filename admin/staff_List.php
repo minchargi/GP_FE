@@ -171,191 +171,38 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr class="tb-row">
-                    <th class="td-head" scope="col">ID</th>
-                    <th class="td-head" scope="col">Name</th>
+                <th class="td-head" scope="col">ID</th>
+                    <th class="td-head" scope="col">First Name</th>
+                    <th class="td-head" scope="col">Last Name</th>
+                    <th class="td-head" scope="col">Date of birth</th>
+                    <th class="td-head" scope="col">Gender</th>
                     <th class="td-head" scope="col">Email</th>
-                    <th class="td-head" scope="col">Position</th>
-                    <th class="td-head" scope="col">Action</th>
+                    <th class="td-head" scope="col">Phone Number</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">2</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">3</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">4</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">5</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">6</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">7</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">8</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">9</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">10</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">11</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">Assistant</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteStaff()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
+            <?php
+            include 'admin_function/admin_function.php';
+            $result = fetch_staff();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+        ?>
+                    <tr>
+                    <td><?php echo $row['User_ID']; ?></td>
+                    <td><?php echo $row['FirstName']; ?></td>
+                    <td><?php echo $row['LastName']; ?></td>
+                    <td><?php echo $row['DoB']; ?></td>
+                    <td><?php echo $row['Gender']; ?></td>
+                    <td><?php echo $row['Email']; ?></td>
+                    <td><?php echo $row['Phone']; ?></td>
+                    <td><a class="btn btn-info" href="update_student.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="admin_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                    </tr>                       
 
+        <?php       }
+
+            }
+
+        ?>   
             </tbody>
         </table>
     </div>

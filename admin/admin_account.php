@@ -1,3 +1,7 @@
+<?php
+include 'admin_function/admin_function.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,7 +79,7 @@
         <div class="button-container">
             <button class="custom-button" data-bs-toggle="modal" data-bs-target="#addAdminsModal">
                 <span class="button-content gap-4">
-                    Add 
+                    Add
                 </span>
             </button>
             <button class="custom-button" data-bs-toggle="modal" data-bs-target="#importListsModal">
@@ -97,14 +101,14 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <form id="addAdminsForm" action="add_admin.php" method="post">
-                    <!-- Form for add Admin -->
-                    <div class="form-group">
-                        <label for="studentID">Admin ID:</label>
-                        <input type="text" class="form-control" id="id" name="id" required>
-                    </div>
+                    <form id="addAdminsForm" action="add_admin.php" method="post">
+                        <!-- Form for add Admin -->
+                        <div class="form-group">
+                            <label for="studentID">Admin ID:</label>
+                            <input type="text" class="form-control" id="id" name="id" required>
+                        </div>
 
-                    <button type="submit" class="btn btn-custom" name="submit">Add</button>
+                        <button type="submit" class="btn btn-custom" name="submit">Add</button>
                     </form>
                 </div>
             </div>
@@ -141,147 +145,29 @@
             <thead>
                 <tr class="tb-row">
                     <th class="td-head" scope="col">ID</th>
-                    <th class="td-head" scope="col">Name</th>
+                    <th class="td-head" scope="col">First Name</th>
+                    <th class="td-head" scope="col">Last Name</th>
                     <th class="td-head" scope="col">Email</th>
-                    <th class="td-head" scope="col">Action</th>
+                    <th class="td-head" scope="col">Phone</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr class="tb-row">
-                    <td class="th-custom" scope="row">1</td>
-                    <td class="td-custom">Nguyen Van A</td>
-                    <td class="td-custom">aaaaaaa@gmail.com</td>
-                    <td class="td-custom">
-                        <button type="button" class="btn btn-info-cus btn-sm" data-toggle="modal" data-target="#updateGradesModal">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger-cus btn-sm" onclick="deleteAdmin()">
-                            <i class="fa-solid fa-trash-can"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
+                <?php
+                $result = fetch_admin();
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                ?><tr>
+                            <td><?php echo $row['User_ID']; ?></td>
+                            <td><?php echo $row['FirstName']; ?></td>
+                            <td><?php echo $row['LastName']; ?></td>
+                            <td><?php echo $row['Email']; ?></td>
+                            <td><?php echo $row['Phone']; ?></td>
+                            <td><a class="btn btn-info" href="update_student.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="admin_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                        </tr> <?php       }
+                        }
+
+                                ?>
+
 
 
             </tbody>

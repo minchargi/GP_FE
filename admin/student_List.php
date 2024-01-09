@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -171,223 +175,46 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container mt-2">
         <table class="table table-bordered table-hover">
             <thead>
                 <tr class="tb-row">
                     <th class="td-head" scope="col">Student ID</th>
-                    <th class="td-head" scope="col">Name</th>
+                    <th class="td-head" scope="col">Year</th>
+                    <th class="td-head" scope="col">First Name</th>
+                    <th class="td-head" scope="col">Last Name</th>
                     <th class="td-head" scope="col">Date of birth</th>
+                    <th class="td-head" scope="col">Gender</th>
+                    <th class="td-head" scope="col">Email</th>
                     <th class="td-head" scope="col">Phone Number</th>
-                    <th class="td-head" scope="col">Class</th>
                     <th class="td-head" scope="col">Major</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
-                <tr class="tb-row">
-                    <th class="th-custom" scope="row">BI12-001 </th>
-                    <td class="td-custom">Nguyễn Văn A</td>
-                    <td class="td-custom">01/01/2003</td>
-                    <td class="td-custom">0999999999</td>
-                    <td class="td-custom">02</td>
-                    <td class="td-custom">ICT</td>
-                </tr>
+                <?php
+                include 'admin_function/admin_function.php';
+                $result = fetch_student();
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                ?>
+                        <tr>
+                            <td><?php echo $row['User_ID']; ?></td>
+                            <td><?php echo $row['Year_Start']; ?></td>
+                            <td><?php echo $row['FirstName']; ?></td>
+                            <td><?php echo $row['LastName']; ?></td>
+                            <td><?php echo $row['DoB']; ?></td>
+                            <td><?php echo $row['Gender']; ?></td>
+                            <td><?php echo $row['Email']; ?></td>
+                            <td><?php echo $row['Phone']; ?></td>
+                            <td><?php echo $row['TProgram_ID']; ?></td>
+                            <td><a class="btn btn-info" href="staff_function/update_student.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                        </tr>
 
+                <?php       }
+                }
 
-
+                ?>
             </tbody>
         </table>
     </div>

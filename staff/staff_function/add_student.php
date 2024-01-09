@@ -1,6 +1,6 @@
 <?php 
     include "../../db_conn.php";
-    include '../staff_function.php';
+    include 'staff_function.php';
     if (isset($_POST['submit'])) {
         $id = $_POST['studentID'];
         $year = $_POST['year'];
