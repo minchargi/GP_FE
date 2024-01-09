@@ -80,32 +80,23 @@ include 'student_function.php'
 
         <!-- Main content -->
         <h1>Announcements</h1>
-
+          <?php
+            $result = fetch_student_announcement($user_id);
+            if ($result->num_rows > 0){
+              while ($row = $result->fetch_assoc()){
+          ?>
          <div class="announce-accordion">
           <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký thi lại môn Signal and Systems</button>
+            <button class="accordion-header" onclick="toggleAccordion(this)"><?php echo $row['tittle'] ?></button>
             <div class="accordion-content">
-              <p>Điền đơn để đăng ký thi lại: <a href="../students/retakeForm.php">Link</a></p>
-            </div>
-          </div>
-         </div>
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Đăng ký môn tự chọn</button>
-            <div class="accordion-content">
-              <p>Đăng kí môn tại đây: <a href="../students/course-optionaly.php">Link</a></p>
-            </div>
-          </div>
-         </div>
-         <div class="announce-accordion">
-          <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion(this)">Announcement Title</button>
-            <div class="accordion-content">
-              <p>Announcement content here !</p>
+              <p><?php echo $row['announcement'] ?></p>
             </div>
           </div>
         </div>
-        
+        <?php
+              }
+            }
+        ?>
 
         <!-- Footer -->
         <footer>

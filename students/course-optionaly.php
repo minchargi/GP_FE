@@ -136,62 +136,6 @@ include 'student_function.php'
               </tbody>
             </table>
       </div>
-
-      <div class="container mt-2">
-        <div class="text">Semester 2</div>
-        <table class="table table-bordered table-hover">
-            <thead>
-              <tr class="tb-row">
-                <th class="td-head" scope="col"> </th>
-                <th class="td-head" scope="col">Course ID</th>
-                <th class="td-head" scope="col">Course Name</th>
-                <th class="td-head" scope="col">Credits</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="tb-row">
-                <th class="th-custom" scope="row">
-                  <input class="tb-check-input" type="checkbox" id="checkbox1">
-                </th>
-                <td class="td-custom">ICT3.001</td>
-                <td class="td-custom">Introduction to Cryptography</td>
-                <td class="td-custom">4</td>
-              </tr>
-              <tr class="tb-row">
-                <th class="th-custom" scope="row">
-                  <input class="tb-check-input" type="checkbox" id="checkbox2">
-                </th>
-                <td class="td-custom">ICT3.001</td>
-                <td class="td-custom">Introduction to Cryptography</td>
-                <td class="td-custom">4</td>
-              </tr>
-              <tr class="tb-row">
-                <th class="th-custom" scope="row">
-                  <input class="tb-check-input" type="checkbox" id="checkbox3">
-                </th>
-                <td class="td-custom">ICT3.001</td>
-                <td class="td-custom">Introduction to Cryptography</td>
-                <td class="td-custom">4</td>
-              </tr>
-              <tr class="tb-row">
-                <th class="th-custom" scope="row">
-                  <input class="tb-check-input" type="checkbox" id="checkbox4">
-                </th>
-                <td class="td-custom">ICT3.001</td>
-                <td class="td-custom">Introduction to Cryptography</td>
-                <td class="td-custom">4</td>
-              </tr>
-              <tr class="tb-row">
-                <th class="th-custom" scope="row">
-                  <input class="tb-check-input" type="checkbox" id="checkbox5">
-                </th>
-                <td class="td-custom">ICT3.001</td>
-                <td class="td-custom">Introduction to Cryptography</td>
-                <td class="td-custom">4</td>
-              </tr>
-              
-            </tbody>
-          </table>
     </div>
 
         <!-- Submit Button -->

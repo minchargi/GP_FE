@@ -138,4 +138,12 @@ function fetch_student_gpa($student_id,$bachelor_year){
     $conn->close();
     return $result;
 }
+
+function fetch_student_announcement($student_id){
+    include '../db_conn.php';
+    $sql = "SELECT * FROM announcements a INNER JOIN grade g ON g.Course_ID = a.Course_ID WHERE g.Student_ID = '$student_id' ORDER BY `g`.`Created_at` DESC";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
 ?>
