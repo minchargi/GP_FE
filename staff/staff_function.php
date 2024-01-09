@@ -1,5 +1,4 @@
 <?php
-include '../db_conn.php';
 function fetch_department()
 {
     include '../db_conn.php';
@@ -20,37 +19,29 @@ function fetch_department()
 
     echo json_encode($departments);
 }
+function addStudentToCourse($studentId, $trainingProgramId, $year)
+{
+    include '../../db_conn.php';
 
-function addStudentsToCourse($course_id, $training_program_id) {
-    // Fetch all students with the corresponding training program id
-    $students = fetchStudentsByTrainingProgramId($training_program_id);
+    // Prepare SQL statements for security and efficiency
+    $stmt = $conn->prepare("SELECT Course_ID, TProgram_ID  FROM course WHERE TProgram_ID  = ? AND Year = ?");
+    $stmt->bind_param("si", $trainingProgramId, $year);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    // Loop through the students and add them to the course list
-    foreach ($students as $student) {
-        addStudentToCourse($course_id, $student['User_ID']);
+    // Ensure a matching course exists
+    if ($result->num_rows === 0) {
+        return false; // Or handle the error as needed
     }
+    while ($row = $result->fetch_assoc()) {
+        // Fetch the course ID
+        $courseId = $row['Course_ID'];
+
+        // Prepare the SQL statement to insert student-course association
+        $stmt = $conn->prepare("INSERT INTO grade (Student_ID , Course_ID, Year ) VALUES (?, ?, ?)");
+        $stmt->bind_param("ssi", $studentId, $courseId, $year);
+
+        $stmt->execute();
+    }
+    $conn->close();
 }
-
-function fetchStudentsByTrainingProgramId($training_program_id) {
-    $db = new PDO('mysql:host=localhost;dbname=project', 'root', '');
-
-    // Replace with your actual SQL query to fetch students
-    $stmt = $db->prepare('SELECT * FROM users WHERE TProgram_ID = :TProgram_ID');
-    $stmt->bindParam(':TProgram_ID', $training_program_id);
-    $stmt->execute();
-
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
-
-function addStudentToCourse($course_id, $student_id) {
-    // Replace with your actual database connection code
-    $db = new PDO('mysql:host=localhost;dbname=project', 'root', '');
-
-    // Replace with your actual SQL query to add the student to the course list
-    $stmt = $db->prepare('INSERT INTO course_list (Course_ID, Student_ID) VALUES (:Course_ID, :Student_ID)');
-    $stmt->bindParam(':Course_ID', $course_id);
-    $stmt->bindParam(':Student_ID', $student_id);
-    $stmt->execute();
-}
-
-

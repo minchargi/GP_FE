@@ -82,7 +82,7 @@ include 'staff_function.php'
                 </div>
                 <div class="modal-body">
                     <!-- Form for creating a class -->
-                    <form id="createClassForm" action="courseListM.php" method=post>
+                    <form id="createClassForm" action="staff_function/add_course.php" method=post>
                         <div class="form-group">
                             <label for="classCode">Course Id:</label>
                             <input type="text" class="form-control" id="course_id" name="course_id" required>

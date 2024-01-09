@@ -30,6 +30,7 @@ $year = $_GET['year'];
 </head>
 
 <body>
+<<<<<<< HEAD
       <!-- Navbar-->
       <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -80,7 +81,10 @@ $year = $_GET['year'];
             </div>
           </nav>
       </header>
-
+=======
+  <!-- Navbar-->
+  <?php include '../navbar/teachernav.php'; ?>
+>>>>>>> 9030e120118b36bf886bd4d41e058e2402c06fc7
 
   <ul class="nav">
     <li><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year; ?>">Announcement</a></li>

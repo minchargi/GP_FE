@@ -1,5 +1,5 @@
 <?php
-include "../db_conn.php";
+include "../../db_conn.php";
 include 'staff_function.php';
 
 if (isset($_POST['submit'])) {
@@ -12,11 +12,10 @@ if (isset($_POST['submit'])) {
     $result = $conn->query($sql);
     if ($result == true) {
         echo "New record created successfully";
-        header('location:courseList.php');
+        header('location:../courseList.php');
     } else {
         echo "Error" . $sql . $conn->error;
     }
 }
-addStudentsToCourse($course_id,$tprogram_id);
 ?>
 
