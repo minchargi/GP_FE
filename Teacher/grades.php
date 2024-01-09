@@ -30,7 +30,6 @@ $year = $_GET['year'];
 </head>
 
 <body>
-<<<<<<< HEAD
       <!-- Navbar-->
       <header>
           <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -81,10 +80,7 @@ $year = $_GET['year'];
             </div>
           </nav>
       </header>
-=======
-  <!-- Navbar-->
-  <?php include '../navbar/teachernav.php'; ?>
->>>>>>> 9030e120118b36bf886bd4d41e058e2402c06fc7
+
 
   <ul class="nav">
     <li><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year; ?>">Announcement</a></li>
@@ -185,75 +181,6 @@ $year = $_GET['year'];
     </form>
 
       </div>
-<<<<<<< HEAD
-      <div class="container mt-4">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination page-custom">
-            <li class="page-item" style="padding-right: 10px;">
-              <a class="page-link custom-color" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item" style="padding-right: 10px;">
-              <a class="page-link custom-color" href="#">1</a>
-            </li>
-            <li class="page-item" style="padding-right: 10px;">
-              <a class="page-link custom-color" href="#">2</a>
-            </li>
-            <li class="page-item" style="padding-right: 10px;">
-              <a class="page-link custom-color" href="#">...</a>
-            </li>
-            <li class="page-item" style="padding-right: 10px;">
-              <a class="page-link custom-color" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link custom-color" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      
-      <!-- Footer -->
-      <footer>
-        <div class="row mt-4">
-            <div class="col-md-4 infor">
-                <img class="white-logo" src="../images/white_logo.png">
-                <!--Address-->
-                <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
-                    Address
-                </p>
-                <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
-                <hr class="divider">
-
-                <!--Phone-->
-                <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
-                Phone</p>
-                <p class="text-detail"> +84-24 37 91 69 60</p>
-                <hr class="divider">
-                
-                <!--Email-->
-                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                    Email
-                </p>
-                <p class="text-detail">officeusth@usth.edu.vn</p>
-                <hr class="divider">
-                
-                <!--Contact-->
-                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                    Contact
-                <p class="text-detail">webmaster@usth.edu.vn</p>
-                <hr class="divider">
-                
-            </div>
-            <div class="copy-right  py-2 mt-4">
-                <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
-            </div>
-        </div>
-      </footer>
-  </body>
-=======
     <div class="container mt-2">
       <table class="table table-bordered table-hover">
         <thead>
@@ -350,8 +277,42 @@ $year = $_GET['year'];
     </div>
 
     <!-- Footer -->
-    <?php include '../footer/footer.php'; ?>
+    <footer>
+        <div class="row mt-4">
+            <div class="col-md-4 infor">
+                <img class="white-logo" src="../images/white_logo.png">
+                <!--Address-->
+                <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
+                    Address
+                </p>
+                <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
+                <hr class="divider">
+
+                <!--Phone-->
+                <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
+                Phone</p>
+                <p class="text-detail"> +84-24 37 91 69 60</p>
+                <hr class="divider">
+                
+                <!--Email-->
+                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                    Email
+                </p>
+                <p class="text-detail">officeusth@usth.edu.vn</p>
+                <hr class="divider">
+                
+                <!--Contact-->
+                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+                    Contact
+                <p class="text-detail">webmaster@usth.edu.vn</p>
+                <hr class="divider">
+                
+            </div>
+            <div class="copy-right  py-2 mt-4">
+                <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
+            </div>
+        </div>
+      </footer>
 </body>
 
->>>>>>> 9030e120118b36bf886bd4d41e058e2402c06fc7
 </html>

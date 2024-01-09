@@ -9,23 +9,20 @@
     font-weight: 700;
     line-height: normal;
 }
-.link{
-    text-decoration: none;
-    color:#000;
-}
-.card{
-    margin-top: 5px;
-    overflow:hidden;
-}
-.delete-icon{
-    display: none;
-    position: absolute;
-    right: 10px;
-    margin-top: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    color: #727272;
-}
+
+.accordion {
+    margin-top: 20px; 
+    width: 700px; 
+    padding-bottom: 20px; 
+  }
+  
+  .accordion-button {
+    font-weight: 600; 
+  }
+  
+  .accordion-button::after {
+    display: none; 
+  }
 
 .custom-button:hover {
     background-color: #EB1C24;
@@ -105,94 +102,3 @@
   }
   /**/
 
-  .accordion {
-    width: 700px; 
-    padding-bottom: 20px; 
-    margin-left: 80px; 
-}
-
-.accordion-item {
-    border-radius: 5px; 
-    border: 1px solid #ccc;
-}
-
-.accordion-header {
-    background-color: white;
-    font-weight: 600px;
-    border-radius: 5px; 
-    color: #2A3C95;
-    padding: 10px;
-    cursor: pointer; 
-    width: 100%; 
-    text-align: left; 
-    border: none; 
-    outline: none; 
-    font-size: 16px; 
-}
-
-.accordion-content {
-    font-family: 'Roboto', sans-serif; 
-    max-height: 0; 
-    overflow: hidden; 
-    transition: max-height 0.5s ease-out; 
-}
-
-.accordion-content ul {
-    list-style-type: none; 
-    padding: 0; 
-}
-
-.accordion-content li a {
-    display: block; 
-    padding: 10px; 
-    text-decoration: none; 
-    color: #000; 
-}
-
-.accordion-content li a:hover {
-    background-color: #f0f0f0; 
-    color: #EB1C24;
-}
-
-.accordion-content a {
-    color:#293895; 
-    text-decoration: underline; 
-}
-
-.accordion-content a:hover {
-    color:#EB1C24;
-}
-
-  .announce-accordion {
-    width: 700px;
-    padding-bottom: 20px; 
-    margin-left: 80px; 
-}
-
-.announce-accordion .accordion-item {
-    border-radius: 5px; 
-    border: 1px solid #ccc;
-}
-
-.announce-accordion .accordion-header {
-    font-weight: 600;
-    background-color: white; 
-    color: #000000; 
-    padding: 10px; 
-    cursor: pointer; 
-    text-align: left; 
-    border: none; 
-    outline: none; 
-    font-size: 16px; 
-}
-
-.announce-accordion .accordion-content {
-    font-family: 'Roboto', sans-serif; 
-    max-height: 0; 
-    overflow: hidden; 
-    transition: max-height 0.5s ease-out; 
-}
-
-.announce-accordion p {
-    padding: 10px; 
-}
