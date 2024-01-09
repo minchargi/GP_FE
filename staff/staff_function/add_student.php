@@ -1,5 +1,6 @@
 <?php 
-    include "../db_conn.php";
+    include "../../db_conn.php";
+    include '../staff_function.php';
     if (isset($_POST['submit'])) {
         $id = $_POST['studentID'];
         $year = $_POST['year'];
@@ -21,14 +22,15 @@
         $result = $conn->query($sql);
 
         if ($result == TRUE) {
-            echo "New record created successfully.";
-            header('location:studentList.php');
+            addStudentToCourse($id,$tprogram_id,$year);
+            header('location:../studentList.php');
         }else{
             echo "Error:". $sql . "<br>". $conn->error;
         } 
-
+        
         $conn->close();     
     }
 
+    
 ?>
 

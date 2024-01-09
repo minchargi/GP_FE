@@ -62,6 +62,16 @@
 .error-message {
     color: red;
 }
+.btn-primary{
+    background:#293895;
+    color:#FFF;
+    font-weight:500px;
+    border: none;
+}
+.btn-primary:hover{
+    background: #EB1C24;
+    color: #FFF;
+}
 .link{
     text-decoration: none;
     color: #293895;
