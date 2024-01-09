@@ -1,15 +1,13 @@
 <?php
-// reset_password.php
+    // Check if the token is provided in the URL
+    if (!isset($_GET['token'])) {
+        echo "Invalid reset link.";
+        exit;
+    }
 
-// Check if the token is provided in the URL
-if (!isset($_GET['token'])) {
-    echo "Invalid reset link.";
-    exit;
-}
+    $token = $_GET['token'];
 
-$token = $_GET['token'];
-
-// Display a form to reset the password
+    // Display a form to reset the password
 ?>
 
 <!DOCTYPE html>
@@ -72,18 +70,3 @@ $token = $_GET['token'];
     </div>
 </body>
 </html>
-
-<?php
-// update_password.php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $newPassword = $_POST['newPassword'];
-    $token = $_POST['token'];
-
-    // Update the user's password
-    $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-    $sql = "UPDATE users SET password='$hashedPassword', reset_token=null, reset_token_expiration=null WHERE reset_token='$token'";
-    $conn->query($sql);
-    exit;
-}
-?>

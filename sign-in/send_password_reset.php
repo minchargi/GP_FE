@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //Content
             $mail->isHTML(false);   // Set email format to plain text
             $mail->Subject = 'Password Reset';
-            $mail->Body    = "To reset your password, click the following link:\n\nhttp://localhost/GP_FE-Nev/sign-in/reset_password.php?token=$resetToken";
+            $mail->Body    = "To reset your password, click the following link:\n\nhttp://localhost/GP_FE/sign-in/reset_password.php?token=$resetToken";
 
             $mail->send();
             // Use JavaScript to display an alert with the message
