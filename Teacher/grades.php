@@ -32,54 +32,54 @@ $year = $_GET['year'];
 <body>
   <!-- Navbar-->
   <header>
-          <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-              <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
-            </a>
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="../Teacher/courseList.php"> 
-                      <i class="fas fa-book"></i> Course
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../Teacher/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-calendar"></i> Timetable
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
-                        <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-user-circle"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="../Teacher/profile.php">Account</a></li>
-                      <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
-                    </ul>
-                  </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
-      </header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
+      </a>
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../Teacher/announcement.php"><i class="fas fa-home"></i> Announcement</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="../Teacher/courseList.php">
+                <i class="fas fa-book"></i> Course
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Teacher/contact.php"><i class="fa-solid fa-phone"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-calendar"></i> Timetable
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
+                <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-user-circle"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../Teacher/profile.php">Account</a></li>
+                <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
 
   <ul class="nav">
     <li><a href="../Teacher/courseAnnounce.php?id=<?php echo $course_id; ?>&year=<?php echo $year; ?>">Announcement</a></li>
@@ -113,20 +113,28 @@ $year = $_GET['year'];
             </button>
           </div>
           <div class="modal-body">
+
             <!-- Form for updating grades -->
-            <form id="updateGradesForm" action = "update_grade.php">
+            <form id="updateGradesForm" action="update_grade.php" method="post">
               <div class="form-group">
                 <label for="studentInfo">ID of Student:</label>
-                <input type="text" class="form-control" id="studentid" required>
+                <input type="text" class="form-control" id="student_id" name="student_id" required>
+              </div>
+              <input type="hidden" class="form-control" id="course_id" name="course_id" value="<?php echo $course_id; ?>">
+              <input type="hidden" class="form-control" id="year" name="year" value="<?php echo $year; ?>">
+              <div class="form-group">
+                <label for="studentInfo">Attendance:</label>
+                <input type="text" class="form-control" id="attend" name="attend" required>
               </div>
               <div class="form-group">
-                <label for="gradeType">Select Grade Type:</label>
+                <label for="studentInfo">Midterm:</label>
+                <input type="text" class="form-control" id="midterm" name="midterm" required>
               </div>
               <div class="form-group">
-                <label for="studentInfo">Grade:</label>
-                <input type="text" class="form-control" id="studentGrade" required>
+                <label for="studentInfo">Final:</label>
+                <input type="text" class="form-control" id="final" name="final" required>
               </div>
-              <button type="button" class="btn btn-custom" onclick="updateGrades()">Update</button>
+              <input type="submit" value="Update" name="update">
             </form>
           </div>
         </div>
@@ -153,143 +161,143 @@ $year = $_GET['year'];
             </form>
           </div>
         </div>
-        </div>
+      </div>
     </div>
-    
+
+
+  </div>
+  <div class="container mt-2">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr class="tb-row">
+          <th class="td-head" scope="col">Student ID</th>
+          <th class="td-head" scope="col">Name</th>
+          <th class="td-head" scope="col">Attendance</th>
+          <th class="td-head" scope="col">Midterm </th>
+          <th class="td-head" scope="col">Final </th>
+          <th class="td-head" scope="col">Total </th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        $result = fetch_course_detail($course_id, $year);
+        $row = $result->fetch_assoc();
+        ?>
+        <tr class="tb-row">
+          <th class="th-custom" scope="row"> </th>
+          <td class="td-custom"> </td>
+          <td class="td-custom"><?php echo $row['Attendance_Percentage']; ?>%</td>
+          <td class="td-custom"><?php echo $row['Midterm_Percentage']; ?>%</td>
+          <td class="td-custom"><?php echo $row['Final_Percentage']; ?>%</td>
+          <td class="td-custom">100%</td>
+        </tr>
+        <?php
+        $result = fetch_course_grade($course_id, $year);
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            if (!isset($row['Attendance'])) {
+              $attendance = 0;
+            } else {
+              $attendance = $row['Attendance'];
+            }
+            if (!isset($row['Midterm'])) {
+              $midterm = 0;
+            } else {
+              $midterm = $row['Midterm'];
+            }
+            if (!isset($row['Final'])) {
+              $final = 0;
+            } else {
+              $final = $row['Final'];
+            }
+            if (!isset($row['Overall'])) {
+              $overall = 0;
+            } else {
+              $overall = $row['Overall'];
+            }
+        ?>
+            <tr class="tb-row">
+              <th class="th-custom" scope="row"><?php echo $row['User_ID']; ?></th>
+              <td class="td-custom"><?php echo $row['FullName']; ?></td>
+              <td class="td-custom"><?php echo $attendance; ?></td>
+              <td class="td-custom"><?php echo $midterm; ?></td>
+              <td class="td-custom"><?php echo $final; ?></td>
+              <td class="td-custom"><?php echo $overall; ?></td>
+            </tr>
+        <?php
+          }
+        }
+        ?>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="container mt-4">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination page-custom">
+        <li class="page-item" style="padding-right: 10px;">
+          <a class="page-link custom-color" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item" style="padding-right: 10px;">
+          <a class="page-link custom-color" href="#">1</a>
+        </li>
+        <li class="page-item" style="padding-right: 10px;">
+          <a class="page-link custom-color" href="#">2</a>
+        </li>
+        <li class="page-item" style="padding-right: 10px;">
+          <a class="page-link custom-color" href="#">...</a>
+        </li>
+        <li class="page-item" style="padding-right: 10px;">
+          <a class="page-link custom-color" href="#">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link custom-color" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="row mt-4">
+      <div class="col-md-4 infor">
+        <img class="white-logo" src="../images/white_logo.png">
+        <!--Address-->
+        <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
+          Address
+        </p>
+        <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
+        <hr class="divider">
+
+        <!--Phone-->
+        <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
+          Phone</p>
+        <p class="text-detail"> +84-24 37 91 69 60</p>
+        <hr class="divider">
+
+        <!--Email-->
+        <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+          Email
+        </p>
+        <p class="text-detail">officeusth@usth.edu.vn</p>
+        <hr class="divider">
+
+        <!--Contact-->
+        <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
+          Contact
+        <p class="text-detail">webmaster@usth.edu.vn</p>
+        <hr class="divider">
 
       </div>
-    <div class="container mt-2">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr class="tb-row">
-            <th class="td-head" scope="col">Student ID</th>
-            <th class="td-head" scope="col">Name</th>
-            <th class="td-head" scope="col">Attendance</th>
-            <th class="td-head" scope="col">Midterm </th>
-            <th class="td-head" scope="col">Final </th>
-            <th class="td-head" scope="col">Total </th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          $result = fetch_course_detail($course_id, $year);
-          $row = $result->fetch_assoc();
-          ?>
-          <tr class="tb-row">
-            <th class="th-custom" scope="row"> </th>
-            <td class="td-custom"> </td>
-            <td class="td-custom"><?php echo $row['Attendance_Percentage']; ?>%</td>
-            <td class="td-custom"><?php echo $row['Midterm_Percentage']; ?>%</td>
-            <td class="td-custom"><?php echo $row['Final_Percentage']; ?>%</td>
-            <td class="td-custom">100%</td>
-          </tr>
-          <?php
-          $result = fetch_course_grade($course_id, $year);
-          if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-              if (!isset($row['Attendance'])) {
-                $attendance = 0;
-              } else {
-                $attendance = $row['Attendance'];
-              }
-              if (!isset($row['Midterm'])) {
-                $midterm = 0;
-              } else {
-                $midterm = $row['Midterm'];
-              }
-              if (!isset($row['Final'])) {
-                $final = 0;
-              } else {
-                $final = $row['Final'];
-              }
-              if (!isset($row['Overall'])) {
-                $overall = 0;
-              } else {
-                $overall = $row['Overall'];
-              }
-          ?>
-              <tr class="tb-row">
-                <th class="th-custom" scope="row"><?php echo $row['User_ID']; ?></th>
-                <td class="td-custom"><?php echo $row['FullName']; ?></td>
-                <td class="td-custom"><?php echo $attendance; ?></td>
-                <td class="td-custom"><?php echo $midterm; ?></td>
-                <td class="td-custom"><?php echo $final; ?></td>
-                <td class="td-custom"><?php echo $overall; ?></td>
-              </tr>
-          <?php
-            }
-          }
-          ?>
-
-        </tbody>
-      </table>
+      <div class="copy-right  py-2 mt-4">
+        <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
+      </div>
     </div>
-    <div class="container mt-4">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination page-custom">
-          <li class="page-item" style="padding-right: 10px;">
-            <a class="page-link custom-color" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item" style="padding-right: 10px;">
-            <a class="page-link custom-color" href="#">1</a>
-          </li>
-          <li class="page-item" style="padding-right: 10px;">
-            <a class="page-link custom-color" href="#">2</a>
-          </li>
-          <li class="page-item" style="padding-right: 10px;">
-            <a class="page-link custom-color" href="#">...</a>
-          </li>
-          <li class="page-item" style="padding-right: 10px;">
-            <a class="page-link custom-color" href="#">4</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link custom-color" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row mt-4">
-            <div class="col-md-4 infor">
-                <img class="white-logo" src="../images/white_logo.png">
-                <!--Address-->
-                <p class="detail"> <i class="fa-solid fa-house icon-footer"></i>
-                    Address
-                </p>
-                <p class="text-detail"> A21 building, Vietnam Academy of Science and Technology, 18 Hoang Quoc Viet, Cau Giay, Hanoi</p>
-                <hr class="divider">
-
-                <!--Phone-->
-                <p class="detail"><i class="fa-solid fa-phone icon-footer"></i>
-                Phone</p>
-                <p class="text-detail"> +84-24 37 91 69 60</p>
-                <hr class="divider">
-                
-                <!--Email-->
-                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                    Email
-                </p>
-                <p class="text-detail">officeusth@usth.edu.vn</p>
-                <hr class="divider">
-                
-                <!--Contact-->
-                <p class="detail"> <i class="fa-solid fa-envelope icon-footer"></i>
-                    Contact
-                <p class="text-detail">webmaster@usth.edu.vn</p>
-                <hr class="divider">
-                
-            </div>
-            <div class="copy-right  py-2 mt-4">
-                <p class="ft-text">&copy; 2021 <span class="web-site">usth.edu.vn</span>. All Rights reserved</p>
-            </div>
-        </div>
-      </footer>
+  </footer>
 </body>
 
 </html>
