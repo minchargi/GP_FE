@@ -150,155 +150,43 @@
   <div class="container mt-2">
     <table class="table table-bordered table-hover">
       <thead>
-        <tr class="tb-row">
-          <th class="td-head" scope="col">Dept.</th>
-          <th class="td-head" scope="col">Name</th>
-          <th class="td-head" scope="col">DOB</th>
-          <th class="td-head" scope="col">Phone number</th>
-          <th class="td-head" scope="col">Email</th>
-        </tr>
+      <tr class="tb-row">
+                <th class="td-head" scope="col">Student ID</th>
+                    <th class="td-head" scope="col">Year</th>
+                    <th class="td-head" scope="col">First Name</th>
+                    <th class="td-head" scope="col">Last Name</th>
+                    <th class="td-head" scope="col">Date of birth</th>
+                    <th class="td-head" scope="col">Gender</th>
+                    <th class="td-head" scope="col">Email</th>
+                    <th class="td-head" scope="col">Phone Number</th>
+                    <th class="td-head" scope="col">Department</th>
+                </tr>
       </thead>
       <tbody>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
-        <tr class="tb-row">
-          <td class="td-custom">ICT</td>
-          <td class="td-custom">Nguyễn Văn A </td>
-          <td class="td-custom">01/01/2001</td>
-          <td class="td-custom">0987654321</td>
-          <td class="td-custom">anguyenvanbi12001@gmail.com</td>
-        </tr>
+      <?php
+            include 'staff_function/staff_function.php';
+            $result = fetch_teacher();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+        ?>
+                    <tr>
+                    <td><?php echo $row['User_ID']; ?></td>
+                    <td><?php echo $row['Year_Start']; ?></td>
+                    <td><?php echo $row['FirstName']; ?></td>
+                    <td><?php echo $row['LastName']; ?></td>
+                    <td><?php echo $row['DoB']; ?></td>
+                    <td><?php echo $row['Gender']; ?></td>
+                    <td><?php echo $row['Email']; ?></td>
+                    <td><?php echo $row['Phone']; ?></td>
+                    <td><?php echo $row['Department']; ?></td>
+                    <td><a class="btn btn-info" href="update_student.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                    </tr>                       
+
+        <?php       }
+
+            }
+
+        ?>   
       </tbody>
     </table>
   </div>

@@ -1,6 +1,6 @@
 <?php 
     include "../../db_conn.php";
-    include '../staff_function.php';
+    include 'staff_function.php';
     if (isset($_POST['submit'])) {
         $id = $_POST['studentID'];
         $year = $_POST['year'];
@@ -12,7 +12,7 @@
         $tprogram_id = $_POST['tprogram_id'];
         $dob = $_POST['studentDOB'];
         $role = "Student";
-        $password = "password";
+        $password = md5('1');
         $progress = "B1";
 
 

@@ -10,7 +10,7 @@
         $tprogram_id = $_POST['tprogram_id'];
         $dob = $_POST['studentDOB'];
         $role = "Teacher";
-        $password = "password";
+        $password = md5('1');
 
         $sql = "INSERT INTO users(User_ID, FirstName, LastName, Gender, Email, Phone, TProgram_ID, DoB, `Role`, `Password`) 
                 VALUES ('$id','$first_name','$last_name','$gender','$email','$phone','$tprogram_id','$dob','$role','$password')";

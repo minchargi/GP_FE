@@ -11,7 +11,7 @@
         $tprogram_id = $_POST['tprogram_id'];
         $dob = $_POST['studentDOB'];
         $role = "Student";
-        $password = "password";
+        $password = md5('1');
         $progress = "B1";
 
 
