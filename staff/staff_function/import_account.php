@@ -1,6 +1,6 @@
 <?php
 include "../../db_conn.php";
-include "../staff_function.php";
+include "staff_function.php";
 if (isset($_POST["Import"])) {
 
   $filename = $_FILES["fileImport"]["tmp_name"];
@@ -17,7 +17,7 @@ if (isset($_POST["Import"])) {
               window.location = \"../studentList.php\"
               </script>";
       } else {
-        addStudentToCourse($getData[0], $getData[9], $getData[1]);
+        addStudentToCourse($getData[0], $getData[9], $getData[1], $getData[2]);
       }
     }
     fclose($file);

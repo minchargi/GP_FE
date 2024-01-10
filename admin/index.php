@@ -1,4 +1,4 @@
 <?php 
     include 'verifyAdmin.php';
-    header("Location: announce.php");
+    header("Location: dashboard.php");
 ?>

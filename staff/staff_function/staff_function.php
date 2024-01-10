@@ -19,13 +19,16 @@ function fetch_department()
 
     echo json_encode($departments);
 }
-function addStudentToCourse($studentId, $trainingProgramId, $year)
+function addStudentToCourse($studentId, $trainingProgramId, $year, $ba_year)
 {
     include '../../db_conn.php';
 
     // Prepare SQL statements for security and efficiency
-    $stmt = $conn->prepare("SELECT Course_ID, TProgram_ID  FROM course WHERE TProgram_ID  = ? AND Year = ?");
-    $stmt->bind_param("si", $trainingProgramId, $year);
+    $stmt = $conn->prepare("SELECT u.* , c.Course_ID, c.Year
+    FROM users u
+    INNER JOIN course c ON u.TProgram_ID = c.TProgram_ID AND u.Year_Start = c.Year AND u.Progress = C.Bachelor_Year
+    WHERE u.TProgram_ID  = ? AND c.Year = ? AND u.Progress = ? AND u.Role = 'Student'");
+    $stmt->bind_param("sis", $trainingProgramId, $year, $ba_year);
     $stmt->execute();
     $result = $stmt->get_result();
 
