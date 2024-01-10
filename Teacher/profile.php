@@ -102,7 +102,7 @@
                 <p><b>Department:</b></p>
                 <span><?php echo $row['TProgram_ID']; ?></span>
               </div>
-              <a href="../sign-in/FORgot/resetPass.php">
+              <a href="../Teacher/change_password.php">
                 <button>Change Password</button>
               </a>
             </div>

@@ -119,7 +119,7 @@ include 'student_function.php'
             <?php echo $row['TProgram_ID']; ?>
           </span>
         </div>
-        <a href="../students/resetPass.php">
+        <a href="../students/change_password.php">
           <button>Change</button>
         </a>
       </div>

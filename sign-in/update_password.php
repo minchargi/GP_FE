@@ -1,18 +1,9 @@
 <?php
 // Establish database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "project";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../db_conn.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $newPassword = $_POST['newPassword'];
+    $newPassword = md5($_POST['newPassword']);
     $token = $_POST['token'];
 
     // Directly use the new password (without hashing)
