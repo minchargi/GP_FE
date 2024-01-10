@@ -83,7 +83,7 @@ include 'student_function.php'
         <h1>Retake Form</h1>
         
         <div class="container mt-2">
-          <form id="retakeForm">
+          <form id="retakeForm" action="add_retake.php">
             <table class="table table-bordered table-hover">
               <thead>
                 <tr class="tb-row">
