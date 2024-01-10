@@ -185,7 +185,7 @@
                     <td><?php echo $row['Email']; ?></td>
                     <td><?php echo $row['Phone']; ?></td>
                     <td><?php echo $row['TProgram_ID']; ?></td>
-                    <td><a class="btn btn-info" href="staff_function/update_student.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                    <td><a class="btn btn-info" href="staff_function/edit_button.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
                     </tr>                       
 
         <?php       }

@@ -162,7 +162,7 @@ include 'admin_function/admin_function.php'
                             <td><?php echo $row['LastName']; ?></td>
                             <td><?php echo $row['Email']; ?></td>
                             <td><?php echo $row['Phone']; ?></td>
-                            <td><a class="btn btn-info" href="update_student.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="admin_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                            <td><a class="btn btn-info" href="admin_function/edit_button.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="admin_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
                         </tr> <?php       }
                         }
 

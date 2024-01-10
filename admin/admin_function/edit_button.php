@@ -10,9 +10,10 @@
         $phone = $_POST['phone'];
         $tprogram_id = $_POST['tprogram_id']; 
         $year = $_POST['year'];
+        $dob = $_POST['dob'];
         echo $firstname;
         echo "(", $user_id,")"; 
-        $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year' WHERE `User_ID`='$user_id'"; 
+        $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year',`DoB`='$dob' WHERE `User_ID`='$user_id'"; 
         $result = $conn->query($sql); 
         if ($result == TRUE) {
             echo " Record updated successfully.";
@@ -36,6 +37,7 @@
                 $first_name = $row['FirstName'];
                 $year = $row['Year_Start'];
                 $lastname = $row['LastName'];
+                $dob = $row['DoB'];
                 $email = $row['Email'];
                 $phone = $row['Phone'];
                 $tprogram_id = $row['TProgram_ID'];
@@ -54,6 +56,9 @@
             <br>
             Last name:<br>
             <input type="text" name="lastname" value="<?php echo $lastname; ?>">
+            <br>
+            Date of birth:<br>
+            <input type="text" name="dob" value="<?php echo $dob; ?>">
             <br>
             Year:<br>
             <input type="text" name="year" value="<?php echo $year; ?>">
