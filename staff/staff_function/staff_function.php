@@ -1,24 +1,5 @@
 <?php
-function fetch_department()
-{
-    include '../db_conn.php';
-    $sql = "SELECT Department_Name FROM departments";
-    $result = $conn->query($sql);
 
-    $departments = array();
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $departments[] = array('id' => $row['id'], 'name' => $row['name']);
-        }
-    } else {
-        echo "0 results";
-    }
-
-    $conn->close();
-
-    echo json_encode($departments);
-}
 function addStudentToCourse($studentId, $trainingProgramId, $year, $ba_year)
 {
     include '../../db_conn.php';
@@ -63,4 +44,21 @@ function fetch_teacher(){
     $result = $conn->query($sql);
     $conn->close();
     return $result;
+}
+
+function fetch_year(){
+    include '../db_conn.php';
+    $sql = "SELECT * FROM year";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_department()
+{
+    include '../db_conn.php';
+    $sql = "SELECT Department_Name FROM department";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result ;
 }

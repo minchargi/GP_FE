@@ -114,18 +114,13 @@ $year = $_GET['year'];
           </div>
           <div class="modal-body">
             <!-- Form for updating grades -->
-            <form id="updateGradesForm">
+            <form id="updateGradesForm" action = "update_grade.php">
               <div class="form-group">
-                <label for="studentInfo">Name or ID of Student:</label>
-                <input type="text" class="form-control" id="studentInfo" required>
+                <label for="studentInfo">ID of Student:</label>
+                <input type="text" class="form-control" id="studentid" required>
               </div>
               <div class="form-group">
                 <label for="gradeType">Select Grade Type:</label>
-                <select class="form-control" id="gradeType" required>
-                  <option value="attendance">Attendance</option>
-                  <option value="midterm">Midterm</option>
-                  <option value="final">Final</option>
-                </select>
               </div>
               <div class="form-group">
                 <label for="studentInfo">Grade:</label>
@@ -161,23 +156,6 @@ $year = $_GET['year'];
         </div>
     </div>
     
-    <?php
-      if(isset($_POST['caloverall'])){
-        overall_grade($course_id,$year);
-      }
-    ?>
-    <form method="post">
-    <input type="submit" name="caloverall" value="Cal overall">
-    </form>
-
-    <?php
-      if(isset($_POST['passyear'])){
-        cal_credit($year);
-      }
-    ?>
-    <form method="post">
-    <input type="submit" name="passyear" value="pass year">
-    </form>
 
       </div>
     <div class="container mt-2">

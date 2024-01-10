@@ -34,7 +34,7 @@
             <div class="form-group">
                 <label for="newPassword" class="tittle_text">Old Password:</label>
                 <input type="password" class="form-control" id="oldPassword" name="oldPassword" 
-                    placeholder="Enter your new password" required>
+                    placeholder="Enter your old password" required>
                 <small class="error-message" id="passwordError"><?php echo $error ?></small>
             </div>
             <!-- Password Input -->
