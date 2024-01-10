@@ -119,3 +119,14 @@ h1 {
     border: #293895;
 }
 /**/
+
+.btn-info {
+    background-color: #293895;
+    border: none; 
+    color: white; 
+}
+
+.btn-info:hover {
+    background-color: #EB1C24;
+    color: white; 
+}
