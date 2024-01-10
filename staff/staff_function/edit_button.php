@@ -72,7 +72,7 @@
           </div>
           <div class="mb-3">
             <label for="lastName" class="form-label">Last Name: </label>
-            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter last name" value="<?php echo $lastname; ?>" required>
+            <input type="text" class="form-control" name="lastname" id="lastName" placeholder="Enter last name" value="<?php echo $lastname; ?>" required>
           </div>
           <div class="mb-3">
             <label for="dob" class="form-label">Date of birth: </label>
@@ -95,7 +95,7 @@
             <input type="text" class="form-control" name="tprogram_id" id="tprogram_id" placeholder="Enter TProgram_ID" value="<?php echo $tprogram_id; ?>" required>
           </div>
 
-          <button type="submit" class="btn btn-lg btn-custom" name="submit">Update</button>
+          <button type="submit" class="btn btn-lg btn-custom" name="update">Update</button>
       </form> 
     </div>
   </body>
