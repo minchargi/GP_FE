@@ -12,6 +12,7 @@
 
 a {
     text-decoration: none; 
+    color:#FFF
 }
 
 .training {
@@ -26,6 +27,11 @@ a {
     margin-left: 80px; 
     border: none; 
     background-color: #293895;
+}
+.year-btn:hover {
+    margin-left: 80px; 
+    border: none; 
+    background-color: #EB1C24;
 }
 
 .yearCourse {
