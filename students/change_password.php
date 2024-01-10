@@ -18,7 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="forgot.css">
+    <link rel="stylesheet" href="../sign-in/forgot.css">
     <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
 </head>
 <body>
