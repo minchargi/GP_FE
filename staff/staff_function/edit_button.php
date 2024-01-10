@@ -11,8 +11,6 @@
         $tprogram_id = $_POST['tprogram_id']; 
         $year = $_POST['year'];
         $dob = $_POST['dob'];
-        echo $firstname;
-        echo "(", $user_id,")"; 
         $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year',`DoB`='$dob' WHERE `User_ID`='$user_id'"; 
         $result = $conn->query($sql); 
         if ($result == TRUE) {
