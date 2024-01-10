@@ -16,7 +16,7 @@
             $result = $conn->query($sql);
             if ($result == TRUE) {
                 $conn->close();   
-                header("Location: account.php");
+                header("Location: profile.php");
             }else{
                 echo "Error:". $sql . "<br>". $conn->error;
             } 

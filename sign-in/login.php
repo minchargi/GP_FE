@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     }
 } else {
     // Invalid credentials, redirect to login page
-    echo "wrong";
+    header("Location: index.php?error='Wrong password!!!'");;
 }
 
 $conn->close();
