@@ -3,7 +3,7 @@
 include '../db_conn.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $newPassword = $_POST['newPassword'];
+    $newPassword = md5($_POST['newPassword']);
     $token = $_POST['token'];
 
     $passwordToUpdate = $newPassword;
