@@ -120,7 +120,7 @@ include 'student_function.php'
           </span>
         </div>
         <a href="../students/change_password.php">
-          <button>Change</button>
+          <button>Change Password</button>
         </a>
       </div>
     </div>
