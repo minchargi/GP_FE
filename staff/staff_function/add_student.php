@@ -22,7 +22,7 @@
         $result = $conn->query($sql);
 
         if ($result == TRUE) {
-            addStudentToCourse($id,$tprogram_id,$year);
+            addStudentToCourse($id,$tprogram_id,$year,$progress);
             header('location:../studentList.php');
         }else{
             echo "Error:". $sql . "<br>". $conn->error;

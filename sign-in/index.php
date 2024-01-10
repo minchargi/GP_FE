@@ -1,3 +1,10 @@
+<?php
+  if(isset($_GET['error'])){
+      $error = $_GET['error'];
+  } else {
+      $error = '';
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +29,7 @@
             <div class="form-group">
               <label for="user_id" class="tittle_text">User ID:</label>
               <input type="email" class="form-control" id="user_id" name="user_id" placeholder="Enter your account">
-              <small class="error-message" id="usernameError"></small>
+              <small class="error-message" id="usernameError"><?php echo $error?></small>
             </div>
     
             <!-- Password Input -->

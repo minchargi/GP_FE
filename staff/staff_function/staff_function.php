@@ -1,31 +1,15 @@
 <?php
-function fetch_department()
-{
-    include '../db_conn.php';
-    $sql = "SELECT Department_Name FROM departments";
-    $result = $conn->query($sql);
 
-    $departments = array();
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $departments[] = array('id' => $row['id'], 'name' => $row['name']);
-        }
-    } else {
-        echo "0 results";
-    }
-
-    $conn->close();
-
-    echo json_encode($departments);
-}
-function addStudentToCourse($studentId, $trainingProgramId, $year)
+function addStudentToCourse($studentId, $trainingProgramId, $year, $ba_year)
 {
     include '../../db_conn.php';
 
     // Prepare SQL statements for security and efficiency
-    $stmt = $conn->prepare("SELECT Course_ID, TProgram_ID  FROM course WHERE TProgram_ID  = ? AND Year = ?");
-    $stmt->bind_param("si", $trainingProgramId, $year);
+    $stmt = $conn->prepare("SELECT u.* , c.Course_ID, c.Year
+    FROM users u
+    INNER JOIN course c ON u.TProgram_ID = c.TProgram_ID AND u.Year_Start = c.Year AND u.Progress = C.Bachelor_Year
+    WHERE u.TProgram_ID  = ? AND c.Year = ? AND u.Progress = ? AND u.Role = 'Student'");
+    $stmt->bind_param("sis", $trainingProgramId, $year, $ba_year);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -60,4 +44,21 @@ function fetch_teacher(){
     $result = $conn->query($sql);
     $conn->close();
     return $result;
+}
+
+function fetch_year(){
+    include '../db_conn.php';
+    $sql = "SELECT * FROM year";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+
+function fetch_department()
+{
+    include '../db_conn.php';
+    $sql = "SELECT Department_Name FROM department";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result ;
 }

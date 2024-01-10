@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newPassword = md5($_POST['newPassword']);
     $token = $_POST['token'];
 
-    // Directly use the new password (without hashing)
     $passwordToUpdate = $newPassword;
 
     // Update the user's password using prepared statements to prevent SQL injection

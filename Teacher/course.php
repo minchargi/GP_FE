@@ -112,12 +112,20 @@
                         <input type="hidden" id="ba_year" name="ba_year" value=<?php echo $ba_year ?>>
                         
                         <div class="form-group">
-                            <label for="courseCode">Course Code:</label>
+                            <label for="courseCode">Course ID:</label>
                             <input type="text" class="form-control" id="courseCode" name="courseCode" required>
                         </div>                        
                         <div class="form-group">
                             <label for="courseName">Course Name:</label>
                             <input type="text" class="form-control" id="courseName" name="courseName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="courseName">Training Program ID:</label>
+                            <input type="text" class="form-control" id="courseName" name="tp_id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="courseName">Bachelor Year:</label>
+                            <input type="text" class="form-control" id="courseName" name="ba_year" required>
                         </div>
                         <div class="form-group">
                             <label for="optional">Optional:</label>
