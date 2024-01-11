@@ -176,16 +176,16 @@
                 while ($row = $result->fetch_assoc()) {
         ?>
                     <tr>
-                    <td><?php echo $row['User_ID']; ?></td>
-                    <td><?php echo $row['Year_Start']; ?></td>
-                    <td><?php echo $row['FirstName']; ?></td>
-                    <td><?php echo $row['LastName']; ?></td>
-                    <td><?php echo $row['DoB']; ?></td>
-                    <td><?php echo $row['Gender']; ?></td>
-                    <td><?php echo $row['Email']; ?></td>
-                    <td><?php echo $row['Phone']; ?></td>
-                    <td><?php echo $row['TProgram_ID']; ?></td>
-                    <td><a class="btn btn-info" href="staff_function/edit_button.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                    <td class="td-custom"><?php echo $row['User_ID']; ?></td>
+                    <td class="td-custom"><?php echo $row['Year_Start']; ?></td>
+                    <td class="td-custom"><?php echo $row['FirstName']; ?></td>
+                    <td class="td-custom"><?php echo $row['LastName']; ?></td>
+                    <td class="td-custom"><?php echo $row['DoB']; ?></td>
+                    <td class="td-custom"><?php echo $row['Gender']; ?></td>
+                    <td class="td-custom"><?php echo $row['Email']; ?></td>
+                    <td class="td-custom"><?php echo $row['Phone']; ?></td>
+                    <td class="td-custom"><?php echo $row['TProgram_ID']; ?></td>
+                    <td class="td-custom"><a class="btn btn-info" href="staff_function/edit_button.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
                     </tr>                       
 
         <?php       }
