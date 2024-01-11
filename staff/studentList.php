@@ -31,7 +31,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/announce.php"><i class="fa-solid fa-newspaper"></i> Announcements</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/courses.php"><i class="fa-solid fa-book"></i> Courses</a></li>
+                  <a class="nav-link" href="../staff/courseOverview.php"><i class="fa-solid fa-book"></i> Courses</a></li>
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/studentList.php"><i class="fa-solid fa-user-group"></i> Students</a></li>
                 <li class="nav-item">
@@ -186,7 +186,7 @@
                     <td class="td-custom"><?php echo $row['Email']; ?></td>
                     <td class="td-custom"><?php echo $row['Phone']; ?></td>
                     <td class="td-custom"><?php echo $row['TProgram_ID']; ?></td>
-                    <td class="td-custom"><a class="btn btn-info" href="staff_function/edit_button.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
+                    <td class="td-custom"><a class="btn btn-info" href="staff_function/edit_student.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="staff_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
                     </tr>                       
 
         <?php       }

@@ -1,6 +1,7 @@
 <?php 
 
     include '../../db_conn.php';
+    include 'admin_function.php';
 
     if (isset($_POST['update'])) {
         $firstname = $_POST['firstname'];
@@ -10,11 +11,12 @@
         $phone = $_POST['phone'];
         $tprogram_id = $_POST['tprogram_id']; 
         $year = $_POST['year'];
-        $dob = $_POST['dob'];
-        $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year',`DoB`='$dob' WHERE `User_ID`='$user_id'"; 
+        $dob = $_POST['dob']; 
+        $progress = $_POST['progress'];
+        $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Progress`='$progress',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year',`DoB`='$dob' WHERE `User_ID`='$user_id'"; 
         $result = $conn->query($sql); 
         if ($result == TRUE) {
-            echo " Record updated successfully.";
+            header('Location: ../student_List.php');
         }else{
             echo "Error:" . $sql . "<br>" . $conn->error;
         }
@@ -35,29 +37,32 @@
                 $first_name = $row['FirstName'];
                 $year = $row['Year_Start'];
                 $lastname = $row['LastName'];
+                $progress = $row['Progress'];
                 $dob = $row['DoB'];
                 $email = $row['Email'];
                 $phone = $row['Phone'];
                 $tprogram_id = $row['TProgram_ID'];
             } 
 
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
-    <title>User Update Form</title>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Update Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../admin/admin_function/edit_button.css">
+    <link rel="stylesheet" href="../admin/navbar.css">
+    <link rel="stylesheet" href="../admin/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../staff/staff_function/edit_button.css">
-    <link rel="stylesheet" href="../staff/navbar.css">
-    <link rel="stylesheet" href="../staff/footer.css">
+    <link rel="stylesheet" href="./FontAwesome.Pro.6.4.2/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-</head>
+  </head>
 
   <body>
     <div class="container mt-4">
@@ -73,6 +78,10 @@
           <div class="mb-3">
             <label for="lastName" class="form-label">Last Name: </label>
             <input type="text" class="form-control" name="lastname" id="lastName" placeholder="Enter last name" value="<?php echo $lastname; ?>" required>
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Progress: </label>
+            <input type="text" class="form-control" name="progress" id="progress" placeholder="Progress" value="<?php echo $progress; ?>" required>
           </div>
           <div class="mb-3">
             <label for="dob" class="form-label">Date of birth: </label>
@@ -102,8 +111,7 @@
 </html>
 
     <?php
-    } else{ 
-        header('Location: view_student.php');
-    } 
+        }
+
 }
 ?> 

@@ -92,7 +92,7 @@
     <div class="row">
       <div class="col-md-6">
             <!-- Admin Account Button -->
-        <a href="admin_account.php" class="btn custom-button mb-3">
+        <a href="admin_List.php" class="btn custom-button mb-3">
           Admin Account
           <div class="total">Total: 10</div>
         </a>

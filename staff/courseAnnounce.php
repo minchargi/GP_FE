@@ -32,7 +32,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/announce.php"><i class="fa-solid fa-newspaper"></i> Announcements</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/courses.php"><i class="fa-solid fa-book"></i> Courses</a></li>
+                  <a class="nav-link" href="../staff/courseOverview.php"><i class="fa-solid fa-book"></i> Courses</a></li>
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/studentList.php"><i class="fa-solid fa-user-group"></i> Students</a></li>
                 <li class="nav-item">

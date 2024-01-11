@@ -1,7 +1,7 @@
 <?php 
 
     include '../../db_conn.php';
-    include 'admin_function.php';
+    include 'staff_function.php';
 
     if (isset($_POST['update'])) {
         $firstname = $_POST['firstname'];
@@ -16,8 +16,7 @@
         $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Progress`='$progress',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year',`DoB`='$dob' WHERE `User_ID`='$user_id'"; 
         $result = $conn->query($sql); 
         if ($result == TRUE) {
-            delete_course_if_year_progress_mismatch();
-            header('Location: ../manageAccount.php');
+            header('Location: ../studentList.php');
         }else{
             echo "Error:" . $sql . "<br>" . $conn->error;
         }

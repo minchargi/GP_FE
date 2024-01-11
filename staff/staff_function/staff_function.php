@@ -62,3 +62,45 @@ function fetch_department()
     $conn->close();
     return $result ;
 }
+
+function cal_credit($year)
+{
+    include '../db_conn.php';
+    $stmt = $conn->prepare("SELECT u.*, SUM(c.Number_credit) AS TotalCredits 
+    FROM `users` u 
+    INNER JOIN `grade` g 
+    ON u.User_ID = g.Student_ID
+    INNER JOIN `course` c 
+    ON c.Course_ID = g.Course_ID AND c.Year = g.Year
+    WHERE u.Progress=c.Bachelor_Year AND g.Overall >= 10
+    GROUP BY g.Student_ID;");
+    $stmt->bind_param("s", $year);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 0) {
+        return null; // Or handle no data found appropriately
+    }
+
+    $creditSummary = [];
+    while ($row = $result->fetch_assoc()) {
+        $student_id = $row['Student_ID'];
+        $totalCredits = $row['TotalCredits'];
+
+        $creditSummary[$student_id] = $totalCredits;
+
+        if ($totalCredits >= 40) {
+            pass_year($student_id);
+        }
+    }
+    return $creditSummary;
+}
+function pass_year($student_id)
+{
+    include '../db_conn.php';
+    $sql = "UPDATE Users SET Progress = 'B2'
+    WHERE User_ID = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $student_id);
+    $stmt->execute();
+}

@@ -12,7 +12,9 @@ if (isset($_POST['update'])) {
     $sql = "UPDATE `grade` SET `Attendance`='$attendance',`Midterm`='$midterm',`Final`='$final' WHERE `Student_ID`='$student_id' AND `Year` = '$year' AND `Course_ID` = '$course_id'";
     $result = $conn->query($sql);
     if ($result == TRUE) {
-        echo " Record updated successfully.";
+        if (!headers_sent()) {
+            header("location: grades.php?id=$course_id&year=$year");
+        }
     } else {
         echo "Error:" . $sql . "<br>" . $conn->error;
     }
