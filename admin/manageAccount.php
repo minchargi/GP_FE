@@ -76,14 +76,14 @@
     <div class="row">
       <div class="col-md-6">
             <!-- Student Account Button -->
-        <a href="student_depart.php" class="btn custom-button mb-3">
+        <a href="student_List.php" class="btn custom-button mb-3">
           Student Account
           <div class="total">Total: 10</div>
         </a>
       </div>
       <div class="col-md-6">
             <!-- Teacher Account Button -->
-        <a href="teacher_depart.php" class="btn custom-button mb-3">
+        <a href="teacher_List.php" class="btn custom-button mb-3">
           Teacher Account
           <div class="total">Total: 10</div>
         </a>
@@ -99,7 +99,7 @@
       </div>
       <div class="col-md-6">
             <!-- Staff Account Button -->
-        <a href="staff_depart.php" class="btn custom-button mb-3">
+        <a href="staff_List.php" class="btn custom-button mb-3">
           Staff Account
           <div class="total">Total: 10</div>
         </a>

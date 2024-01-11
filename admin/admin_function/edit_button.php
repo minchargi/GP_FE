@@ -1,6 +1,7 @@
 <?php 
 
     include '../../db_conn.php';
+    include 'admin_function.php';
 
     if (isset($_POST['update'])) {
         $firstname = $_POST['firstname'];
@@ -11,10 +12,11 @@
         $tprogram_id = $_POST['tprogram_id']; 
         $year = $_POST['year'];
         $dob = $_POST['dob']; 
-        $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year',`DoB`='$dob' WHERE `User_ID`='$user_id'"; 
+        $progress = $_POST['progress'];
+        $sql = "UPDATE `users` SET `FirstName`='$firstname',`LastName`='$lastname',`Progress`='$progress',`Email`='$email',`Phone`='$phone',`TProgram_ID`='$tprogram_id',`Year_Start`='$year',`DoB`='$dob' WHERE `User_ID`='$user_id'"; 
         $result = $conn->query($sql); 
         if ($result == TRUE) {
-            echo " Record updated successfully.";
+            delete_course_if_year_progress_mismatch();
             header('Location: ../manageAccount.php');
         }else{
             echo "Error:" . $sql . "<br>" . $conn->error;
@@ -36,6 +38,7 @@
                 $first_name = $row['FirstName'];
                 $year = $row['Year_Start'];
                 $lastname = $row['LastName'];
+                $progress = $row['Progress'];
                 $dob = $row['DoB'];
                 $email = $row['Email'];
                 $phone = $row['Phone'];
@@ -76,6 +79,10 @@
           <div class="mb-3">
             <label for="lastName" class="form-label">Last Name: </label>
             <input type="text" class="form-control" name="lastname" id="lastName" placeholder="Enter last name" value="<?php echo $lastname; ?>" required>
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Progress: </label>
+            <input type="text" class="form-control" name="progress" id="progress" placeholder="Progress" value="<?php echo $progress; ?>" required>
           </div>
           <div class="mb-3">
             <label for="dob" class="form-label">Date of birth: </label>

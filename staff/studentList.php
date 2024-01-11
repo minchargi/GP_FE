@@ -33,7 +33,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/courses.php"><i class="fa-solid fa-book"></i> Courses</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../staff/students.php"><i class="fa-solid fa-user-group"></i> Students</a></li>
+                  <a class="nav-link" href="../staff/studentList.php"><i class="fa-solid fa-user-group"></i> Students</a></li>
                 <li class="nav-item">
                   <a class="nav-link" href="../staff/departments.php"><i class="fa-solid fa-chalkboard-user"></i> Departments</a></li>
                 <li class="nav-item dropdown">
@@ -159,6 +159,7 @@
       <tr class="tb-row">
                     <th class="td-head" scope="col">Student ID</th>
                     <th class="td-head" scope="col">Year</th>
+                    <th class="td-head" scope="col">Progress</th>
                     <th class="td-head" scope="col">First Name</th>
                     <th class="td-head" scope="col">Last Name</th>
                     <th class="td-head" scope="col">Date of birth</th>
@@ -178,6 +179,7 @@
                     <tr>
                     <td><?php echo $row['User_ID']; ?></td>
                     <td><?php echo $row['Year_Start']; ?></td>
+                    <td><?php echo $row['Progress'] ; ?></td>
                     <td><?php echo $row['FirstName']; ?></td>
                     <td><?php echo $row['LastName']; ?></td>
                     <td><?php echo $row['DoB']; ?></td>
