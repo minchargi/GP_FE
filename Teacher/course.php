@@ -80,15 +80,17 @@
 
     </div>
     <div class="container mt-4">
-        <p class="header_text">Courses</p>
+      <div class="header-container">
+        <p class="header-text">Courses</p>
         <div class="button-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
-                <span class="button-content gap-4">
-                    <i class="fas fa-plus-circle"></i>
-                    Create Course
-                </span>
-            </button>
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
+            <span class="button-content gap-4">
+              <i class="fas fa-plus-circle"></i>
+              Create Course
+            </span>
+          </button>
         </div>
+      </div>
     </div>
     
     <!-- Create Class Modal -->

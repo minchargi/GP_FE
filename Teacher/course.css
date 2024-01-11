@@ -1,4 +1,9 @@
-.header_text{
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-text{
     background: url('../images/titlel.svg') no-repeat bottom left;
     font-family: 'Roboto Slab', serif; 
     color: #293895;
