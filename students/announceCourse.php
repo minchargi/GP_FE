@@ -70,9 +70,6 @@
                   <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="fas fa-user-circle"></i>
@@ -88,6 +85,7 @@
         </div>
       </nav>
     </header>
+    
   <ul class="nav">
     <li class="active"><a href="announceCourse.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Announcement</a></li>
     <li><a href="coursedetail.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Overview</a></li>

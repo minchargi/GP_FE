@@ -62,9 +62,6 @@
                         <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-                    </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-user-circle"></i>
@@ -89,17 +86,13 @@
         <li><a href="../Teacher/attendance.php?id=<?php echo $course_id; ?>&year=<?php echo $year;?>">Attendance</a></li>
     </ul>
     <div class="container mt-4">
-      <p class="header-text">Announcements</p>
-    </div>
-    <div class="container mt-4">
-        <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#courseAnnounce">
-            <span class="button-content gap-4">
-                Add
-            </span>
+      <div class="header-container">
+        <p class="header-text">Announcements</p>
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#courseAnnounce">
+          <span class="button-content gap-4">Add</span>
         </button>
-        </div>
       </div>
+    </div>
       <!-- Add Announce Modal-->
         <div class="modal fade" id="courseAnnounce" tabindex="-1" role="dialog" aria-labelledby="courseAnnounceLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -125,7 +118,7 @@
                             <textarea class="form-control" name="announcement" id="announcement" rows="4"></textarea>
                           </div>
                           <div class="modal-footer">
-                                <input type="submit" class="btn btn-secondary" name ="submit" data-bs-dismiss="modal">Close</button>
+                                <input type="submit" class="btn btn-submit" name ="submit" data-bs-dismiss="modal"></button>
                            </div>
                         </form>
                     </div>

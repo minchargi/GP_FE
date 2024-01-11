@@ -71,10 +71,6 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
                     </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-user-circle"></i>
-                    </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="../Teacher/profile.php">Account</a></li>
                       <li><a class="dropdown-item" href="../sign-in/logout.php">Logout</a></li>

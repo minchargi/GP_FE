@@ -157,11 +157,11 @@ include 'admin_function/admin_function.php'
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                 ?><tr>
-                            <td><?php echo $row['User_ID']; ?></td>
-                            <td><?php echo $row['FirstName']; ?></td>
-                            <td><?php echo $row['LastName']; ?></td>
-                            <td><?php echo $row['Email']; ?></td>
-                            <td><?php echo $row['Phone']; ?></td>
+                            <td class="td-custom"><?php echo $row['User_ID']; ?></td>
+                            <td class="td-custom"><?php echo $row['FirstName']; ?></td>
+                            <td class="td-custom"><?php echo $row['LastName']; ?></td>
+                            <td class="td-custom"><?php echo $row['Email']; ?></td>
+                            <td class="td-custom"><?php echo $row['Phone']; ?></td>
                             <td><a class="btn btn-info" href="admin_function/edit_button.php?id=<?php echo $row['User_ID']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="admin_function/delete_button.php?id=<?php echo $row['User_ID']; ?>">Delete</a></td>
                         </tr> <?php       }
                         }

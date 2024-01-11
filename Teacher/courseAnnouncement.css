@@ -1,3 +1,8 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 a{
 	text-decoration: none;
 	outline: none;
@@ -130,6 +135,15 @@ ul.nav {
 }
 
 .btn-primary:hover {
+  background-color: #EB1C24;
+  color: white; 
+}
+.btn-submit{
+  background-color: #293895; 
+  border: none; 
+  color: white; 
+}
+.btn-submit:hover{
   background-color: #EB1C24;
   color: white; 
 }

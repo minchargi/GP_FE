@@ -62,9 +62,6 @@
                         <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-                    </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-user-circle"></i>
@@ -83,15 +80,17 @@
 
     </div>
     <div class="container mt-4">
-        <p class="header_text">Courses</p>
+      <div class="header-container">
+        <p class="header-text">Courses</p>
         <div class="button-container">
-            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
-                <span class="button-content gap-4">
-                    <i class="fas fa-plus-circle"></i>
-                    Create Class
-                </span>
-            </button>
+          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#createClassModal">
+            <span class="button-content gap-4">
+              <i class="fas fa-plus-circle"></i>
+              Create Course
+            </span>
+          </button>
         </div>
+      </div>
     </div>
     
     <!-- Create Class Modal -->

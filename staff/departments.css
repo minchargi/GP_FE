@@ -28,7 +28,6 @@ h1 {
 .td-custom{
     color:#000;
     font-size: 16px;
-    font-weight: 500;
     line-height: normal;
     text-align: center;
 }
@@ -121,6 +120,7 @@ h1 {
 /**/
 
 .btn-info {
+    margin-bottom: 5px; 
     background-color: #293895;
     border: none; 
     color: white; 
@@ -129,4 +129,8 @@ h1 {
 .btn-info:hover {
     background-color: #EB1C24;
     color: white; 
+}
+
+.btn-danger {
+    margin-bottom: 5px; 
 }

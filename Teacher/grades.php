@@ -62,9 +62,6 @@ $year = $_GET['year'];
                 <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fas fa-user-circle"></i>
@@ -134,7 +131,9 @@ $year = $_GET['year'];
                 <label for="studentInfo">Final:</label>
                 <input type="text" class="form-control" id="final" name="final" required>
               </div>
-              <input type="submit" value="Update" name="update">
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-submit" name ="submit" data-bs-dismiss="modal"></button>
+              </div>
             </form>
           </div>
         </div>
