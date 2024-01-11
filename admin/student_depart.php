@@ -70,7 +70,7 @@
 
         <!-- Main content -->
       <div class="container mt-4">
-        <p class="header-text">Intake</p>
+        <p class="header-text">Academic Year</p>
       </div>
       <div class="container mt-4">
         <div class="btn-container">
