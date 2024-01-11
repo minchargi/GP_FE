@@ -122,7 +122,7 @@
                             <textarea class="form-control" name="announcement" id="announcement" rows="4"></textarea>
                           </div>
                           <div class="modal-footer">
-                                <input type="submit" class="btn btn-secondary" name ="submit" data-bs-dismiss="modal">Close</button>
+                                <input type="submit" class="btn btn-submit" name ="submit" data-bs-dismiss="modal"></button>
                            </div>
                         </form>
                     </div>

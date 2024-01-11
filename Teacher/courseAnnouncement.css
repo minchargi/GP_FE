@@ -133,6 +133,15 @@ ul.nav {
   background-color: #EB1C24;
   color: white; 
 }
+.btn-submit{
+  background-color: #293895; 
+  border: none; 
+  color: white; 
+}
+.btn-submit:hover{
+  background-color: #EB1C24;
+  color: white; 
+}
 /**/
 
 /* accordion */
