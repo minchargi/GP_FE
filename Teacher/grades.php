@@ -131,7 +131,9 @@ $year = $_GET['year'];
                 <label for="studentInfo">Final:</label>
                 <input type="text" class="form-control" id="final" name="final" required>
               </div>
-              <input type="submit" value="Update" name="update">
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-submit" name ="submit" data-bs-dismiss="modal"></button>
+              </div>
             </form>
           </div>
         </div>
