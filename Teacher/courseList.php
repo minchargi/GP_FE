@@ -73,16 +73,6 @@
         <p class="header-text">Academic Year</p>
       </div>
       <div class="container mt-4">
-        <div class="btn-container">
-          <button class="custom-button" data-bs-toggle="modal" data-bs-target="#add">
-            <span class="button-content gap-4">
-                <i class="fas fa-plus-circle"></i>
-                Add
-            </span>
-        </button>
-        </div>
-      </div>
-      <div class="container mt-4">
       <?php
         $result = fetch_program_year($user_id);
         if ($result->num_rows > 0) {
