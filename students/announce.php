@@ -22,7 +22,7 @@ include 'student_function.php'
 
     <body> 
         <!-- Navbar-->
-        <header>
+      <header>
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="#">
           <img src="../images/logo-moi_2.svg" alt="logo" width="90" height="50.78">
@@ -58,9 +58,6 @@ include 'student_function.php'
                   <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetableo-of-year-2-program-in-information-and-communication-technology-5959/">Second Year</a></li>
                   <li><a class="dropdown-item" href="https://usth.edu.vn/en/timetable-of-year-3-ict-5961/">Third Year</a></li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="far fa-question-circle"></i> </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
