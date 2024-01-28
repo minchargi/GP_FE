@@ -117,8 +117,7 @@
           <textarea class="form-control" id="editedContent" rows="4"></textarea>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+          <button type="button" class="btn btn-custom" id="saveChangesBtn">Save changes</button>
         </div>
       </div>
     </div>
