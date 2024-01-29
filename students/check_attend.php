@@ -19,5 +19,6 @@ include 'student_function.php';
         $conn->close();
         header('location:coursedetail.php');
     }
+    header("location:coursedetail.php?id=$course_id&year=$year");
 
 ?>
