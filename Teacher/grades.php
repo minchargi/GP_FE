@@ -110,14 +110,18 @@ $year = $_GET['year'];
           Import
         </span>
       </button>
+      <form method="post">
+        <button class="custom-button" type="submit" name="caloverall" data-bs-toggle="modal" data-bs-target="#calOverall">
+          <span class="button-content gap-4">
+            Calculate Overall
+          </span>
+        </button>
+      </form>
       <?php
       if (isset($_POST['caloverall'])) {
         overall_grade($course_id, $year);
       }
       ?>
-      <form method="post">
-        <input type="submit" name="caloverall" value="Calculate Overall">
-      </form>
     </div>
 
     <!-- Update Grades Modal -->
